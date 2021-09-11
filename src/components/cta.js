@@ -5,7 +5,7 @@ import awake from "../assets/cta/BitBotAwake.png"
 import smile from "../assets/cta/BitBotSmile.png"
 import snooze from "../assets/cta/Snooze.png"
 import "./cta.scss";
-// import button
+import Button from "./button"
 
 const Cta = ({}) => {
     // State management for bit bot interactions
@@ -25,7 +25,7 @@ const Cta = ({}) => {
                     smiling
                     ?
                         /* Insert speech balloon with text, Join BYTE! It's fun! */
-                        <div className="absolute -top-24 -right-40">
+                        <div className="absolute -top-28 -right-40">
                             <p className="speech text-md font-sans">Come join BYTE!</p>
                         </div>
                     :
@@ -37,7 +37,7 @@ const Cta = ({}) => {
                         </div>
                     :
                         /* Insert speech balloon with typing animation */
-                        <div className="absolute -top-24 -right-40">
+                        <div className="absolute -top-28 -right-40">
                             <p className="speech text-md font-sans">...</p>
                         </div>
                 }
@@ -49,9 +49,10 @@ const Cta = ({}) => {
                 />
             </div>
             <h1 className="pt-12 pb-4 font-sans font-bold text-2xl text-black">Lorem ipsum dolor sit amet, consectetur</h1>
-            <div className="w-max px-4 py-2 rounded-lg bg-gray-600 font-sans font-bold text-base text-white">
-                Register Now
-            </div>
+            <Button 
+                link="#"
+                label="Register Now"
+            />
         </div>
     )
 }

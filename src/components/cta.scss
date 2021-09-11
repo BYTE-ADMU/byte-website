@@ -16,10 +16,15 @@ $secondary-orange: #F58647;
 
 .bitbot {
   cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  
+  &:hover {
+    transform: translatey(-4%);
+  }
 }
 
 .speech {
-  min-width: 200px;
+  min-width: 218px;
   transform: translatey(0px);
   animation: float 5s ease-in-out infinite;
   mix-blend-mode: multiply;
@@ -30,8 +35,8 @@ $secondary-orange: #F58647;
   font-size: 12px;
   color: #333;
   background-color: $secondary-blue;
-  padding: 2rem;
-  border-radius: 5%;
+  padding: 1.5rem;
+  border-radius: 4px;
   position: relative;
   box-shadow: 20px 20px $primary-blue;
   z-index: 2;
