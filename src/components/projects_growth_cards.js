@@ -3,8 +3,8 @@ import '../styles/global.css'
 
 const ProjectsGrowthCards = () => {
     return (
-        <div className="mb-40 flex flex-row items-center justify-center mx-28 md: flex-wrap">
-          <div className="mx-2 my-3 w-64">
+        <div className="w-full mb-32 flex flex-row items-center justify-center md: flex-wrap">
+          <div className="mx-2 my-3 w-3/12">
             <div className="bg-gray-400 h-36"></div>
             <div className="bg-gray-50 p-5">
                 <h3 className="text-3xl">Love at First BYTE</h3>
@@ -16,7 +16,7 @@ const ProjectsGrowthCards = () => {
                 </p>
             </div>
           </div>
-          <div className="mx-2 my-3 w-64">
+          <div className="mx-2 my-3 w-3/12">
             <div className="bg-gray-400 h-36"></div>
             <div className="bg-gray-50 p-5">
                 <h3 className="text-3xl">Love at First BYTE</h3>
@@ -28,7 +28,7 @@ const ProjectsGrowthCards = () => {
                 </p>
             </div>
           </div>
-          <div className="mx-2 my-3 w-64">
+          <div className="mx-2 my-3 w-3/12">
             <div className="bg-gray-400 h-36"></div>
             <div className="bg-gray-50 p-5">
                 <h3 className="text-3xl">Love at First BYTE</h3>
