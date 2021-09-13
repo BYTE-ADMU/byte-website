@@ -8,7 +8,7 @@ const ProjectsHero = () => {
     return (
         <div className="flex flex-col md:flex-row items-center justify-center w-full h-screen">
           <div className="md: w-full md:w-1/2 flex flex-col items-center justify-center">
-            <img className="w=full h=full fixed sm:" src={ProjectsHeroBg} />
+            <img className="w=full h=full px-5 absolute sm:" src={ProjectsHeroBg} />
             <div className="w-auto">
             <img 
             src={ProjectsHeroImg}
