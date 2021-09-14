@@ -39,6 +39,12 @@ module.exports = {
         lighter: '#E0E0E0',
         lightest: '#FAFAFA',
       }
+    },
+    dropShadow: {
+      'normal': '0px 0px 20px rgba(20, 20, 20, 0.1)',
+      'hover': '0px 5px 20px rgba(20, 20, 20, 0.15)',
+      'nav': '0px 4px 8px rgba(20, 20, 20, 0.1)',
+      'footer': '0px -12px 20px rgba(20, 20, 20, 0.1)'
     }
   },
   variants: {

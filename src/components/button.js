@@ -2,7 +2,7 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
-const primary = "w-max px-4 py-2 rounded-lg bg-gray-600 font-sans font-bold text-base text-white"
+const primary = "w-max px-4 py-2 rounded-lg bg-red-primary font-sans font-bold text-base text-gray-lightest"
 const secondary = "w-max px-4 py-2 rounded-lg bg-transparent border border-black border-transparent font-sans font-bold text-base text-gray-600"
 
 const Button = ({ 
