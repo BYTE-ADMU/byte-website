@@ -33,6 +33,15 @@ body {
   }
 }
 
+.community-image {
+  transition: border 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.05);
+    z-index: 40 !important;
+  }
+}
+
 .speech {
   min-width: 218px;
   transform: translatey(0px);
