@@ -5,28 +5,13 @@ import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import CTA from "../components/cta"
-import Projects from "../components/projects"
+import LandingProjects from "../components/landing_projects"
 import LandingHero from "../components/landing_hero"
 
 import section from "../assets/landing/projects-section.png"
 
 const IndexPage = () => (
   <Layout>
-    <Seo title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <StaticImage
-      src="../images/gatsby-astronaut.png"
-      width={300}
-      quality={95}
-      formats={["AUTO", "WEBP", "AVIF"]}
-      alt="A Gatsby astronaut"
-      style={{ marginBottom: `1.45rem` }}
-    />
-    <p>
-      <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-    </p>
     <LandingHero />
     <div
       className="
@@ -44,7 +29,7 @@ const IndexPage = () => (
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
         tristique porttitor amet ac molestie lectus.
       </p>
-      <Projects />
+      <LandingProjects />
     </div>
     <CTA />
   </Layout>
