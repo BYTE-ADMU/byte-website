@@ -1,6 +1,5 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
-import "./cta.scss";
 
 import bg from "../assets/cta/background.png"
 import sleep from "../assets/cta/BitBotSleep.png"

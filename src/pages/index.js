@@ -10,7 +10,10 @@ import LandingProjects from "../components/landing_projects"
 import LandingCommunity from "../components/landing_community"
 import CTA from "../components/cta"
 
-import section from "../assets/landing/projects-section.png"
+import projects from "../assets/landing/projects-section.png"
+import community from "../assets/landing/community.png"
+
+import "./index.scss";
 
 const galleryInfo = [
   "https://ik.imagekit.io/ripzjge77zz/BYTE/BYTE_Website/Landing/community_1_IAqEeryHx.png?updatedAt=1631622808779",
@@ -20,13 +23,13 @@ const galleryInfo = [
 
 const testimonialsInfo = [
   {
-    name: "Adam Smith",
+    name: "Kianna Zalameda",
     quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique porttitor amet",
-    image: "https://ik.imagekit.io/ripzjge77zz/BYTE/BYTE_Website/Landing/community_1_IAqEeryHx.png?updatedAt=1631622808779",
+    image: "https://ik.imagekit.io/ripzjge77zz/BYTE/BYTE_Website/Landing/testimonial_OslbvN1To.png?updatedAt=1631628186051",
     secret: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique porttitor amet",
   },
   {
-    name: "Adam Smith 2",
+    name: "Aidan Olarte",
     quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique porttitor amet",
     image: "https://ik.imagekit.io/ripzjge77zz/BYTE/BYTE_Website/Landing/community_1_IAqEeryHx.png?updatedAt=1631622808779",
     secret: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique porttitor amet",
@@ -119,7 +122,7 @@ const IndexPage = () => {
               flex flex-col justify-center content-center items-center
               bg-white bg-contain bg-no-repeat bg-center" 
         style={{
-          backgroundImage: `url(${section})`
+          backgroundImage: `url(${projects})`
         }}
       >
         <h1 className="font-sans font-bold text-2xl text-gray-darkest text-center">
@@ -135,11 +138,11 @@ const IndexPage = () => {
       {/* Community Section */}
       <div
         className="
-              w-full h-max 2xl:p-32 lg:p-16 md:p-8 p-4
+              w-full h-max 2xl:p-48 lg:p-24 md:p-8 p-4
               flex flex-col justify-center content-center items-center
               bg-white bg-contain bg-no-repeat bg-center" 
         style={{
-          backgroundImage: `url(${section})`
+          backgroundImage: `url(${community})`
         }}
       >
         <h1 className="font-sans font-bold text-2xl text-gray-darkest text-center">
