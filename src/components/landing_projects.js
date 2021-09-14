@@ -57,7 +57,7 @@ const projectsInfo = {
     ]
 }
 
-const Projects = ({ }) => {
+const LandingProjects = ({ }) => {
     
     // Get first project as default
     const [selected, isSelected] = useState(projectsInfo.flagship[0])
@@ -125,4 +125,4 @@ const Projects = ({ }) => {
     )
 }
 
-export default Projects;
+export default LandingProjects;
