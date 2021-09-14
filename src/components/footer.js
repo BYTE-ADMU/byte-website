@@ -2,15 +2,11 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
-// import facebook from "../../public/icons/facebook.svg"
-// import linkedin from "../../public/icons/linkedin.svg"
-// import twitter from "../../public/icons/twitter.svg"
-// import ig from "../../public/icons/ig.svg"
-
 import facebook from "../assets/facebook.svg"
 import linkedin from "../assets/linkedin.svg"
 import twitter from "../assets/twitter.svg"
 import ig from "../assets/ig.svg"
+import bytelogo from "../assets/small-byte-logo.png"
 
 const about_links = [
   {
@@ -100,41 +96,45 @@ const social_media = [
   {
     id: 1,
     image: facebook,
-    link: "https://facebook.com/BYTE",
+    link: "https://www.facebook.com/byteadmu",
   },
   {
     id: 2,
     image: linkedin,
-    link: "https://facebook.com/BYTE",
+    link: "https://www.linkedin.com/company/byteadmu/mycompany/",
   },
   {
     id: 3,
     image: twitter,
-    link: "https://facebook.com/BYTE",
+    link: "https://twitter.com/byteadmu",
   },
   {
     id: 4,
     image: ig,
-    link: "https://facebook.com/BYTE",
+    link: "https://www.instagram.com/byteadmu/",
   },
 ]
 
 const Footer = ({ siteTitle }) => (
-  <footer className="flex items-center justify-center flex-col bg-gray-400 h-full">
-    <div className="flex items-center justify-center w-full px-4 py-4 lg:px-10 lg:py-16 flex-col-reverse lg:flex-row">
+  <footer className="
+    h-full flex items-center justify-center flex-col 
+    bg-yellow-secondary drop-shadow-footer">
+    <div className="flex items-center justify-center w-full px-4 lg:px-10 lg:py-16 flex-col-reverse lg:flex-row">
       <div className="w-full lg:w-5/12 flex justify-center items-center lg:justify-around lg:items-start flex-col p-6">
-        <div className="w-full flex justify-center lg:justify-start lg:items-start">
-          {social_media.map((value, key) => {
-            return (
-              <a
-                key={key}
-                href={value.link}
-                className="w-10 h-10 m-2 bg-white rounded-full flex items-center justify-center text-gray-600"
-              >
-                <img src={value.image} alt={value.img} className="m-1" />
-              </a>
-            )
-          })}
+        <div className="w-full flex flex-col justify-center lg:justify-center lg:items-center">
+          <h3 className="w-full flex items-center justify-center lg:items-start items-left lg:justify-start px-4">Contact Us</h3>
+          <div className="w-full flex justify-center lg:justify-start lg:items-start">
+            {social_media.map((value, key) => {
+              return (
+                <a
+                  key={key}
+                  href={value.link}
+                  className="w-10 h-10 m-2 rounded-2xl flex items-center justify-center">
+                  <img src={value.image} alt={value.img} className="m-1" />
+                </a>
+              )
+            })}
+          </div>
         </div>
 
         <div className="flex items-center justify-center lg:items-start lg:justify-start flex-col ml-4">
@@ -142,8 +142,12 @@ const Footer = ({ siteTitle }) => (
             byteadmu@gmail.com
           </h3>
           <div className="flex items-center justify-center mt-10">
-            <div className="h-16 w-16 bg-gray-600 mr-4"></div>
-            <h3 className="mt-4">BYTE</h3>
+            <div className="h-16 w-32 mr-4">
+              <img 
+              src={bytelogo}
+              alt="BYTE Logo"
+              ></img>
+            </div>
           </div>
           <p className="text-xs mt-4 text-center md:text-left">
             © 2021 Building Young Tech Entrepreneurs. All Rights Reserved.
@@ -151,7 +155,7 @@ const Footer = ({ siteTitle }) => (
         </div>
       </div>
 
-      <div className="flex flex-wrap md:flex-nowrap items-start justify-center w-full lg:w-7/12">
+      <div className="w-full h-full flex flex-wrap md:flex-nowrap items-start lg: mt-5 w-7/12">
         <div className="w-1/3 lg:w-1/4 flex items-start justify-start flex-col m-4">
           <h3>About</h3>
           {about_links.map((value, key) => {
