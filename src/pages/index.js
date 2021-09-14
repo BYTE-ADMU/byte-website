@@ -8,6 +8,8 @@ import CTA from "../components/cta"
 import Projects from "../components/projects"
 import LandingHero from "../components/landing_hero"
 
+import section from "../assets/landing/projects-section.png"
+
 const IndexPage = () => (
   <Layout>
     <Seo title="Home" />
@@ -28,15 +30,17 @@ const IndexPage = () => (
     <LandingHero />
     <div
       className="
-            w-full h-max p-32
+            w-full h-max 2xl:p-32 lg:p-16 md:p-8 p-4
             flex flex-col justify-center content-center items-center
-            bg-white
-    "
+            bg-white bg-contain bg-no-repeat bg-center" 
+      style={{
+        backgroundImage: `url(${section})`
+      }}
     >
-      <h1 className="font-sans font-bold text-2xl text-black">
+      <h1 className="font-sans font-bold text-2xl text-gray-darkest text-center">
         Lorem ipsum dolor sit amet, consectetur{" "}
       </h1>
-      <p className="font-sans text-base text-gray-700">
+      <p className="font-sans text-base text-gray-darkest text-center">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
         tristique porttitor amet ac molestie lectus.
       </p>
