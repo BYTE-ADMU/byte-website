@@ -1,0 +1,3 @@
+.section-height {
+  min-height: calc(100vh + 4px);
+}

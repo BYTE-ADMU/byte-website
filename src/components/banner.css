@@ -1,0 +1,120 @@
+
+.community-container {
+  height: 900px;
+}
+
+.banner-desktop {
+  display: flex;
+  justify-content: center;
+  height: 900px;
+  padding: 0 40px;
+}
+
+.banner-column {
+  position: relative;
+  -webkit-animation-play-state: inherit !important;
+  animation-play-state: inherit !important;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  margin: 54px 9px 0;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.card_img {
+  border-radius: 30px;
+}
+
+.name {
+  margin: 48px 24px 0;
+}
+
+.name-span {
+  font-family: "Avenir LT Std Heavy", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  chrome-offset: 16px;
+  position: relative;
+  top: 2px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.quote {
+  margin: 12px 24px 24px;
+}
+
+.laptop {
+  overflow: hidden;
+}
+
+.image-fade {
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.top-fade {
+  height: 160px;
+  background: linear-gradient(
+    180deg,
+    #fafafa 28.12%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  width: 100vw;
+  position: absolute;
+  z-index: 10;
+}
+
+.bottom-fade {
+  height: 199px;
+  background: linear-gradient(
+    180deg,
+    #fafafa 42.71%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(-180deg) translateY(199px);
+  width: 100vw;
+  position: absolute;
+  z-index: 10;
+}
+
+.left-animation {
+  animation: 50.2s linear 0s infinite normal none running scroll;
+}
+
+.right-animation {
+  animation: 80.2s linear 0s infinite normal none running scroll;
+}
+
+.middle-animation {
+  animation: 30.0667s linear 0s infinite normal none running scroll;
+}
+
+.first {
+  top: 10px;
+}
+
+.second {
+  top: 30px;
+}
+
+@keyframes scroll {
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .banner-desktop {
+    display: none;
+  }
+
+  .top-fade,
+  .bottom-fade {
+    display: none;
+  }
+}
