@@ -4,8 +4,10 @@ import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import Button from "../components/button"
 
 import LandingHero from "../components/landing_hero"
+import LandingAbout from "../components/landing_about"
 import LandingProjects from "../components/landing_projects"
 import LandingCommunity from "../components/landing_community"
 import CTA from "../components/cta"
@@ -114,6 +116,7 @@ const IndexPage = () => {
       <LandingHero />
 
       {/* About Section */}
+      <LandingAbout />
 
       {/* Projects Section */}
       <div
