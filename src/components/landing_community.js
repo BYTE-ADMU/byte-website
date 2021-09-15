@@ -59,13 +59,13 @@ const LandingCommunity = ({
                                 <Startups startups={startups} />
                         }
                     </div>
-                    <div className="md:w-1/2 w-full h-auto flex justify-start items-center content-center px-8">
+                    <div className="md:w-1/2 w-full h-auto flex justify-start items-center content-center px-16">
                         <p className="md:text-left text-center font-sans text-base text-gray-darkest">{description}</p>
                     </div>
                 </>
             :
             <>
-                    <div className="md:w-1/2 w-full h-auto flex flex-row justify-start items-center content-center px-8">
+                    <div className="md:w-1/2 w-full h-auto flex flex-row justify-start items-center content-center px-16">
                         <p className="md:text-left text-center font-sans text-base text-gray-darkest">{description}</p>
                     </div>
                     <div className="md:w-1/2 w-full h-auto flex justify-center items-center content-center px-8">

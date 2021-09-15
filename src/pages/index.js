@@ -13,7 +13,7 @@ import CTA from "../components/cta"
 import projects from "../assets/landing/projects-section.png"
 import community from "../assets/landing/community.png"
 
-import "./index.scss";
+import "./globals.scss";
 
 const galleryInfo = [
   "https://ik.imagekit.io/ripzjge77zz/BYTE/BYTE_Website/Landing/community_1_IAqEeryHx.png?updatedAt=1631622808779",
