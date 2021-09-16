@@ -131,7 +131,7 @@ const IndexPage = () => {
         <h1 className="font-sans text-2xl font-bold text-center text-gray-darkest">
           Lorem ipsum dolor sit amet, consectetur{" "}
         </h1>
-        <p className="font-sans text-base text-center text-gray-darkest">
+        <p className="font-sans text-base text-center text-gray-darkest pt-2 pb-8">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
           tristique porttitor amet ac molestie lectus.
         </p>

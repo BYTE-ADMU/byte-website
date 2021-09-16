@@ -16,10 +16,10 @@ const landing_hero = () => {
       </div>
       <div className="w-full md:w-2/3 pb-8 px-8 flex md:items-start items-center justify-center flex-col">
         <div className="flex md:items-start items-center justify-center flex-col">
-          <h3 className="text-2xl md:text-left text-center font-sans font-bold not-italic">
+          <h3 className="text-2xl pb-1 md:text-left text-center font-sans font-bold not-italic">
             Lorem ipsum dolor sit amet conse.
           </h3>
-          <p className="lg:w-3/4 w-full text-base md:text-left text-center font-sans font-normal not-italic">
+          <p className="lg:w-3/4 pb-4 w-full text-base md:text-left text-center font-sans font-normal not-italic">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique porttitor amet ac molestie lectus.
           </p>
         </div>

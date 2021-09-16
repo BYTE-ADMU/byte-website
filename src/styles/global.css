@@ -4,47 +4,167 @@
 
 /* START: TYPEFACES */
 @font-face {
-  font-family: Objectivity;
-  src: url("../assets/fonts/Objectivity/Objectivity-Bold.otf")
-    format("truetype");
+  font-family: 'Objectivity';
+  src: url('../assets/fonts/Objectivity/Objectivity-Thin.woff2') format('woff2'),
+      url('../assets/fonts/Objectivity/Objectivity-Thin.otf') format('otf');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Objectivity';
+  src: url('../assets/fonts/Objectivity/Objectivity-Light.woff2') format('woff2'),
+      url('../assets/fonts/Objectivity/Objectivity-Light.otf') format('otf');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Objectivity';
+  src: url('../assets/fonts/Objectivity/Objectivity-Regular.woff2') format('woff2'),
+      url('../assets/fonts/Objectivity/Objectivity-Regular.otf') format('otf');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Objectivity';
+  src: url('../assets/fonts/Objectivity/Objectivity-Medium.woff2') format('woff2'),
+      url('../assets/fonts/Objectivity/Objectivity-Medium.otf') format('otf');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Objectivity';
+  src: url('../assets/fonts/Objectivity/Objectivity-Bold.woff2') format('woff2'),
+      url('../assets/fonts/Objectivity/Objectivity-Bold.otf') format('otf');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Objectivity';
+  src: url('../assets/fonts/Objectivity/Objectivity-ExtraBold.woff2') format('woff2'),
+      url('../assets/fonts/Objectivity/Objectivity-ExtraBold.otf') format('otf');
   font-weight: 700;
   font-style: normal;
+  font-display: swap;
 }
-  
-  @font-face {
-    font-family: Objectivity;
-    src: url("../assets/fonts/Objectivity/Objectivity-Medium.otf")
-      format("truetype");
-    font-weight: 500;
-    font-style: normal;
-  }
-  
-  @font-face {
-    font-family: Objectivity;
-    src: url("../assets/fonts/Objectivity/Objectivity-Regular.otf")
-      format("truetype");
-    font-weight: 400;
-    font-style: normal;
-  }
+
+@font-face {
+  font-family: 'Objectivity';
+  src: url('../assets/fonts/Objectivity/Objectivity-Black.woff2') format('woff2'),
+      url('../assets/fonts/Objectivity/Objectivity-Black.otf') format('otf');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Objectivity';
+  src: url('../assets/fonts/Objectivity/Objectivity-Super.woff2') format('woff2'),
+      url('../assets/fonts/Objectivity/Objectivity-Super.otf') format('otf');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Objectivity';
+  src: url('../assets/fonts/Objectivity/Objectivity-ThinSlanted.woff2') format('woff2'),
+      url('../assets/fonts/Objectivity/Objectivity-ThinSlanted.otf') format('otf');
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Objectivity';
+  src: url('../assets/fonts/Objectivity/Objectivity-LightSlanted.woff2') format('woff2'),
+      url('../assets/fonts/Objectivity/Objectivity-LightSlanted.otf') format('otf');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Objectivity';
+  src: url('../assets/fonts/Objectivity/Objectivity-RegularSlanted.woff2') format('woff2'),
+      url('../assets/fonts/Objectivity/Objectivity-RegularSlanted.otf') format('otf');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Objectivity';
+  src: url('../assets/fonts/Objectivity/Objectivity-MediumSlanted.woff2') format('woff2'),
+      url('../assets/fonts/Objectivity/Objectivity-MediumSlanted.otf') format('otf');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Objectivity';
+  src: url('../assets/fonts/Objectivity/Objectivity-BoldSlanted.woff2') format('woff2'),
+      url('../assets/fonts/Objectivity/Objectivity-BoldSlanted.otf') format('otf');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Objectivity';
+  src: url('../assets/fonts/Objectivity/Objectivity-ExtraBoldSlanted.woff2') format('woff2'),
+      url('../assets/fonts/Objectivity/Objectivity-ExtraBoldSlanted.otf') format('otf');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Objectivity';
+  src: url('../assets/fonts/Objectivity/Objectivity-BlackSlanted.woff2') format('woff2'),
+      url('../assets/fonts/Objectivity/Objectivity-BlackSlanted.otf') format('otf');
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Objectivity';
+  src: url('../assets/fonts/Objectivity/Objectivity-SuperSlanted.woff2') format('woff2'),
+      url('../assets/fonts/Objectivity/Objectivity-SuperSlanted.otf') format('otf');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
 /* END: TYPEFACES */
 
 
 /* START: FONT WEIGHTS */
-.bold{font-weight:700}
-.medium{font-weight: 500}
-.regular{font-weight:400}
+.bold {font-weight: 700}
+.medium {font-weight: 500}
+.regular  {font-weight:400}
 /* END: FONT WEIGHTS */
 
 /* START: FONT SIZES */
-h1{ font-size:24px }
-h2{ font-size:20px }
-p{ font-size:14px }
-.small{ font-size:12px }
+h1  { font-size: 1.5rem; line-height: 2rem; }
+h2  { font-size: 1.25rem; line-height: 1.75rem; }
+p { font-size: 1rem; line-height: 1.5rem; }
+.small  { font-size: 0.75rem; line-height: 1rem; }
 
 @media only screen and (min-width: 768px) {
-    h1{ font-size:32px }
-    h2{ font-size:24px }
-    p{ font-size:16px }
-    .small{ font-size:12px }
+    h1 { font-size: 2rem; line-height: 2.5rem; }
+    h2 { font-size: 1.5rem; line-height: 2rem; }
+    p { font-size: 1rem; line-height: 1.5rem; }
+    .small { font-size: 0.75rem; line-height: 1rem; }
 }
 /* END: FONT SIZES */
