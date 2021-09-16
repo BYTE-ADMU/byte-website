@@ -10,8 +10,8 @@ import "swiper/css/pagination"
 // import message from "../../public/icons/message.png"
 // import play from "../../public/icons/play.png"
 
-import message from "../assets/message.png"
-import play from "../assets/play.png"
+import message from "../assets/img/message.png"
+import play from "../assets/img/play.png"
 
 SwiperCore.use([Pagination])
 SwiperCore.use([Autoplay])
@@ -55,11 +55,11 @@ const Testimonials = props => {
       className="mySwiper"
     >
       <SwiperSlide key={props.id}>
-        <div className="h-full w-full flex md:flex-row flex-col items-center justify-around mb-50 md:mb-20">
-          <div className="w-full md:w-1/2 flex items-center justify-center mr-0 md:mr-10">
+        <div className="flex flex-col items-center justify-around w-full h-full md:flex-row mb-50 md:mb-20">
+          <div className="flex items-center justify-center w-full mr-0 md:w-1/2 md:mr-10">
             <div className="bg-gray-400 h-96 w-80"></div>
           </div>
-          <div className="w-full md:w-1/2 flex items-start justify-start flex-col mt-10 md:m-0">
+          <div className="flex flex-col items-start justify-start w-full mt-10 md:w-1/2 md:m-0">
             <div>
               <img src={message} alt="Message" />
             </div>
@@ -78,11 +78,11 @@ const Testimonials = props => {
         </div>
       </SwiperSlide>
       <SwiperSlide key={props.id}>
-        <div className="h-full w-full flex md:flex-row flex-col items-center justify-around mb-50 md:mb-20">
-          <div className="w-full md:w-1/2 flex items-center justify-center mr-0 md:mr-10">
+        <div className="flex flex-col items-center justify-around w-full h-full md:flex-row mb-50 md:mb-20">
+          <div className="flex items-center justify-center w-full mr-0 md:w-1/2 md:mr-10">
             <div className="bg-gray-400 h-96 w-80"></div>
           </div>
-          <div className="w-full md:w-1/2 flex items-start justify-start flex-col mt-10 md:m-0">
+          <div className="flex flex-col items-start justify-start w-full mt-10 md:w-1/2 md:m-0">
             <div>
               <img src={message} alt="Message" />
             </div>

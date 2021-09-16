@@ -1,0 +1,12 @@
+/* .header {
+  @apply flex flex-wrap items-center justify-between px-6 py-2 bg-gray-500;
+} */
+
+.header-bytelogo {
+  width: 64px;
+  height: 64px;
+}
+
+/* .header-joinusbtn {
+  @apply inline-block px-4 py-2 mt-4 text-sm leading-none text-white border border-white rounded lg:mt-0;
+} */

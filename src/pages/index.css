@@ -59,7 +59,7 @@ body {
   position: relative;
   box-shadow: 20px 20px $primary-blue;
   z-index: 2;
-  // border: 1px solid $color-green;
+  /* border: 1px solid $color-green; */
 }
 
 .speech:after {
@@ -67,9 +67,9 @@ body {
   animation: float2 5s ease-in-out infinite;
   content: ".";
   font-weight: bold;
-  // -webkit-text-stroke: 0.5px $color-green;
+/* -webkit-text-stroke: 0.5px $color-green; */
   -webkit-text-fill-color: $secondary-blue;
-  // border: 1px solid $color-green;
+/* border: 1px solid $color-green; */
   text-shadow: 20px 20px $primary-blue;
   text-align: left;
   font-size: 55px;
@@ -90,14 +90,14 @@ body {
   animation: float 5s ease-in-out infinite;
 }
 
-// @keyframes fade {
-//   0% {
-//     opacity: 0;
-//   }
-//   100% {
-//     opacity: 1;
-//   }
-// }
+ /* @keyframes fade {
+   0% {
+     opacity: 0;
+   }
+   100% {
+     opacity: 1;
+   }
+} */
 
 @keyframes float {
   0% {
