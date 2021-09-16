@@ -16,7 +16,6 @@ const ProjectsPage = () => {
                 <ProjectsLayout />
             </div>
             <div className="w-full h-full flex flex-col items-center justify-center">
-                <h2 class="text-3xl mb-8">We value member growth</h2>
                 <ProjectsGrowthCards />                    
             </div>
                 <Footer />
