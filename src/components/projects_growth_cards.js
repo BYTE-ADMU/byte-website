@@ -46,7 +46,7 @@ const ProjectsGrowthCards = () => {
                 <div className="p-5 min-h-56 max-h-96">
                   <h3 className="text-2xl text-yellow-primary text-center m-0 p-0">Online BYTE Tables</h3>
                   <p className="p-5 m-0">
-                  THE virtual hangout spot and hopefully your hangout spot SOON! We have games, music bots, intiatives from game nights, e-numans and deep kwentuhans. But we need you to make that come into reality :D so come join B)
+                  THE virtual hangout spot and hopefully your hangout spot SOON! We have intiatives from game nights, e-numans, kwentuhans and of course, music bots! But we need you to make that come into reality :D so come join B)
                   </p>
                 </div>
               </div>
