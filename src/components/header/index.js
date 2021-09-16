@@ -1,69 +1,97 @@
-// START: IMPORTS
+// START: IMPORTS = = = = = = = = = = = = = = = = = = = =
+// Dependencies
 import * as React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
+//Components
+import Button from "../button"
+
+// Assets
 import byteLogo from "../../assets/img/byte-icon-without-text.png"
-import './header.css'
-import '../../styles/global.css'
-// END: IMPORTS
 
-// START: TEMPLATE
+//Styles
+import "./header.css"
+import "../../styles/global.css"
+// END: IMPORTS = = = = = = = = = = = = = = = = = = = =
+
+// START: TEMPLATE = = = = = = = = = = = = = = = = = = = =
 const Header = ({ siteTitle }) => (
+  <header className="fixed top-0 z-50 w-full px-10 py-0 shadow-lg  bg-gray-lightest md:flex md:items-center md:justify-between">
+    {/* START: BRAND NAV BUTTON */}
+    <div className="flex-none">
+      <Link to="/">
+        <div className="flex items-center py-6 ">
+          <img src={byteLogo} className="mr-5 header-bytelogo" />
+          <h1 className="bold">{siteTitle.toLowerCase()}</h1>
+        </div>
+      </Link>
+    </div>
+    {/* END: BRAND NAV BUTTON */}
 
-  <header class="md:flex md:items-center md:justify-between px-4 shadow-lg">
+    {/* START: NAV BUTTONS */}
+    <nav>
+      <ul className="list-reset md:flex md:items-center">
+        {/* START: NAV BUTTON */}
+        {navbarBtns.map((navbarBtn, key) => {
+          return (
 
-    {/* Logo text or image  */}
-    < div class="flex items-center justify-between py-4 bg-red-400" >
-      <h1 class="flex">
-        {/* <img src={byteLogo} class="header-bytelogo" /> */}
-        <a class="no-underline text-grey-darkest hover:text-black" href="#">
-          byte
-        </a>
-      </h1>
+            <li className="block px-8 py-3 bg-red-300 border-b-8 border-transparent hover:border-gray-300 md:ml-4">
 
+              <Link className="navAnimation" to={navbarBtn.route}>
+                <h2 className="medium">
+                  <a style={{ color: navbarBtn.color }}>{navbarBtn.name}</a>
+                </h2>
+              </Link>
+            </li>
 
-    </ div >
-    {/* END Logo text or image  */}
+          )
+        })}
 
-
-    {/* Global navigation  */}
-    {/* <nav>
-      <ul class="list-reset md:flex md:items-center">
-        <li class="md:ml-4">
-          <a class="block no-underline hover:underline py-2 text-grey-darkest hover:text-black md:border-none md:p-0" href="#">
-            Products
-          </a>
-        </li>
-        <li class="md:ml-4">
-          <a class="border-t block no-underline hover:underline py-2 text-grey-darkest hover:text-black md:border-none md:p-0" href="#">
-            About
-          </a>
-        </li>
-        <li class="md:ml-4">
-          <a class="border-t block no-underline hover:underline py-2 text-grey-darkest hover:text-black md:border-none md:p-0" href="#">
-            Contact
-          </a>
-        </li>
+<Button className="ml-10" link="#" label="Join Us" type="primary" />
+        {/* END: NAV BUTTON */}
       </ul>
-    </nav> */}
-    {/* END Global navigation  */}
+    </nav>
 
+    {/* END: NAV BUTTONS */}
   </header>
-
 )
-// END: TEMPLATE
+// END: TEMPLATE = = = = = = = = = = = = = = = = = = = =
 
-// START: TYPES
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-// END: TYPES
+// START: SCRIPT = = = = = = = = = = = = = = = = = = = =
+const navbarBtns = [
+  {
+    id: 0,
+    name: "About",
+    route: "/about",
+    color: "#FFB700"
+  },
+  {
+    id: 1,
+    name: "Projects",
+    route: "/projects",
+    color: "#7A2FF2"
+  },
+  {
+    id: 2,
+    name: "Community",
+    route: "/community",
+    color: "#57CEFE"
+  },
+  {
+    id: 3,
+    name: "Partners",
+    route: "/partners",
+    color: "#33D69F"
+  }
+]
 
-// START: DEFAULT VALUES
-Header.defaultProps = {
-  siteTitle: ``,
-}
-// END: DEFAULT VALUES
+// Start: Types 
+Header.propTypes = { siteTitle: PropTypes.string }
+// End: Types 
 
+// Start: Default Values
+Header.defaultProps = { siteTitle: ``, }
+// End: Default Values 
+// END: SCRIPT = = = = = = = = = = = = = = = = = = = =
 export default Header

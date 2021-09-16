@@ -109,7 +109,9 @@ const IndexPage = () => {
   // const [startups, useStartups] = useState[startupsInfo]
 
   return (
-    <Layout>
+    <Layout >
+
+    
       {/* Hero Section */}
       <LandingHero />
 
