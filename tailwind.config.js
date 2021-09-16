@@ -17,7 +17,10 @@ module.exports = {
         '100%': '100% 100%',
         '125%': '125% 125%',
         '150%': '150% 125%'
-      }
+      },
+      fontFamily: {
+        sans: ['Objectivity', 'sans-serif'],
+      },
     },
     colors: {
       transparent: 'transparent',
@@ -52,6 +55,12 @@ module.exports = {
         light: '#C7C7C7',
         lighter: '#E0E0E0',
         lightest: '#FAFAFA',
+      },
+      black: {
+        primary: "#000000",
+      },
+      white: {
+        primary: '#FFFFFF',
       }
     }
   },

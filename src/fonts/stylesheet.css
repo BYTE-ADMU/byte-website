@@ -1,0 +1,143 @@
+@font-face {
+    font-family: 'Objectivity';
+    src: url('Objectivity-Thin.woff2') format('woff2'),
+        url('Objectivity-Thin.otf') format('otf');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Objectivity';
+    src: url('Objectivity-Light.woff2') format('woff2'),
+        url('Objectivity-Light.otf') format('otf');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Objectivity';
+    src: url('Objectivity-Regular.woff2') format('woff2'),
+        url('Objectivity-Regular.otf') format('otf');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Objectivity';
+    src: url('Objectivity-Medium.woff2') format('woff2'),
+        url('Objectivity-Medium.otf') format('otf');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Objectivity';
+    src: url('Objectivity-Bold.woff2') format('woff2'),
+        url('Objectivity-Bold.otf') format('otf');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Objectivity';
+    src: url('Objectivity-ExtraBold.woff2') format('woff2'),
+        url('Objectivity-ExtraBold.otf') format('otf');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Objectivity';
+    src: url('Objectivity-Black.woff2') format('woff2'),
+        url('Objectivity-Black.otf') format('otf');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Objectivity';
+    src: url('Objectivity-Super.woff2') format('woff2'),
+        url('Objectivity-Super.otf') format('otf');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Objectivity';
+    src: url('Objectivity-ThinSlanted.woff2') format('woff2'),
+        url('Objectivity-ThinSlanted.otf') format('otf');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Objectivity';
+    src: url('Objectivity-LightSlanted.woff2') format('woff2'),
+        url('Objectivity-LightSlanted.otf') format('otf');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Objectivity';
+    src: url('Objectivity-RegularSlanted.woff2') format('woff2'),
+        url('Objectivity-RegularSlanted.otf') format('otf');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Objectivity';
+    src: url('Objectivity-MediumSlanted.woff2') format('woff2'),
+        url('Objectivity-MediumSlanted.otf') format('otf');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Objectivity';
+    src: url('Objectivity-BoldSlanted.woff2') format('woff2'),
+        url('Objectivity-BoldSlanted.otf') format('otf');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Objectivity';
+    src: url('Objectivity-ExtraBoldSlanted.woff2') format('woff2'),
+        url('Objectivity-ExtraBoldSlanted.otf') format('otf');
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Objectivity';
+    src: url('Objectivity-BlackSlanted.woff2') format('woff2'),
+        url('Objectivity-BlackSlanted.otf') format('otf');
+    font-weight: 800;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Objectivity';
+    src: url('Objectivity-SuperSlanted.woff2') format('woff2'),
+        url('Objectivity-SuperSlanted.otf') format('otf');
+    font-weight: 900;
+    font-style: italic;
+font-display: swap;
+}

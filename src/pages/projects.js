@@ -7,7 +7,6 @@ import ProjectsGrowthCards from "../components/projects_growth_cards"
 const ProjectsPage = () => {
     return (
         <Layout>
-
         <div className="h-full">
             <div class="h-full w-full">
                 <ProjectsHero />
@@ -15,8 +14,7 @@ const ProjectsPage = () => {
             <div className="w-full">
                 <ProjectsLayout />
             </div>
-            <div className="flex flex-col items-center justify-center w-full h-full">
-                <h2 class="text-3xl mb-8">We value member growth</h2>
+            <div className="w-full h-full flex flex-col items-center justify-center">
                 <ProjectsGrowthCards />                    
             </div>
         </div>

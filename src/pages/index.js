@@ -4,8 +4,10 @@ import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../layouts/default"
 import Seo from "../components/seo"
+import Button from "../components/button"
 
 import LandingHero from "../components/landing_hero"
+import LandingAbout from "../components/landing_about"
 import LandingProjects from "../components/landing_projects"
 import LandingCommunity from "../components/landing_community"
 import CTA from "../components/cta"
@@ -14,6 +16,7 @@ import projects from "../assets/img/landing/projects-section.png"
 import community from "../assets/img/landing/community.png"
 
 import "./index.css";
+import "./globals.scss";
 
 const galleryInfo = [
   "https://ik.imagekit.io/ripzjge77zz/BYTE/BYTE_Website/Landing/community_1_IAqEeryHx.png?updatedAt=1631622808779",
@@ -116,6 +119,7 @@ const IndexPage = () => {
       <LandingHero />
 
       {/* About Section */}
+      <LandingAbout />
 
       {/* Projects Section */}
       <div

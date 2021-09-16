@@ -2,7 +2,7 @@ import React from "react"
 import { Swiper, SwiperSlide } from "swiper/react"
 import SwiperCore, { Pagination, Autoplay } from "swiper"
 
-import '../styles/global.css'
+import "../styles/global.css"
 
 import "swiper/css"
 import "swiper/css/pagination"
@@ -55,18 +55,22 @@ const Testimonials = props => {
       className="mySwiper"
     >
       <SwiperSlide key={props.id}>
-        <div className="flex flex-col items-center justify-around w-full h-full md:flex-row mb-50 md:mb-20">
-          <div className="flex items-center justify-center w-full mr-0 md:w-1/2 md:mr-10">
-            <div className="bg-gray-400 h-96 w-80"></div>
+        <div className="h-full w-full flex md:flex-row flex-col items-center justify-around mb-50 md:mb-20">
+          <div className="w-full md:w-1/2 flex items-center justify-center mr-0 md:mr-10">
+            <div className="bg-gray-light h-96 w-80 hidden md:block"></div>
           </div>
           <div className="flex flex-col items-start justify-start w-full mt-10 md:w-1/2 md:m-0">
             <div>
-              <img src={message} alt="Message" />
+              <img src={message} alt="Message" className="hidden md:block" />
             </div>
-            <div>
-              <h2>Kirsten Sy</h2>
-              <h3>BYTE 4 President</h3>
+            <div className="flex items-center">
+              <div className="h-32 w-32 bg-gray-dark mr-10 mb-10 rounded-full md:hidden block"></div>
+              <div>
+                <h2>Kirsten Sy</h2>
+                <h3>BYTE 4 President</h3>
+              </div>
             </div>
+
             <p>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet,
               modi fuga ex libero cupiditate et consectetur eligendi ut sapiente
@@ -78,17 +82,20 @@ const Testimonials = props => {
         </div>
       </SwiperSlide>
       <SwiperSlide key={props.id}>
-        <div className="flex flex-col items-center justify-around w-full h-full md:flex-row mb-50 md:mb-20">
-          <div className="flex items-center justify-center w-full mr-0 md:w-1/2 md:mr-10">
-            <div className="bg-gray-400 h-96 w-80"></div>
+        <div className="h-full w-full flex md:flex-row flex-col items-center justify-around mb-50 md:mb-20">
+          <div className="w-full md:w-1/2 flex items-center justify-center mr-0 md:mr-10">
+            <div className="bg-gray-light h-96 w-80 hidden md:block"></div>
           </div>
-          <div className="flex flex-col items-start justify-start w-full mt-10 md:w-1/2 md:m-0">
+          <div className="w-full md:w-1/2 flex items-start  flex-col mt-10 md:m-0">
             <div>
-              <img src={message} alt="Message" />
+              <img src={message} alt="Message" className="hidden md:block" />
             </div>
-            <div>
-              <h2>Kirsten Sy</h2>
-              <h3>BYTE 4 President</h3>
+            <div className="flex items-center ">
+              <div className="h-32 w-32 bg-gray-dark mr-10 mb-10 rounded-full md:hidden block"></div>
+              <div>
+                <h2>Kirsten Sy</h2>
+                <h3>BYTE 4 President</h3>
+              </div>
             </div>
             <p>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet,
