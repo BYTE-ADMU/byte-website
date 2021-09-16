@@ -10,8 +10,8 @@ import "swiper/css/pagination"
 // import message from "../../public/icons/message.png"
 // import play from "../../public/icons/play.png"
 
-import message from "../assets/message.png"
-import play from "../assets/play.png"
+import message from "../assets/img/message.png"
+import play from "../assets/img/play.png"
 
 SwiperCore.use([Pagination])
 SwiperCore.use([Autoplay])
@@ -59,7 +59,7 @@ const Testimonials = props => {
           <div className="w-full md:w-1/2 flex items-center justify-center mr-0 md:mr-10">
             <div className="bg-gray-light h-96 w-80 hidden md:block"></div>
           </div>
-          <div className="w-full md:w-1/2 flex items-start justify-start flex-col mt-10 md:m-0">
+          <div className="flex flex-col items-start justify-start w-full mt-10 md:w-1/2 md:m-0">
             <div>
               <img src={message} alt="Message" className="hidden md:block" />
             </div>

@@ -5,10 +5,8 @@ import ProjectsHeroImg from '../assets/projects/projects-hero-img.png'
 import ProjectsHeroBgRight from '../assets/projects/projects-hero-bg-right.png'
 import ProjectsHeroBgLeft from '../assets/projects/projects-hero-bg-left.png'
 
-
 const ProjectsHero = () => {
     return (
-      
         <div className="w-full h-full bg-cover lg: h-screen flex flex-col justify-center content-center items-center bg-no-repeat bg-center bg-contain">
             <div className="absolute w-full flex justify-between items-center z-0 px-10 mb-40 sm:mt-10 mb-0 md:mb-0 lg:mt-24">
               <img className="relative w-2/5 h-auto left-0" src={ProjectsHeroBgLeft} />
@@ -29,7 +27,6 @@ const ProjectsHero = () => {
             </div>
           </div>
         </div>
-        
     )
 }
 

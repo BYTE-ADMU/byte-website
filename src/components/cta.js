@@ -1,11 +1,11 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
 
-import bg from "../assets/cta/background.png"
-import sleep from "../assets/cta/BitBotSleep.png"
-import awake from "../assets/cta/BitBotAwake.png"
-import smile from "../assets/cta/BitBotSmile.png"
-import snooze from "../assets/cta/Snooze.png"
+import bg from "../assets/img/cta/background.png"
+import sleep from "../assets/img/cta/BitBotSleep.png"
+import awake from "../assets/img/cta/BitBotAwake.png"
+import smile from "../assets/img/cta/BitBotSmile.png"
+import snooze from "../assets/img/cta/Snooze.png"
 
 import Button from "./button"
 
@@ -17,11 +17,7 @@ const Cta = ({}) => {
     // Sleep vs Smile for Clicks
     const [smiling, isSmiling] = useState(false)
     return (
-        <div className="
-            w-full h-max px-16 py-48 
-            flex flex-col justify-center content-center items-center
-            bg-white bg-contain bg-no-repeat bg-center
-        " style={{
+        <div className="flex flex-col items-center content-center justify-center w-full px-16 py-48 bg-white bg-center bg-no-repeat bg-contain  h-max" style={{
             backgroundImage: `url(${bg})`
         }}>
             <div className="relative">
@@ -30,7 +26,7 @@ const Cta = ({}) => {
                     ?
                         /* Insert speech balloon with text, Join BYTE! It's fun! */
                         <div className="absolute md:-top-28 md:-right-40 -top-32 right-1/4">
-                            <p className="speech text-md font-sans">Come join BYTE!</p>
+                            <p className="font-sans speech text-md">Come join BYTE!</p>
                         </div>
                     :
                     sleeping == sleep
@@ -42,7 +38,7 @@ const Cta = ({}) => {
                     :
                         /* Insert speech balloon with typing animation */
                         <div className="absolute md:-top-28 md:-right-40 -top-32 right-1/4">
-                            <p className="speech text-md font-sans">...</p>
+                            <p className="font-sans speech text-md">...</p>
                         </div>
                 }
                 <img src={smiling ? smile : sleeping} 
@@ -52,7 +48,7 @@ const Cta = ({}) => {
                     className="bitbot" 
                 />
             </div>
-            <h1 className="pt-12 pb-4 font-sans font-bold text-2xl text-black text-center mb-2">Lorem ipsum dolor sit amet, consectetur</h1>
+            <h1 className="pt-12 pb-4 mb-2 font-sans text-2xl font-bold text-center text-black">Lorem ipsum dolor sit amet, consectetur</h1>
             <Button 
                 link="#"
                 label="Register Now"

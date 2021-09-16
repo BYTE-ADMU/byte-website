@@ -1,5 +1,5 @@
 import React from "react"
-
+import Layout from '../layouts/default'
 import HomeGrownStartups from "../components/homegrown_startups"
 import Testimonials from "../components/testimonials"
 import "./community.css"
@@ -46,6 +46,7 @@ const CommunityPage = () => {
         <HomeGrownStartups />
       </div>
     </div>
+    </Layout>
   )
 }
 export default CommunityPage

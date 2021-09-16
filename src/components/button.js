@@ -2,7 +2,7 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
-const primary = `w-max p-2 lg:px-4 lg:py-2 rounded-lg bg-red-primary 
+const primary = `w-max p-2 lg:px-6 lg:py-3 rounded-lg bg-red-primary 
                 font-sans font-bold text-base text-gray-lightest
                 transition duration-300 ease-in-out 
                 hover:bg-red-secondary hover:drop-shadow-hover
@@ -53,7 +53,7 @@ const Button = ({
                         : 
                             ( color ? `${tertiary} ${className} ${getStyle(type, color)}` : `${tertiary} ${className}`)
                     }>
-                        {label}
+                        <h2 class="bold">{label}</h2>
                     </button>
                 </Link>
             :
@@ -68,7 +68,7 @@ const Button = ({
                     : 
                         ( color ? `${tertiary} ${className} ${getStyle(type, color)}` : `${tertiary} ${className}`)
                 } onClick={onClick}>
-                    {label}
+<h2 class="bold">{label}</h2>
                 </button>
         }
     </>

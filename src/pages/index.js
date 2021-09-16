@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
-import Layout from "../components/layout"
+import Layout from "../layouts/default"
 import Seo from "../components/seo"
 import Button from "../components/button"
 
@@ -12,9 +12,10 @@ import LandingProjects from "../components/landing_projects"
 import LandingCommunity from "../components/landing_community"
 import CTA from "../components/cta"
 
-import projects from "../assets/landing/projects-section.png"
-import community from "../assets/landing/community.png"
+import projects from "../assets/img/landing/projects-section.png"
+import community from "../assets/img/landing/community.png"
 
+import "./index.css";
 import "./globals.scss";
 
 const galleryInfo = [
@@ -111,7 +112,9 @@ const IndexPage = () => {
   // const [startups, useStartups] = useState[startupsInfo]
 
   return (
-    <Layout>
+    <Layout >
+
+    
       {/* Hero Section */}
       <LandingHero />
 
@@ -120,18 +123,15 @@ const IndexPage = () => {
 
       {/* Projects Section */}
       <div
-        className="
-              w-full h-max 2xl:p-32 lg:p-16 md:p-8 p-4
-              flex flex-col justify-center content-center items-center
-              bg-white bg-contain bg-no-repeat bg-center" 
+        className="flex flex-col items-center content-center justify-center w-full p-4 bg-white bg-center bg-no-repeat bg-contain h-max 2xl:p-32 lg:p-16 md:p-8" 
         style={{
           backgroundImage: `url(${projects})`
         }}
       >
-        <h1 className="font-sans font-bold text-2xl text-gray-darkest text-center">
+        <h1 className="font-sans text-2xl font-bold text-center text-gray-darkest">
           Lorem ipsum dolor sit amet, consectetur{" "}
         </h1>
-        <p className="font-sans text-base text-gray-darkest text-center">
+        <p className="font-sans text-base text-center text-gray-darkest">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
           tristique porttitor amet ac molestie lectus.
         </p>
@@ -140,18 +140,15 @@ const IndexPage = () => {
 
       {/* Community Section */}
       <div
-        className="
-              w-full h-max 2xl:p-48 lg:p-24 md:p-8 p-4
-              flex flex-col justify-center content-center items-center
-              bg-white bg-contain bg-no-repeat bg-center" 
+        className="flex flex-col items-center content-center justify-center w-full p-4 bg-white bg-center bg-no-repeat bg-contain h-max 2xl:p-48 lg:p-24 md:p-8" 
         style={{
           backgroundImage: `url(${community})`
         }}
       >
-        <h1 className="font-sans font-bold text-2xl text-gray-darkest text-center">
+        <h1 className="font-sans text-2xl font-bold text-center text-gray-darkest">
           Lorem ipsum dolor sit amet, consectetur{" "}
         </h1>
-        <p className="font-sans text-base text-gray-darkest text-center">
+        <p className="font-sans text-base text-center text-gray-darkest">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
           tristique porttitor amet ac molestie lectus.
         </p>
