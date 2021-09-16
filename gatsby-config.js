@@ -32,17 +32,17 @@ module.exports = {
     `gatsby-plugin-gatsby-cloud`,
     
     // Gatsby Strapi Setup
-    {
-      resolve: "gatsby-source-strapi",
-      options: {
-        apiURL: "https://byte-website.herokuapp.com",
-        queryLimit: 1000, // default is 100
-        collectionTypes: [
-          "category",
-          "projects",
-        ],
-      },
-    },
+    // {
+    //   resolve: "gatsby-source-strapi",
+    //   options: {
+    //     apiURL: "https://byte-website.herokuapp.com",
+    //     queryLimit: 1000, // default is 100
+    //     collectionTypes: [
+    //       "category",
+    //       "projects",
+    //     ],
+    //   },
+    // },
 
     // Gatsby Sass
     `gatsby-plugin-sass`,
