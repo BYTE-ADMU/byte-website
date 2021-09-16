@@ -6,7 +6,6 @@ import "./community.css"
 
 // import community_banner from "../../public/icons/community_banner.png"
 
-import community_banner from "../assets/community_banner.png"
 import CommunityBanner from "../components/community_banner"
 import AnimatedBanner from "../components/animated_banner"
 
@@ -36,16 +35,17 @@ const testimonials_data = [
 
 const CommunityPage = () => {
   return (
-    <div>
-      {/* <CommunityBanner /> */}
-      <AnimatedBanner />
-      <div className="px-10 py-20 h-full w-full">
-        <Testimonials />
+    <Layout>
+      <div>
+        {/* <CommunityBanner /> */}
+        <AnimatedBanner />
+        <div className="px-10 py-20 h-full w-full">
+          <Testimonials />
+        </div>
+        <div className="h-full">
+          <HomeGrownStartups />
+        </div>
       </div>
-      <div className="h-full">
-        <HomeGrownStartups />
-      </div>
-    </div>
     </Layout>
   )
 }

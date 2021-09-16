@@ -1,7 +1,7 @@
 import React from 'react'
 import '../styles/global.css'
 
-import ProjectsHeroImg from '../assets/projects/projects-hero-img.png'
+import ProjectsHeroImg from '../assets/projects/image1.png'
 import ProjectsHeroBgRight from '../assets/projects/projects-hero-bg-right.png'
 import ProjectsHeroBgLeft from '../assets/projects/projects-hero-bg-left.png'
 
