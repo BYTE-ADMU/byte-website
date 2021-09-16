@@ -2,11 +2,12 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
-import facebook from "../assets/img/social_icons/facebook.svg"
-import linkedin from "../assets/img/social_icons/linkedin.svg"
-import twitter from "../assets/img/social_icons/twitter.svg"
-import ig from "../assets/img/social_icons/ig.svg"
+import facebook from "../assets/img/social_icons/facebook.png"
+import linkedin from "../assets/img/social_icons/linkedin.png"
+import twitter from "../assets/img/social_icons/twitter.png"
+import ig from "../assets/img/social_icons/ig.png"
 import bytelogo from "../assets/img/byte-icon-without-text.png"
+
 
 const about_links = [
   {
@@ -136,9 +137,9 @@ const Footer = ({ siteTitle }) => (
         </div>
 
         <div className="flex flex-col items-center justify-center ml-4 lg:items-start lg:justify-start">
-          <h3 className="mt-2 mb-4 text-sm text-white md:text-md">
+          <p className="mt-2 mb-4 text-sm text-white md:text-md">
             byteadmu@gmail.com
-          </h3>
+          </p>
           <div className="flex items-center justify-center mt-10">
             <div className="w-32 h-16 mr-4">
               <img 
@@ -147,7 +148,7 @@ const Footer = ({ siteTitle }) => (
               ></img>
             </div>
           </div>
-          <p className="mt-4 text-xs text-center md:text-left">
+          <p className="mt-24 text-xs text-center md:text-left">
             © 2021 Building Young Tech Entrepreneurs. All Rights Reserved.
           </p>
         </div>
