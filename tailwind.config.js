@@ -55,6 +55,12 @@ module.exports = {
         light: '#C7C7C7',
         lighter: '#E0E0E0',
         lightest: '#FAFAFA',
+      },
+      black: {
+        primary: "#000000",
+      },
+      white: {
+        primary: '#FFFFFF',
       }
     }
   },
