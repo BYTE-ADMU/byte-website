@@ -36,8 +36,8 @@
 .navAnimation a::after {
   position: absolute;
   content: "";
-  height: 5px;
-  top: 100%;
+  height: 2px;
+  top: 150%;
   background: currentColor;
   z-index: -1;
   left: 0;
