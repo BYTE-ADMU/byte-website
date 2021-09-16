@@ -1,0 +1,12 @@
+.bg-styles {
+  background-image: url("../assets/community/homegrown_bg.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.customModal {
+  background-image: url("../assets/community/modal.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}

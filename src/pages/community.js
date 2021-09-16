@@ -2,10 +2,13 @@ import React from "react"
 
 import HomeGrownStartups from "../components/homegrown_startups"
 import Testimonials from "../components/testimonials"
+import "./community.css"
 
 // import community_banner from "../../public/icons/community_banner.png"
 
-import community_banner from '../assets/community_banner.png'
+import community_banner from "../assets/community_banner.png"
+import CommunityBanner from "../components/community_banner"
+import AnimatedBanner from "../components/animated_banner"
 
 const testimonials_data = [
   {
@@ -33,12 +36,9 @@ const testimonials_data = [
 
 const CommunityPage = () => {
   return (
-    <div className="h-full">
-      <img
-        src={community_banner}
-        alt="Community Banner"
-        className="w-full h-full"
-      />
+    <div>
+      {/* <CommunityBanner /> */}
+      <AnimatedBanner />
       <div className="px-10 py-20 h-full w-full">
         <Testimonials />
       </div>
