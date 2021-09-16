@@ -1,12 +1,16 @@
-import React, { useState } from "react"
-import { StaticQuery, graphql } from 'gatsby';
+import React, { useEffect, useState } from "react"
+// import { StaticQuery, graphql } from 'gatsby';
 import { Link } from "gatsby"
+import axios from "axios";
 import Button from './button'
 
-import projects from "../assets/img/landing/projects.png"
+import project_bg from "../assets/img/landing/projects.png"
 import squigglyOne from "../assets/img/landing/squiggly_1.png"
 import squigglyTwo from "../assets/img/landing/squiggly_2.png"
 import cloud from "../assets/img/landing/cloud.png"
+
+import Loader from "react-loader-spinner";
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
 const projectsInfo = {
     flagship: [
@@ -79,73 +83,114 @@ const projectsInfo = {
 //     }
 // `
 
-const LandingProjects = ({ }) => {
+const LandingProjects = () => {
     // Get first project as default
-    const [selected, isSelected] = useState(projectsInfo.flagship[0])
-    var color = selected.color
+    const [projects, setProjects] = useState([]);
+    const [selected, isSelected] = useState(projects && projects[0]);
+    
+    useEffect(() => {
+        axios
+            .get("https://byte-website.herokuapp.com/projects")
+            .then((resp) => {
+                return resp.data
+                    .filter(project => project.category.name == "flagship")
+                    .sort((a, b) => a.id - b.id)
+            })
+            .then((filtered) => {
+                console.log(filtered);
+                setProjects(filtered);
+                isSelected(filtered[0]);
+            });
+    }, [])
     
     return (
         // <StaticQuery
         //     query={query}
         //     render={data => (
-                <div className="
-                    w-full h-max
-                    flex flex-col justify-center content-center items-center
-                    bg-contain bg-no-repeat bg-top
-                ">
-                    <div className="
-                        w-full h-max pb-16
-                        flex sm:flex-row flex-col 
-                        justify-center content-center items-center
-                    ">
-                        {
-                            projectsInfo.flagship.map((project) => (
-                                <Button type={selected.id == project.id ? "primary" : "secondary"} label={project.name} color={project.color} onClick={() => isSelected(project)} className="lg:mx-2 sm:mx-1 sm:my-0 my-1" />
-                            ))
-                        }
-                    </div>
-                    <div className={`
-                        2xl:w-4/5 h-max 2xl:p-32 relative
-                        lg:px-24 md:py-32 py-16 px-4 w-full
-                        flex justify-between content-center items-center
-                        xl:flex-row flex-col
-                        rounded-lg bg-white bg-no-repeat xl:bg-125% md:bg-cover xl:bg-center sm:bg-right-top sm:bg-cover bg-contain bg-bottom
-                        border-4 border-solid border-${color}-primary
-                    `} style={{
-                        backgroundImage: `url(${projects})`
-                    }}>
-                        <img className="absolute top-20 -left-32 sm:block hidden" src={squigglyOne} />
-                        <div className="
-                            xl:w-1/2 w-full h-max
-                            flex xl:flex-col md:flex-row-reverse flex-col-reverse justify-center content-center xl:items-start items-center
-                        ">
+        <div className="
+            w-full h-max
+            flex flex-col justify-center content-center items-center
+            bg-contain bg-no-repeat bg-top
+        ">
+            <div className="
+                w-full h-max pb-16
+                flex sm:flex-row flex-col 
+                justify-center content-center items-center
+            ">
+                {
+                    projects && projects
+                    ?
+                        projects.map((project) => (
+                            <Button type={selected && selected.id == project.id ? "primary" : "secondary"} label={project.name} color={project.color} onClick={() => isSelected(project)} className="lg:mx-2 sm:mx-1 sm:my-0 my-1" />
+                        ))
+                    :
+                        <Loader
+                            type="MutatingDots"
+                            color="#F84A5E"
+                            secondaryColor="#57CEFE"
+                            height={80}
+                            width={80}
+                            timeout={3000} // 3 secs
+                        />
+                }
+            </div>
+            <div className={`
+                2xl:w-4/5 h-max 2xl:p-32 relative
+                lg:px-24 md:py-32 py-16 px-4 w-full
+                flex ${selected && selected ? "justify-between" : "justify-center"} content-center items-center
+                xl:flex-row flex-col
+                rounded-lg bg-white bg-no-repeat xl:bg-125% md:bg-cover xl:bg-center sm:bg-right-top sm:bg-cover bg-contain bg-bottom
+                border-4 border-solid border-${selected && selected ? selected.color : "red"}-primary
+            `} style={{
+                backgroundImage: `url(${project_bg})`
+            }}>
+                {
+                    selected && selected
+                    ?
+                        <>
+                            <img className="absolute top-20 -left-32 sm:block hidden" src={squigglyOne} />
                             <div className="
-                                w-full h-max
-                                flex flex-col justify-center content-center items-center md:items-start
-                                xl:pb-4 md:px-8
+                                xl:w-1/2 w-full h-max
+                                flex xl:flex-col md:flex-row-reverse flex-col-reverse justify-center content-center xl:items-start items-center
                             ">
-                                <h1 className={`font-sans font-bold text-xl text-${color}-primary mb-2`}>{selected.name}</h1>
-                                <p className="font-sans text-base text-white md:text-left text-center">{selected.description}</p>
+                                <div className="
+                                    w-full h-max
+                                    flex flex-col justify-center content-center items-center md:items-start
+                                    xl:pb-4 md:px-8
+                                ">
+                                    <h1 className={`font-sans font-bold text-xl text-${selected && selected ? selected.color : "red"}-primary mb-2`}>{selected && selected ? selected.name : ""}</h1>
+                                    <p className="xl:min-h-32 font-sans text-base text-white md:text-left text-center">{selected && selected ? selected.description : ""}</p>
+                                </div>
+                                <img src={selected && selected ? selected.logo : ""} className="xl:w-60 xl:h-60 md:w-40 md:h-40 w-20 h-20 rounded-full" />
                             </div>
-                            <img src={selected.logo} className="xl:w-60 xl:h-60 md:w-40 md:h-40 w-20 h-20 rounded-full" />
-                        </div>
-                        <div className="
-                            xl:w-1/2 md:w-full h-max relative
-                            flex flex-col md:flex-row xl:justify-center md:justify-between justify-center content-center items-center
-                        ">
-                            <img className="
-                                w-240 h-160 relative
-                                xl:w-320 xl:h-240 xl:absolute xl:-top-48 2xl:left-12 xl:left-4
-                                transform duration-300 ease-in-out transform hover:scale-105" src={selected.image_1} />
-                            <img className="
-                                w-320 h-240 xl:absolute xl:-bottom-48 2xl:right-0 xl:-right-4 md:relative xl:z-10
-                                transform duration-300 ease-in-out transform hover:scale-105" src={selected.image_2} />
-                            <img className="w-200 absolute -top-64 left-72 z-20 xl:block hidden" src={cloud} />
-                        </div>
-                        <img className="absolute top-48 -right-40 sm:block hidden" src={squigglyTwo} />
-                    </div>
-                    <Button type="primary" label="Learn More" link="" className="my-16" />
-                </div>
+                            <div className="
+                                xl:w-1/2 md:w-full h-max relative
+                                flex flex-col md:flex-row xl:justify-center md:justify-between justify-center content-center items-center
+                            ">
+                                <img className="
+                                    w-240 h-160 relative
+                                    xl:w-320 xl:h-240 xl:absolute xl:-top-48 2xl:left-12 xl:left-4
+                                    transform duration-300 ease-in-out transform hover:scale-105" src={selected && selected ? selected.image_1 : ""} />
+                                <img className="
+                                    w-320 h-240 xl:absolute xl:-bottom-48 2xl:right-0 xl:-right-4 md:relative xl:z-10
+                                    transform duration-300 ease-in-out transform hover:scale-105" src={selected && selected ? selected.image_2 : ""} />
+                                <img className="w-200 absolute -top-64 left-72 z-20 xl:block hidden" src={cloud} />
+                            </div>
+                            <img className="absolute top-48 -right-40 sm:block hidden" src={squigglyTwo} />
+                        </>
+                    :
+                        <Loader
+                            type="MutatingDots"
+                            color="#F84A5E"
+                            secondaryColor="#57CEFE"
+                            height={80}
+                            width={80}
+                            timeout={3000} // 3 secs
+                        />
+                }
+            </div>
+            <Button type="primary" label="Learn More" link="" className="my-16" />
+        </div>
         //     )}
         // />
     )
