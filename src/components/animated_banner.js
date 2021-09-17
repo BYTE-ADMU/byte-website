@@ -24,12 +24,12 @@ const animated_banner = () => {
           </div>
         </div>
 
-        <div className="flex flex-col items-center justify-center text-center">
+        <div className="flex flex-col items-center justify-center text-center mb-40">
           <div>
             <img src={upperCaption} alt="placeholder" />
           </div>
           <div className="w-2/3">
-            <h1>We foster a community of growth and innovation</h1>
+            <h1 className="bold">We foster a community of growth and innovation</h1>
           </div>
           <div>
             <img src={lowerCaption} alt="placeholder" />
