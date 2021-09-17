@@ -124,7 +124,7 @@ const LandingAbout = ({}) => {
                 <MobileValueProp image={valuePropThree} text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique porttitor amet ac molestie lectus. 3" className="pt-4 pb-16 xl:pb-24 2xl:pb-32" />
             </div>
 
-            <Button link="#" type="primary" label="Learn More" className="mt-4" />
+            <Button link="/about" type="primary" label="Learn More" className="mt-4" />
         </div>
     )
 }

@@ -151,7 +151,7 @@ const LandingProjects = ({ data }) => {
                         />
                 }
             </div>
-            <Button type="primary" label="Learn More" link="" className="my-16" />
+            <Button type="primary" label="Learn More" link="/projects" className="my-16" />
         </div>
     )
 }
