@@ -27,7 +27,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <main className="min-h-screen mt-28">{children}</main>
+        <main className="min-h-screen">{children}</main>
       <Footer />
     </>
   )

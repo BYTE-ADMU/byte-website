@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
+import { StaticQuery, graphql } from 'gatsby';
 
 import Layout from "../layouts/default"
 import Seo from "../components/seo"
@@ -17,6 +18,12 @@ import community from "../assets/img/landing/community.png"
 
 import "./index.css";
 import "./globals.scss";
+
+// const query = graphql`
+//   query {
+
+//   }
+// `;
 
 const galleryInfo = [
   "https://ik.imagekit.io/ripzjge77zz/BYTE/BYTE_Website/Landing/community_1_IAqEeryHx.png?updatedAt=1631622808779",
@@ -117,9 +124,11 @@ const IndexPage = () => {
     
       {/* Hero Section */}
       <LandingHero />
+      {/* End of Hero Section */}
 
       {/* About Section */}
       <LandingAbout />
+      {/* End of About Section */}
 
       {/* Projects Section */}
       <div
@@ -129,11 +138,10 @@ const IndexPage = () => {
         }}
       >
         <h1 className="font-sans text-2xl font-bold text-center text-gray-darkest">
-          Lorem ipsum dolor sit amet, consectetur{" "}
+          Build Hope, Make Change, With Tech{" "}
         </h1>
         <p className="font-sans text-base text-center text-gray-darkest pt-2 pb-8">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
-          tristique porttitor amet ac molestie lectus.
+          In BYTE, we don't just build young tech entrepreneurs, we make a change and serve as catalysts of the future.
         </p>
         <LandingProjects />
       </div>
@@ -146,7 +154,7 @@ const IndexPage = () => {
         }}
       >
         <h1 className="font-sans text-2xl font-bold text-center text-gray-darkest">
-          Lorem ipsum dolor sit amet, consectetur{" "}
+          We aim to equip the Filipino with Tech Literacy{" "}
         </h1>
         <p className="font-sans text-base text-center text-gray-darkest pt-2 pb-8">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris

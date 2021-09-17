@@ -16,46 +16,55 @@ import "../../styles/global.css"
 // END: IMPORTS = = = = = = = = = = = = = = = = = = = =
 
 // START: TEMPLATE = = = = = = = = = = = = = = = = = = = =
-const Header = ({ siteTitle }) => (
-  <header className="fixed top-0 z-50 w-full px-10 py-0 shadow-lg bg-gray-lightest md:flex md:items-center md:justify-between">
-    {/* START: BRAND NAV BUTTON */}
-    <div className="flex-none">
-      <Link to="/">
-        <div className="flex items-center py-6 ">
-          <img src={byteLogo} className="mr-5 header-bytelogo" />
-          <h1 className="bold">byte</h1>
-          {/* <h1 className="bold">{siteTitle.toLowerCase()}</h1> */}
-        </div>
-      </Link>
-    </div>
-    {/* END: BRAND NAV BUTTON */}
+const Header = ({ siteTitle }) => {
+  const [navStyle, setNavStyle] = React.useState("z-10 shadow-none")
 
-    {/* START: NAV BUTTONS */}
-    <nav>
-      <ul className="list-reset md:flex md:items-center">
-        {/* START: NAV BUTTON */}
-        {navbarBtns.map((navbarBtn, key) => {
-          return (
+  // HANDLE SCROLL FUNCTION: NAVBAR TRANSPARENT AND NO DROP SHADOW IF ON TOP OF WINDOW
+  React.useEffect(() => {
+    window.onscroll = () => 
+      window.scrollY === 0 ? setNavStyle("bg-transparent z-10 shadow-none") : setNavStyle("z-50 shadow-nav bg-gray-lightest");
+  })
 
-            <li className="block px-8 py-2 bg-red-300 content-center border-b-8 border-transparent hover:border-gray-300 md:ml-4">
-              <Link className="navAnimation" to={navbarBtn.route}>
-                <p className="medium mt-2">
-                  <a style={{ color: navbarBtn.color }}>{navbarBtn.name}</a>
-                </p>
-              </Link>
-            </li>
+  return (
+    <header className={`fixed top-0 w-full px-10 py-0 transition-all duration-300 ease-in-out md:flex md:items-center md:justify-between ${navStyle}`}>
+      {/* START: BRAND NAV BUTTON */}
+      <div className="flex-none">
+        <Link to="/">
+          <div className="flex items-center py-6 ">
+            <img src={byteLogo} className="mr-4 header-bytelogo" />
+            <h1 className="bold">{siteTitle.toLowerCase()}</h1>
+          </div>
+        </Link>
+      </div>
+      {/* END: BRAND NAV BUTTON */}
 
-          )
-        })}
+      {/* START: NAV BUTTONS */}
+      <nav>
+        <ul className="list-reset md:flex md:items-center">
+          {/* START: NAV BUTTON */}
+          {navbarBtns.map((navbarBtn, key) => {
+            return (
 
-<Button className="ml-10" link="#" label="Join Us" type="primary" />
-        {/* END: NAV BUTTON */}
-      </ul>
-    </nav>
+              <li className="block px-8 py-2 bg-red-300 content-center border-b-8 border-transparent hover:border-gray-300 md:ml-4">
+                <Link className="navAnimation" to={navbarBtn.route}>
+                  <p className="medium mt-2">
+                    <a style={{ color: navbarBtn.color }}>{navbarBtn.name}</a>
+                  </p>
+                </Link>
+              </li>
 
-    {/* END: NAV BUTTONS */}
-  </header>
-)
+            )
+          })}
+
+          <Button className="ml-8" link="#" label="Join Us" type="primary" />
+          {/* END: NAV BUTTON */}
+        </ul>
+      </nav>
+
+      {/* END: NAV BUTTONS */}
+    </header>
+  )
+}
 // END: TEMPLATE = = = = = = = = = = = = = = = = = = = =
 
 // START: SCRIPT = = = = = = = = = = = = = = = = = = = =

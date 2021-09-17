@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `BYTE Website`,
+    title: `BYTE`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@byte-admu`,
     siteUrl: `https://byteadmu.com/`,
@@ -32,17 +32,18 @@ module.exports = {
     `gatsby-plugin-gatsby-cloud`,
     
     // Gatsby Strapi Setup
-    // {
-    //   resolve: "gatsby-source-strapi",
-    //   options: {
-    //     apiURL: "https://byte-website.herokuapp.com",
-    //     queryLimit: 1000, // default is 100
-    //     collectionTypes: [
-    //       "category",
-    //       "projects",
-    //     ],
-    //   },
-    // },
+    {
+      resolve: "gatsby-source-strapi",
+      options: {
+        apiURL: "http://localhost:1337",
+        queryLimit: 1000, // default is 100
+        collectionTypes: [
+          "category",
+          "projects",
+          
+        ],
+      },
+    },
 
     // Gatsby Sass
     `gatsby-plugin-sass`,

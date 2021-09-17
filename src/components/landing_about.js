@@ -22,7 +22,7 @@ const DesktopValueProp = ({
     <div className={`2xl:w-1/4 xl:w-1/2 w-full h-auto flex flex-col justify-center items-center content-center about-children py-24`}>
         <div className="w-64 h-64 flex flex-col justify-center items-center content-center relative my-8">
             <img src={imageOne} className={`w-64 h-64 my-4 value-prop-image-1 absolute`} />
-            <img src={imageTwo} className={`w-64 h-64 my-4 value-prop-image-2 absolute`} />
+            <img src={imageTwo} className={`w-48 h-48 my-4 value-prop-image-2 absolute`} />
             <img src={imageThree} className={`w-64 h-64 my-4 value-prop-image-3 absolute`} />
         </div>
         <div className="w-full h-1/3 flex flex-col justify-center items-center content-center relative">
