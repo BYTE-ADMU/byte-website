@@ -29,7 +29,7 @@ const Layout = ({ seo, children }) => {
     <>
       <Helmet
         title={seo.siteTitle}
-        titleTemplate={` %s | BYTE ADMU`}
+        titleTemplate={`%s`}
         meta={[
           {
             name: `description`,
