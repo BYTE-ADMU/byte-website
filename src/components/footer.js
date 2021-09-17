@@ -1,6 +1,7 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
+import './footer.css'
 
 import facebook from "../assets/img/social_icons/facebook.svg"
 import linkedin from "../assets/img/social_icons/linkedin.svg"
@@ -116,7 +117,7 @@ const social_media = [
 ]
 
 const Footer = ({ siteTitle }) => (
-  <footer className="bottom-0 flex flex-col items-center justify-center h-full bg-yellow-secondary drop-shadow-footer">
+  <footer className="bottom-0 flex flex-col items-center justify-center h-full bg-gray-lightest drop-shadow-footer">
     <div className="flex flex-col-reverse items-start justify-center w-full px-4 lg:px-10 lg:py-16 lg:flex-row">
       <div className="flex flex-col items-center justify-center w-full p-6 lg:w-5/12 lg:justify-around lg:items-start">
         <div className="flex flex-col justify-center w-full lg:justify-center lg:items-center">
@@ -125,15 +126,47 @@ const Footer = ({ siteTitle }) => (
           </h3>
           <div className="flex justify-center w-full lg:justify-start lg:items-start">
             {social_media.map((value, key) => {
-              return (
-                <a
-                  key={key}
-                  href={value.link}
-                  className="flex items-center justify-center w-10 h-10 m-2 rounded-2xl"
-                >
-                  <img src={value.image} alt={value.img} className="m-1" />
-                </a>
-              )
+              if (value.id === 1) {
+                return (
+                  <a
+                    key={key}
+                    href={value.link}
+                    className="flex items-center justify-center w-10 h-10 m-2 rounded-2xl bg-blue-primary hover:bg-blue-secondary"
+                  >
+                    <img src={value.image} alt={value.img} className="m-1" />
+                  </a>
+                )
+              } else if (value.id === 2) {
+                return (
+                  <a
+                    key={key}
+                    href={value.link}
+                    className="flex items-center justify-center w-10 h-10 m-2 rounded-2xl bg-purple-primary hover:bg-purple-secondary"
+                  >
+                    <img src={value.image} alt={value.img} className="m-1" />
+                  </a>
+                )
+              } else if (value.id === 3) {
+                return (
+                  <a
+                    key={key}
+                    href={value.link}
+                    className="flex items-center justify-center w-10 h-10 m-2 rounded-2xl bg-green-primary hover:bg-green-secondary"
+                  >
+                    <img src={value.image} alt={value.img} className="m-1" />
+                  </a>
+                )
+              } else if (value.id === 4) {
+                return (
+                  <a
+                    key={key}
+                    href={value.link}
+                    className="flex items-center justify-center w-10 h-10 m-2 rounded-2xl bg-red-primary hover:bg-red-secondary"
+                  >
+                    <img src={value.image} alt={value.img} className="m-1" />
+                  </a>
+                )
+              }
             })}
           </div>
         </div>
