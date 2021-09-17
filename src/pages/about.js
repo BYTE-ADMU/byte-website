@@ -1,13 +1,16 @@
+// START: IMPORTS = = = = = = = = = = = = = = = = = = = =
+// Dependencies
 import React from 'react'
 import Layout from "../layouts/default"
+
+// Components
+import AboutHero from "../components/about/about-hero"
+// END: IMPORTS = = = = = = = = = = = = = = = = = = = =
 
 const about = () => {
     return (
         <Layout>
-
-        <div>
-            <h1>About Page</h1>
-        </div>
+            <AboutHero />
         </Layout>
     )
 }

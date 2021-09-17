@@ -1,33 +1,31 @@
 // START: IMPORTS = = = = = = = = = = = = = = = = = = = =
 // Dependencies
 import React from 'react'
-import '../styles/global.css'
+import '../../styles/global.css'
 
 // Assets
-import ProjectsHeroImg from '../assets/projects/projects-hero-image.png'
-import ProjectsHeroBgRight from '../assets/projects/projects-hero-bg-right.png'
-import ProjectsHeroBgLeft from '../assets/projects/projects-hero-bg-left.png'
+import AboutHeroImg from '../../assets/about/about-hero-image.png'
+import AboutBg from '../../assets/about/about-bg.png'
 // END: IMPORTS = = = = = = = = = = = = = = = = = = = =
 
 // START: TEMPLATE = = = = = = = = = = = = = = = = = = = =
-const ProjectsHero = () => {
+const AboutHero = () => {
     return (
         <div className="w-full h-full bg-cover lg: h-screen flex flex-col justify-center content-center items-center bg-no-repeat bg-center bg-contain">
-            <div className="absolute w-full flex justify-between items-center z-0 px-10 mb-40 sm:mt-10 mb-0 md:mb-0 lg:mt-24">
-              <img className="relative w-2/5 h-auto left-0" src={ProjectsHeroBgLeft} />
-              <img className="relative w-2/5 h-auto right-0" src={ProjectsHeroBgRight} />
+            <div className="absolute w-full flex justify-center items-center z-0 px-10 mb-40 sm:mt-10 mb-0 md:mb-0">
+              <img className="relative w-full h-screen left-0" src={AboutBg} />
             </div>
           <div className="z-10 md: w-full md:w-1/2 flex flex-col items-center justify-center">
             <div className="w-3/4 pb-10 md:w-auto px-0">
               <img 
-              src={ProjectsHeroImg}
+              src={AboutHeroImg}
               alt="Projects Hero Image"
               />
             </div>
-            <h2 class="text-4xl pt-2 lg:pt-6 medium py-6">What we do</h2>
+            <h2 class="text-4xl pt-2 lg:pt-6 medium py-6">Who are we.</h2>
             <div className="flex flex-col md:items-center justify-center w-full">
                 <p className="text-center px-11 sm:px-5">
-                BYTE gives its members the opportunity to be at the forefront through the involvement in various projects
+                  We cultivate young entrepreneurs who create innovative solutions for nation-building.
                 </p>
             </div>
           </div>
@@ -36,4 +34,4 @@ const ProjectsHero = () => {
 }
 // END: TEMPLATE = = = = = = = = = = = = = = = = = = = =
 
-export default ProjectsHero
+export default AboutHero
