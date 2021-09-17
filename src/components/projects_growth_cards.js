@@ -30,7 +30,7 @@ const ProjectsGrowthCards = () => {
             backgroundImage: `url(${GrowthCardsBg})`
           }}
         >
-          <h2 className="text-3xl text-white-primary my-16 mx-7 text-center">We value member growth.</h2>
+          <h2 className="text-3xl text-white-primary my-16 mx-7 text-center medium">We value member growth.</h2>
             <div className="w-full h-full flex flex-wrap justify-center content-center items-start lg:mt-5">
               <div className="lg:w-1/4 md:w-64 min-w-52 h-full bg-white-primary rounded-2xl mb-16 mx-7">
                 <img className="p-0 m-0" src={image1} />

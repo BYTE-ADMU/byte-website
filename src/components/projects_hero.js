@@ -13,13 +13,13 @@ const ProjectsHero = () => {
               <img className="relative w-2/5 h-auto right-0" src={ProjectsHeroBgRight} />
             </div>
           <div className="z-10 md: w-full md:w-1/2 flex flex-col items-center justify-center">
-            <div className="w-3/4 md:w-auto px-0">
+            <div className="w-3/4 pb-10 md:w-auto px-0">
               <img 
               src={ProjectsHeroImg}
               alt="Projects Hero Image"
               />
             </div>
-            <h2 class="text-4xl pt-2 lg:pt-6">What we do</h2>
+            <h2 class="text-4xl pt-2 lg:pt-6 medium py-6">What we do</h2>
             <div className="flex flex-col md:items-center justify-center w-full">
                 <p className="text-center px-11 sm:px-5">
                 BYTE gives its members the opportunity to be at the forefront through the involvement in various projects
