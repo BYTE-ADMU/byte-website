@@ -40,7 +40,9 @@ module.exports = {
         collectionTypes: [
           "category",
           "projects",
-          
+          "gallery",
+          "testimonials",
+          "startups"
         ],
       },
     },
