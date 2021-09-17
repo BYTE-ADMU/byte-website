@@ -23,7 +23,8 @@ const Header = ({ siteTitle }) => (
       <Link to="/">
         <div className="flex items-center py-6 ">
           <img src={byteLogo} className="mr-5 header-bytelogo" />
-          <h1 className="bold">{siteTitle.toLowerCase()}</h1>
+          <h1 className="bold">byte</h1>
+          {/* <h1 className="bold">{siteTitle.toLowerCase()}</h1> */}
         </div>
       </Link>
     </div>
