@@ -117,17 +117,20 @@ const social_media = [
 
 const Footer = ({ siteTitle }) => (
   <footer className="bottom-0 flex flex-col items-center justify-center h-full bg-yellow-secondary drop-shadow-footer">
-    <div className="flex flex-col-reverse items-center justify-center w-full px-4 lg:px-10 lg:py-16 lg:flex-row">
+    <div className="flex flex-col-reverse items-start justify-center w-full px-4 lg:px-10 lg:py-16 lg:flex-row">
       <div className="flex flex-col items-center justify-center w-full p-6 lg:w-5/12 lg:justify-around lg:items-start">
         <div className="flex flex-col justify-center w-full lg:justify-center lg:items-center">
-          <h3 className="flex items-center justify-center w-full px-4 lg:items-start items-left lg:justify-start">Contact Us</h3>
+          <h3 className="flex items-center justify-center w-full px-4 lg:items-start items-left lg:justify-start font-bold">
+            Contact Us
+          </h3>
           <div className="flex justify-center w-full lg:justify-start lg:items-start">
             {social_media.map((value, key) => {
               return (
                 <a
                   key={key}
                   href={value.link}
-                  className="flex items-center justify-center w-10 h-10 m-2 rounded-2xl">
+                  className="flex items-center justify-center w-10 h-10 m-2 rounded-2xl"
+                >
                   <img src={value.image} alt={value.img} className="m-1" />
                 </a>
               )
@@ -140,12 +143,10 @@ const Footer = ({ siteTitle }) => (
             byteadmu@gmail.com
           </h3>
           <div className="flex items-center justify-center mt-10">
-            <div className="w-32 h-16 mr-4">
-              <img 
-              src={bytelogo}
-              alt="BYTE Logo"
-              ></img>
-            </div>
+            {/* <div className="w-32 h-16 mr-4"> */}
+            <img src={bytelogo} alt="BYTE Logo" className="w-24 h-24 mr-4" />
+            {/* </div> */}
+            <h3 className="font-bold text-2xl">byte</h3>
           </div>
           <p className="mt-4 text-xs text-center md:text-left">
             © 2021 Building Young Tech Entrepreneurs. All Rights Reserved.
@@ -153,9 +154,9 @@ const Footer = ({ siteTitle }) => (
         </div>
       </div>
 
-      <div className="flex flex-wrap items-start w-7/12 w-full h-full mt-5 md:flex-nowrap lg:">
+      <div className="flex flex-wrap items-start justify-center lg:w-7/12 w-full h-full mt-5 lg:mt-0 md:flex-nowrap">
         <div className="flex flex-col items-start justify-start w-1/3 m-4 lg:w-1/4">
-          <h3>About</h3>
+          <h3 className="font-bold">About</h3>
           {about_links.map((value, key) => {
             return (
               <Link key={key} to={value.link} className="mt-1 mb-1 text-sm">
@@ -165,7 +166,7 @@ const Footer = ({ siteTitle }) => (
           })}
         </div>
         <div className="flex flex-col items-start justify-start w-1/3 m-4 lg:w-1/4">
-          <h3>Projects</h3>
+          <h3 className="font-bold">Projects</h3>
           {projects_links.map((value, key) => {
             return (
               <Link key={key} to={value.link} className="mt-1 mb-1 text-sm">
@@ -175,7 +176,7 @@ const Footer = ({ siteTitle }) => (
           })}
         </div>
         <div className="flex flex-col items-start justify-start w-1/3 m-4 lg:w-1/4">
-          <h3>Community</h3>
+          <h3 className="font-bold">Community</h3>
           {community_links.map((value, key) => {
             return (
               <Link key={key} to={value.link} className="mt-1 mb-1 text-sm">
@@ -185,7 +186,7 @@ const Footer = ({ siteTitle }) => (
           })}
         </div>
         <div className="flex flex-col items-start justify-start w-1/3 m-4 lg:w-1/4">
-          <h3>Partners</h3>
+          <h3 className="font-bold">Partners</h3>
           <p className="mt-1 mb-1 text-sm">Coming Soon</p>
         </div>
       </div>
