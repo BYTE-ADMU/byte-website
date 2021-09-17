@@ -116,7 +116,7 @@ const social_media = [
 ]
 
 const Footer = ({ siteTitle }) => (
-  <footer className="bottom-0 flex flex-col items-center justify-center h-full bg-yellow-secondary drop-shadow-footer">
+  <footer className="bottom-0 flex flex-col items-center justify-center h-full bg-gray-lightest shadow-inner shadow-2xl">
     <div className="flex flex-col-reverse items-start justify-center w-full px-4 lg:px-10 lg:py-16 lg:flex-row">
       <div className="flex flex-col items-center justify-center w-full p-6 lg:w-5/12 lg:justify-around lg:items-start">
         <div className="flex flex-col justify-center w-full lg:justify-center lg:items-center">

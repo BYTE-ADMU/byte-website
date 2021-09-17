@@ -18,8 +18,8 @@ const ProjectsLayout = () => {
             </div>
             
             <div className="h-full w-full px-5 sm:w-3/5 px-0 md:px-10 md:m-0">
-              <h2 className="text-orange-primary">Startup Summit</h2>
-              <h4 className="text-orange-secondary">BYTE 4 President</h4>
+              <h2 className="text-orange-primary py-1">Startup Summit</h2>
+              <h4 className="text-orange-secondary pb-5">BYTE 4 President</h4>
               <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
             </div>
           </div>
