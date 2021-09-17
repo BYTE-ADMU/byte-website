@@ -17,7 +17,7 @@ import "../../styles/global.css"
 
 // START: TEMPLATE = = = = = = = = = = = = = = = = = = = =
 const Header = ({ siteTitle }) => (
-  <header className="fixed top-0 z-50 w-full px-10 py-0 shadow-lg  bg-gray-lightest md:flex md:items-center md:justify-between">
+  <header className="fixed top-0 z-50 w-full px-10 py-0 shadow-lg bg-gray-lightest md:flex md:items-center md:justify-between">
     {/* START: BRAND NAV BUTTON */}
     <div className="flex-none">
       <Link to="/">
