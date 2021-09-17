@@ -46,7 +46,7 @@ const Header = ({ siteTitle }) => {
             return (
 
               <li className="block px-8 py-2 bg-red-300 content-center border-b-8 border-transparent hover:border-gray-300 md:ml-4">
-                <Link className="navAnimation" to={navbarBtn.route}>
+                <Link className="navAnimation" activeClassName="navAnimation active" to={navbarBtn.route}>
                   <p className="medium mt-2">
                     <a style={{ color: navbarBtn.color }}>{navbarBtn.name}</a>
                   </p>

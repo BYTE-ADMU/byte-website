@@ -30,7 +30,7 @@
 .navAnimation a {
   text-decoration: none;
   position: relative;
-  color:currentColor;
+  color: currentColor;
 }
 
 .navAnimation a::after {
@@ -52,3 +52,8 @@
 }
 /* End: Set 2 */
 /* END: NAV ANIMATION */
+
+/* START: ACTIVE LINK STYLES */
+.navAnimation.active a::after {
+  transform: scaleX(1);
+}

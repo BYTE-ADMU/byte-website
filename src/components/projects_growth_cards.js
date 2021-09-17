@@ -1,67 +1,78 @@
+// START: DEPENDENCIES
 import React from 'react'
 import '../styles/global.css'
 
-import image1 from '../assets/projects/image1.png'
-import image2 from '../assets/projects/image2.png'
-import image3 from '../assets/projects/image3.png'
-import GrowthCardsBg from '../assets/projects/growth-card-bg.png'
+import Loader from "react-loader-spinner";
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+// END: DEPENDENCIES
 
-const growth_cards_data = [
+// START: ASSETS
+import GrowthCardsBg from '../assets/projects/growth-card-bg.png'
+// END: ASSETS
+
+// START: COMING SOON CARD
+const comingSoon = [
   {
-    name: "Love at First BYTE",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
-  },
-  {
-    name: "Online BYTE Tables",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
-  },
-  {
-    name: "Talks",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
-  },
+    node: {
+      image_1: "https://res.cloudinary.com/byteadmu/image/upload/v1631902565/obt_540c9d9b00.png",
+      color: "red",
+      name: "Coming Soon!",
+      description: "More content will come soon. Come back later!"
+    }
+  }
 ]
 
+// END: COMING SOON CARD
 
+// START: Card Component
+const Card = ({ project }) => (
+  <div className="md:w-80 w-full h-full flex flex-col justify-center items-center content-center bg-white-primary rounded-2xl mb-16 mx-7 lg:mx-4 md:mx-3 sm:mx-2">
+    <img className="w-full h-40 rounded-t-xl p-0 m-0" src={project.node.image_1.url} />
+    <div className="lg:p-8 p-4 min-h-56 h-auto w-full flex flex-col justify-center items-start content-center">
+      <h3 className={`text-${project.node.color ? project.node.color : "red"}-primary w-full text-center text-xl bold m-0 p-0`}>{project.node.name}</h3>
+      <p className="py-4 m-0">{project.node.description}</p>
+    </div>
+  </div>
+)
+// END: Card Component
 
-const ProjectsGrowthCards = () => {
+// START: Growth Cards
+const ProjectsGrowthCards = ({ data }) => {
+    console.log(data)
     return (
-        <div className="w-full h-full flex flex-col justify-center content-center items-center bg-cover bg-no-repeat mb-16"
+        <div className="w-full h-full flex flex-col justify-center content-center items-center bg-purple-primary xl:bg-contain bg-cover bg-no-repeat py-24"
           style={{
             backgroundImage: `url(${GrowthCardsBg})`
           }}
         >
-          <h2 className="text-3xl text-white-primary my-16 mx-7 text-center medium">We value member growth.</h2>
-            <div className="w-full h-full flex flex-wrap justify-center content-center items-start lg:mt-5">
-              <div className="lg:w-72 md:w-64 min-w-52 h-full lg: bg-white-primary rounded-2xl mb-16 mx-7">
-                <img className="p-0 m-0" src={image1} />
-                <div className="p-5 min-h-56 max-h-96">
-                  <h3 className="text-2xl text-blue-primary text-center m-0 p-0">Love at First BYTE</h3>
-                  <p className="p-5 m-0">
-                    Bit Bot found you, but its time for you to find the ONE! In this valentine’s season intiative, get the chance to meet the other members of BYTE and develop friendships or even something more! (Closer Friendships)
-                  </p>
-                </div>
-              </div>
-              <div className="lg:w-72 md:w-64 min-w-52 h-full bg-white-primary rounded-2xl mb-16 mx-7 lg:mx-4 md:mx-3 sm:mx-2">
-                <img className="p-0 m-0" src={image2} />
-                <div className="p-5 min-h-56 max-h-96">
-                  <h3 className="text-2xl text-yellow-primary text-center m-0 p-0">Online BYTE Tables</h3>
-                  <p className="p-5 m-0">
-                  THE virtual hangout spot and hopefully your hangout spot SOON! We have intiatives from game nights, e-numans, kwentuhans and music bots! But we need you to make that come into reality :D so come join B)
-                  </p>
-                </div>
-              </div>
-              <div className="lg:w-72 md:w-64 min-w-52 h-full bg-white-primary rounded-2xl mb-16 mx-7">
-                <img className="p-0 m-0" src={image3} />
-                <div className="p-5 min-h-56 max-h-96">
-                  <h3 className="text-2xl text-red-primary text-center m-0 p-0">Talks</h3>
-                  <p className="p-5 m-0">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.
-                  </p>
-                </div>
-              </div>
+          <h1 className="text-white-primary my-16 mx-7 text-center bold">We value member growth.</h1>
+            <div className="w-full h-full flex flex-wrap justify-evenly content-center items-start xl:px-32 lg:px-8 px-4">
+              {
+                data && data 
+                ?
+                  data.length > 0
+                  ?
+                    data.map((project) => (
+                      <Card project={project} />
+                    ))
+                  :
+                    comingSoon.map((project) => (
+                      <Card project={project} />
+                    ))
+                :
+                  <Loader
+                    type="MutatingDots"
+                    color="#F84A5E"
+                    secondaryColor="#57CEFE"
+                    height={80}
+                    width={80}
+                    timeout={3000} // 3 secs
+                  />
+              }
             </div>
         </div>
     )
 }
 
 export default ProjectsGrowthCards
+// END: Growth Cards
