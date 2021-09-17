@@ -154,9 +154,9 @@ const Footer = ({ siteTitle }) => (
         </div>
       </div>
 
-      <div className="flex flex-wrap items-start justify-center lg:w-7/12 w-full h-full mt-5 lg:mt-0 md:flex-nowrap">
+      <div className="flex flex-wrap items-start justify-center pl-24 lg:pl-0 lg:w-7/12 w-full h-full mt-5 lg:mt-0 md:flex-nowrap">
         <div className="flex flex-col items-start justify-start w-1/3 m-4 lg:w-1/4">
-          <h3 className="font-bold">About</h3>
+          <h3 className="font-bold pt-2.5 pb-4">About</h3>
           {about_links.map((value, key) => {
             return (
               <Link key={key} to={value.link} className="mt-1 mb-1 text-sm">
@@ -166,7 +166,7 @@ const Footer = ({ siteTitle }) => (
           })}
         </div>
         <div className="flex flex-col items-start justify-start w-1/3 m-4 lg:w-1/4">
-          <h3 className="font-bold">Projects</h3>
+          <h3 className="font-bold pt-2.5 pb-4">Projects</h3>
           {projects_links.map((value, key) => {
             return (
               <Link key={key} to={value.link} className="mt-1 mb-1 text-sm">
@@ -176,7 +176,7 @@ const Footer = ({ siteTitle }) => (
           })}
         </div>
         <div className="flex flex-col items-start justify-start w-1/3 m-4 lg:w-1/4">
-          <h3 className="font-bold">Community</h3>
+          <h3 className="font-bold pt-2.5 pb-4">Community</h3>
           {community_links.map((value, key) => {
             return (
               <Link key={key} to={value.link} className="mt-1 mb-1 text-sm">
@@ -186,7 +186,7 @@ const Footer = ({ siteTitle }) => (
           })}
         </div>
         <div className="flex flex-col items-start justify-start w-1/3 m-4 lg:w-1/4">
-          <h3 className="font-bold">Partners</h3>
+          <h3 className="font-bold pt-2.5 pb-4">Partners</h3>
           <p className="mt-1 mb-1 text-sm">Coming Soon</p>
         </div>
       </div>
