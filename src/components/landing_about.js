@@ -102,7 +102,7 @@ const LandingAbout = ({}) => {
             }}
         >
             <h1 className="font-sans font-bold text-2xl text-gray-darkest text-center mb-0">
-                BYTE is the premier startup organization of Ateneo.
+                We aim to equip the Filipino with Tech Literacy.
             </h1>
 
             {/* Desktop Version (with Animations) */}
@@ -113,7 +113,7 @@ const LandingAbout = ({}) => {
                     imageThree={valuePropThree}
                     textOne="As a community, we provide opportunities in crafting solutions that addresses problems encountered by our fellows."
                     textTwo="Different gears work as a system leading to great impact. In BYTE our gears are the Hackers, Hipsters and Hustlers."
-                    textThree="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique porttitor amet ac molestie lectus. 3" 
+                    textThree="BYTE is the Atenean Organization that focuses on startup awareness and execution through modern practices." 
                 />
             </div>
 
@@ -121,7 +121,7 @@ const LandingAbout = ({}) => {
             <div className="w-full h-auto flex flex-col justify-center items-center content-center about-container lg:justify-start px-14 lg:hidden">
                 <MobileValueProp image={valuePropOne} text="As a community, we provide opportunities in crafting solutions that addresses problems encountered by our fellows." className="py-4" />
                 <MobileValueProp image={valuePropTwo} text="Different gears work as a system leading to great impact. In BYTE our gears are the Hackers, Hipsters and Hustlers." className="py-4"/>
-                <MobileValueProp image={valuePropThree} text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique porttitor amet ac molestie lectus. 3" className="pt-4 pb-16 xl:pb-24 2xl:pb-32" />
+                <MobileValueProp image={valuePropThree} text="BYTE is the Atenean Organization that focuses on startup awareness and execution through modern practices." className="pt-4 pb-16 xl:pb-24 2xl:pb-32" />
             </div>
 
             <Button link="/about" type="primary" label="Learn More" className="mt-4" />

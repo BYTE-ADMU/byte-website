@@ -16,10 +16,10 @@ const landing_hero = () => {
       </div>
       <div className="w-full md:w-2/3 pb-8 px-8 flex md:items-start items-center justify-center flex-col">
         <div className="flex md:items-start items-center justify-center flex-col">
-          <h3 className="text-2xl pb-1 md:text-left text-center font-sans font-bold not-italic">
+          <h3 className="text-2xl pb-4 md:text-left text-center font-sans font-bold not-italic">
             Build Hope, Make Change, With Tech{" "}
           </h3>
-          <p className="lg:w-3/4 pb-4 w-full text-base md:text-left text-center font-sans font-normal not-italic">
+          <p className="lg:w-3/4 pb-8 w-full text-base md:text-left text-center font-sans font-normal not-italic">
             In BYTE, we don't just build young tech entrepreneurs, we make a change and serve as catalysts of the future.
           </p>
         </div>

@@ -1,10 +1,7 @@
-import React, { useState } from "react"
-import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
+import React from "react"
 import { StaticQuery, graphql } from 'gatsby';
 
 import Layout from "../layouts/default"
-import Seo from "../components/seo"
 import Button from "../components/button"
 
 import LandingHero from "../components/landing_hero"
@@ -27,7 +24,7 @@ const query = graphql`
           node {
             id
             name
-            description
+            teaser
             color
             logo {
               url
@@ -69,11 +66,16 @@ const query = graphql`
     }
 `
 
+const seo = {
+  siteTitle: "Home",
+  siteDescription: "This is the official website of BYTE: Building Young Tech Entrepreneurs."
+}
+
 const IndexPage = () => (
   <StaticQuery
     query={query}
     render={data => (
-      <Layout >
+      <Layout seo={seo}>
         {/* Hero Section */}
         <LandingHero />
         {/* End of Hero Section */}
@@ -89,12 +91,12 @@ const IndexPage = () => (
             backgroundImage: `url(${projects})`
           }}
         >
-          <h1 className="font-sans text-2xl font-bold text-center text-gray-darkest pb-8">
+          <h1 className="font-sans text-2xl font-bold text-center text-gray-darkest pb-1">
             Grow with us through these projects.{" "}
           </h1>
-          {/* <p className="font-sans text-base text-center text-gray-darkest pt-2 pb-8">
-            In BYTE, we don't just build young tech entrepreneurs, we make a change and serve as catalysts of the future.
-          </p> */}
+          <p className="font-sans text-base text-center text-gray-darkest pt-2 pb-8">
+            We spark initiatives that aim to  inspire the youth, and give a platform to enact positive change.
+          </p>
           <LandingProjects data={data.allStrapiProjects.edges} />
         </div>
 
@@ -106,21 +108,20 @@ const IndexPage = () => (
           }}
         >
           <h1 className="font-sans text-2xl font-bold text-center text-gray-darkest">
-            We aim to equip the Filipino with Tech Literacy{" "}
+            Make memories with our awesome comm-YOU-nity!{" "}
           </h1>
           <p className="font-sans text-base text-center text-gray-darkest pt-2 pb-8">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
-            tristique porttitor amet ac molestie lectus.
+            Forge unforgettable moments with BYTE — ones that you'll always cherish .
           </p>
           <LandingCommunity layout="left"
             gallery={data.allStrapiGallery.edges}
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique porttitor amet ac molestie lectus." />
+            description="Meet your future wedding guests, grad trip mates and eating buddies! It's rarely a dull moment here with us!" />
           <LandingCommunity layout="right"
             testimonial={data.strapiTestimonials}
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique porttitor amet ac molestie lectus." />
+            description="Find those friends you'll struggle and thrive with! Either in academics, leisure, or projects, we gotchu!" />
           <LandingCommunity layout="left"
             startups={data.allStrapiStartups.edges}
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique porttitor amet ac molestie lectus." />
+            description="There are no better startup partners than people who hold you accountable. You might meet them here in BYTE!" />
           <Button type="primary" label="Learn More" link="/community" className="my-16" />
         </div>
 

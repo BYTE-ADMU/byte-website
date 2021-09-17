@@ -120,7 +120,7 @@ const LandingProjects = ({ data }) => {
                                     xl:pb-4 md:px-8
                                 ">
                                     <h1 className={`font-sans font-bold text-xl text-${selected && selected ? selected.color : "red"}-primary mb-2`}>{selected && selected ? selected.name : ""}</h1>
-                                    <p className="xl:h-32 font-sans text-base text-white md:text-left text-center">{selected && selected ? selected.description : ""}</p>
+                                    <p className="xl:h-32 font-sans text-base text-white md:text-left text-center">{selected && selected ? selected.teaser : ""}</p>
                                 </div>
                                 <img src={selected && selected ? selected.logo.url : ""} className="xl:w-60 xl:h-60 md:w-40 md:h-40 md:mb-0 mb-4 w-20 h-20 rounded-full" />
                             </div>

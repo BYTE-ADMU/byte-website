@@ -48,7 +48,7 @@ const Cta = ({}) => {
                     className="bitbot" 
                 />
             </div>
-            <h1 className="pt-12 pb-4 mb-2 font-sans text-2xl font-bold text-center text-black">Lorem ipsum dolor sit amet, consectetur</h1>
+            <h1 className="pt-12 pb-4 mb-2 font-sans text-2xl font-bold text-center text-black">Get those brain juices going!</h1>
             <Button 
                 link="#"
                 label="Register Now"
