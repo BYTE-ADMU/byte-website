@@ -33,9 +33,14 @@ const testimonials_data = [
   },
 ]
 
+const seo = {
+  siteTitle: "BYTE Community",
+  siteDescription: "This is the official website of BYTE: Building Young Tech Entrepreneurs."
+}
+
 const CommunityPage = () => {
   return (
-    <Layout>
+    <Layout seo={seo}>
       <div>
         {/* <CommunityBanner /> */}
         <AnimatedBanner />
