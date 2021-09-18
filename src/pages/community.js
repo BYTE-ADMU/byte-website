@@ -1,57 +1,87 @@
-import React from "react"
-import Layout from '../layouts/default'
-import HomeGrownStartups from "../components/homegrown_startups"
-import Testimonials from "../components/testimonials"
-import "./community.css"
+import React from "react";
+import { StaticQuery, graphql } from 'gatsby';
+import Layout from '../layouts/default';
 
-// import community_banner from "../../public/icons/community_banner.png"
+import "./community.css";
 
-import CommunityBanner from "../components/community_banner"
-import AnimatedBanner from "../components/animated_banner"
+import AnimatedBanner from "../components/animated_banner";
+import HomeGrownStartups from "../components/homegrown_startups";
+import Testimonials from "../components/testimonials";
 
-const testimonials_data = [
-  {
-    id: 1,
-    name: "Kirsten Sy",
-    position: "BYTE 4 President",
-    caption:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium harum accusamus et? Veritatis recusandae inventore necessitatibus quisquam velit, consequuntur error voluptatum beatae delectus eveniet dolore totam et sequi adipisci ea.",
-  },
-  {
-    id: 2,
-    name: "TJ Lao",
-    position: "BYTE 3 President",
-    caption:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium harum accusamus et? Veritatis recusandae inventore necessitatibus quisquam velit, consequuntur error voluptatum beatae delectus eveniet dolore totam et sequi adipisci ea.",
-  },
-  {
-    id: 3,
-    name: "Lance Villacin",
-    position: "BYTE 3 Executive VP",
-    caption:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium harum accusamus et? Veritatis recusandae inventore necessitatibus quisquam velit, consequuntur error voluptatum beatae delectus eveniet dolore totam et sequi adipisci ea.",
-  },
-]
+import testimonialsBg from "../assets/community/community-bg.png"
 
 const seo = {
   siteTitle: "BYTE Community",
   siteDescription: "This is the official website of BYTE: Building Young Tech Entrepreneurs."
 }
 
-const CommunityPage = () => {
-  return (
-    <Layout seo={seo}>
-      <div>
-        {/* <CommunityBanner /> */}
-        <AnimatedBanner />
-        <div className="px-10 py-20 h-full w-full">
-          <Testimonials />
+const CommunityPage = () => (
+  <StaticQuery
+    query={query}
+    render={data => (
+      <Layout seo={seo}>
+        <div>
+          {/* <CommunityBanner /> */}
+          <AnimatedBanner members={data.allStrapiGallery.edges} />
+          <div className="2xl:px-48 xl:px-32 lg:px-16 md:px-8 px-4 py-20 h-full w-full lg:bg-cover bg-contain bg-no-repeat"
+            style={{
+              backgroundImage: `url(${testimonialsBg})`
+            }}
+          >
+            <Testimonials testimonials={data.allStrapiTestimonials.edges} />
+          </div>
+          <div className="h-full">
+            <HomeGrownStartups startups={data.allStrapiStartups.edges} />
+          </div>
         </div>
-        <div className="h-full">
-          <HomeGrownStartups />
-        </div>
-      </div>
-    </Layout>
-  )
-}
-export default CommunityPage
+      </Layout>
+    )}
+  />
+)
+
+export default CommunityPage;
+
+// START: GRAPHQL QUERY DATA
+const query = graphql`
+    query {
+      allStrapiGallery {
+        edges {
+          node {
+            members {
+              url
+            }
+          }
+        }
+      }
+      allStrapiTestimonials {
+        edges {
+          node {
+            id
+            name
+            quote
+            image {
+              url
+            }
+          }
+        }
+      }
+      allStrapiStartups(sort: {fields: id}) {
+        edges {
+          node {
+            name
+            description
+            logo {
+              url
+            }
+            founders {
+              name
+              photo {
+                url
+              }
+            }
+          }
+        }
+      }
+    }
+`
+// END: GRAPHQL QUERY DATA

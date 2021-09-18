@@ -74,7 +74,7 @@ const Layout = ({ seo, children }) => {
           // },
         ]}
       />
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+      <Header siteTitle={data.site.siteMetadata?.title || `Title`} page={seo.siteTitle} />
         <main className="min-h-screen">{children}</main>
       <Footer />
     </>

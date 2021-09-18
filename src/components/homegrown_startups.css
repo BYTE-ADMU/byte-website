@@ -10,3 +10,13 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.startup-logo:hover {
+  transform: translateY(-4%);
+}
+
+@media screen and (max-width: 1024px) {
+  .bg-styles {
+    background-position: center;
+  }
+}

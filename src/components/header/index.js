@@ -16,13 +16,13 @@ import "../../styles/global.css"
 // END: IMPORTS = = = = = = = = = = = = = = = = = = = =
 
 // START: TEMPLATE = = = = = = = = = = = = = = = = = = = =
-const Header = ({ siteTitle }) => {
-  const [navStyle, setNavStyle] = React.useState("z-10 shadow-none")
+const Header = ({ siteTitle, page }) => {
+  const [navStyle, setNavStyle] = React.useState(page !== "BYTE Community" ? "z-10 shadow-none bg-transparent" : "z-50 shadow-nav bg-gray-lightest")
 
   // HANDLE SCROLL FUNCTION: NAVBAR TRANSPARENT AND NO DROP SHADOW IF ON TOP OF WINDOW
   React.useEffect(() => {
     window.onscroll = () => 
-      window.scrollY === 0 ? setNavStyle("bg-transparent z-10 shadow-none") : setNavStyle("z-50 shadow-nav bg-gray-lightest");
+      window.scrollY === 0 && page !== "BYTE Community" ? setNavStyle("z-10 shadow-none bg-transparent") : setNavStyle("z-50 shadow-nav bg-gray-lightest");
   })
 
   return (

@@ -24,6 +24,7 @@
     "react-helmet": "^6.1.0",
     "react-loader-spinner": "^4.0.0",
     "react-responsive-modal": "^6.1.0",
+    "react-simple-tooltip": "^2.6.3",
     "sass": "^1.39.2",
     "swiper": "^7.0.3"
   },

@@ -1,6 +1,9 @@
-import React from "react"
+import React, { useState } from "react"
 import { Swiper, SwiperSlide } from "swiper/react"
 import SwiperCore, { Pagination, Autoplay } from "swiper"
+
+import Loader from "react-loader-spinner";
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
 import "../styles/global.css"
 
@@ -12,7 +15,6 @@ import "swiper/css/pagination"
 
 import message from "../assets/img/message.png"
 import play from "../assets/img/play.png"
-import CommunityBg from "../assets/community/community-bg.png"
 
 SwiperCore.use([Pagination])
 SwiperCore.use([Autoplay])
@@ -41,51 +43,74 @@ const testimonials_data = [
   },
 ]
 
-const Testimonials = props => {
+const colors = ["red", "yellow", "blue", "green", "purple", "orange"]
+
+function getRandomColor() {
+  return colors[Math.floor(Math.random()*colors.length)]
+}
+
+const Testimonial = ({ testimonial, onNext }) => (
+  <div className="
+      h-full w-full flex md:flex-row flex-col 2xl:px-32 lg:px-24 md:px-16 px-8 py-16 py-16
+      justify-center content-center items-center bg-transparent relative"
+    >
+    <div className="w-full xl:w-1/3 lg:w-1/2 
+                  lg:flex hidden justify-center items-center content-center"
+    >
+      <img src={testimonial.node.image.url} alt="Message" className="h-full w-auto px-8" />
+    </div>
+    
+    <div className="w-full 2xl:w-1/3 lg:w-1/2 md:w-full
+                  flex flex-col items-start justify-start
+                  px-4"
+    >
+      <img src={message} alt="Message" className="hidden lg:block" />
+      <div className="flex flex justify-center items-center content-center pt-4 pb-8">
+        <img src={testimonial.node.image.url} alt="Message" className="h-16 w-16 rounded-full lg:hidden block mr-4" />
+        <h1 className={`text-${getRandomColor()}-primary bold`}>{testimonial.node.name}</h1>
+      </div>
+      <p className="xl:h-56 lg:h-64 h-auto">{testimonial.node.quote}</p>
+    </div>
+
+    <img src={play} alt="Play" className="absolute right-4 top-2/5 cursor-pointer xl:block hidden" onClick={onNext} />
+  </div>
+)
+
+const Testimonials = ({ testimonials }) => {
+  const [slider, setSlider] = useState(null);
+
   return (
     <Swiper
-      spaceBetween={30}
+      onInit={(ev) => {
+        setSlider(ev)
+      }}
+      spaceBetween={80}
       pagination={{
         clickable: true,
       }}
       loop={true}
-      autoplay={{
-        delay: 5000,
-        disableOnInteraction: false,
-      }}
+      autoplay={false}
+      cssMode={true}
       className="mySwiper border-2 border-red-primary rounded-2xl"
     >
-      <SwiperSlide key={props.id}>
-        <div className="
-            h-full w-full flex md:flex-row flex-col items-center justify-around mb-50 md:mb-20
-            justify-center content-center items-center bg-white-primary xl:bg-contain bg-cover bg-no-repeat"
-              style={{
-                backgroundImage: `url(${CommunityBg})`
-              }}>
-          <div className="w-full mt-20 md:w-1/2 flex items-center justify-center mr-0 md:mr-10">
-            <div className="bg-gray-light h-96 w-80 hidden md:block"></div>
-          </div>
-          <div className="flex flex-col items-start justify-start w-full mt-10 md:w-1/2 md:m-0">
-            <div>
-              <img src={message} alt="Message" className="hidden md:block" />
-            </div>
-            <div className="flex items-center">
-              <div className="h-32 w-32 bg-gray-dark mr-10 mb-10 rounded-full md:hidden block"></div>
-              <div>
-                <h2>Kirsten Marini Sy</h2>
-                <h3>BYTE President</h3>
-                {/* <h2 className={`text-${data.node.color}-primary bold py-2`}>{data.node.name}</h2>
-                <h3 className={`text-${data.node.color}-secondary medium pb-4`}>{data.node.subtitle}</h3> */}
-              </div>
-            </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                </p>
-              {/* <p>{data.node.description}</p> */}
-          </div>
-          <img src={play} alt="Play" />
-        </div>
-      </SwiperSlide>
-      
+      {
+        testimonials && testimonials
+        ?
+          testimonials.map((testimonial) => (
+            <SwiperSlide key={testimonial.node.id}>
+              <Testimonial testimonial={testimonial} onNext={() => slider.slideNext()} />
+            </SwiperSlide>
+          ))
+        :
+          <Loader
+            type="MutatingDots"
+            color="#F84A5E"
+            secondaryColor="#57CEFE"
+            height={80}
+            width={80}
+            timeout={3000} // 3 secs
+          />
+      }
     </Swiper>
   )
 }
