@@ -19,7 +19,7 @@ import "./globals.scss";
 // Query data from Strapi
 const query = graphql`
     query {
-      allStrapiProjects(filter: {category: {name: {eq: "flagship"}}}) {
+      allStrapiProjects(filter: {category: {name: {eq: "flagship"}}}, sort: {fields: id}) {
         edges {
           node {
             id

@@ -36,7 +36,7 @@ module.exports = {
       resolve: "gatsby-source-strapi",
       options: {
         apiURL: "https://byte-website.herokuapp.com",
-        queryLimit: 1000, // default is 100
+        queryLimit: 5000, // default is 100 (change to anything higher than 3000 in production for it to work)
         collectionTypes: [
           "category",
           "projects",

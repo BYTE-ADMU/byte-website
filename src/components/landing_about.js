@@ -106,7 +106,7 @@ const LandingAbout = ({}) => {
             </h1>
 
             {/* Desktop Version (with Animations) */}
-            <div className="w-full min-h-3/4 h-auto hidden lg:flex flex-col justify-center items-center content-center about-container lg:justify-start px-14 overflow-scroll">
+            <div className="w-full min-h-1/2 h-auto hidden lg:flex flex-col justify-center items-center content-center about-container lg:justify-start px-14 overflow-scroll">
                 <DesktopValueProp
                     imageOne={valuePropOne}
                     imageTwo={valuePropTwo}

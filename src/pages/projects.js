@@ -36,7 +36,7 @@ export default ProjectsPage;
 // Query data from Strapi
 const query = graphql`
     query {
-        flagshipProjects: allStrapiProjects(filter: {category: {name: {eq: "flagship"}}}) {
+        flagshipProjects: allStrapiProjects(filter: {category: {name: {eq: "flagship"}}}, sort: {fields: id}) {
             edges {
                 node {
                     id
@@ -56,7 +56,7 @@ const query = graphql`
                 }
             }
         }
-        growthProjects: allStrapiProjects(filter: {category: {name: {eq: "growth"}}}) {
+        growthProjects: allStrapiProjects(filter: {category: {name: {eq: "growth"}}}, sort: {fields: id}) {
             edges {
                 node {
                     id
