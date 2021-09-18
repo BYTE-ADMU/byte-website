@@ -2,10 +2,10 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
-import facebook from "../assets/img/social_icons/facebook.svg"
-import linkedin from "../assets/img/social_icons/linkedin.svg"
-import twitter from "../assets/img/social_icons/twitter.svg"
-import ig from "../assets/img/social_icons/ig.svg"
+import facebook from "../assets/img/social_icons/facebook.png"
+import linkedin from "../assets/img/social_icons/linkedin.png"
+import twitter from "../assets/img/social_icons/twitter.png"
+import ig from "../assets/img/social_icons/ig.png"
 import bytelogo from "../assets/img/byte-icon-without-text.png"
 
 const about_links = [

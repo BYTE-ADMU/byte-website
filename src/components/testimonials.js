@@ -12,6 +12,7 @@ import "swiper/css/pagination"
 
 import message from "../assets/img/message.png"
 import play from "../assets/img/play.png"
+import CommunityBg from "../assets/community/community-bg.png"
 
 SwiperCore.use([Pagination])
 SwiperCore.use([Autoplay])
@@ -52,11 +53,16 @@ const Testimonials = props => {
         delay: 5000,
         disableOnInteraction: false,
       }}
-      className="mySwiper"
+      className="mySwiper border-2 border-red-primary rounded-2xl"
     >
       <SwiperSlide key={props.id}>
-        <div className="h-full w-full flex md:flex-row flex-col items-center justify-around mb-50 md:mb-20">
-          <div className="w-full md:w-1/2 flex items-center justify-center mr-0 md:mr-10">
+        <div className="
+            h-full w-full flex md:flex-row flex-col items-center justify-around mb-50 md:mb-20
+            justify-center content-center items-center bg-white-primary xl:bg-contain bg-cover bg-no-repeat"
+              style={{
+                backgroundImage: `url(${CommunityBg})`
+              }}>
+          <div className="w-full mt-20 md:w-1/2 flex items-center justify-center mr-0 md:mr-10">
             <div className="bg-gray-light h-96 w-80 hidden md:block"></div>
           </div>
           <div className="flex flex-col items-start justify-start w-full mt-10 md:w-1/2 md:m-0">
@@ -66,47 +72,20 @@ const Testimonials = props => {
             <div className="flex items-center">
               <div className="h-32 w-32 bg-gray-dark mr-10 mb-10 rounded-full md:hidden block"></div>
               <div>
-                <h2>Kirsten Sy</h2>
-                <h3>BYTE 4 President</h3>
+                <h2>Kirsten Marini Sy</h2>
+                <h3>BYTE President</h3>
+                {/* <h2 className={`text-${data.node.color}-primary bold py-2`}>{data.node.name}</h2>
+                <h3 className={`text-${data.node.color}-secondary medium pb-4`}>{data.node.subtitle}</h3> */}
               </div>
             </div>
-
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet,
-              modi fuga ex libero cupiditate et consectetur eligendi ut sapiente
-              facere magni, veniam doloribus tempora ipsa autem, laudantium
-              atque. Dolore, velit?
-            </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                </p>
+              {/* <p>{data.node.description}</p> */}
           </div>
           <img src={play} alt="Play" />
         </div>
       </SwiperSlide>
-      <SwiperSlide key={props.id}>
-        <div className="h-full w-full flex md:flex-row flex-col items-center justify-around mb-50 md:mb-20">
-          <div className="w-full md:w-1/2 flex items-center justify-center mr-0 md:mr-10">
-            <div className="bg-gray-light h-96 w-80 hidden md:block"></div>
-          </div>
-          <div className="w-full md:w-1/2 flex items-start  flex-col mt-10 md:m-0">
-            <div>
-              <img src={message} alt="Message" className="hidden md:block" />
-            </div>
-            <div className="flex items-center ">
-              <div className="h-32 w-32 bg-gray-dark mr-10 mb-10 rounded-full md:hidden block"></div>
-              <div>
-                <h2>Kirsten Sy</h2>
-                <h3>BYTE 4 President</h3>
-              </div>
-            </div>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet,
-              modi fuga ex libero cupiditate et consectetur eligendi ut sapiente
-              facere magni, veniam doloribus tempora ipsa autem, laudantium
-              atque. Dolore, velit?
-            </p>
-          </div>
-          <img src={play} alt="Play" />
-        </div>
-      </SwiperSlide>
+      
     </Swiper>
   )
 }
