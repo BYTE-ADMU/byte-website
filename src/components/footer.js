@@ -129,6 +129,7 @@ const Footer = ({ siteTitle }) => (
                 <a
                   key={key}
                   href={value.link}
+                  target="_blank"
                   className="flex items-center justify-center w-10 h-10 m-2 rounded-2xl"
                 >
                   <img src={value.image} alt={value.img} className="m-1" />
