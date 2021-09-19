@@ -5,6 +5,8 @@ import Layout from "../layouts/default"
 
 // Components
 import AboutHero from "../components/about/about-hero"
+import AboutAims from "../components/about/about-aims"
+import AboutByte from "../components/about-byte"
 // END: IMPORTS = = = = = = = = = = = = = = = = = = = =
 
 const seo = {
@@ -16,6 +18,8 @@ const about = () => {
     return (
         <Layout seo={seo}>
             <AboutHero />
+            <AboutByte />
+            <AboutAims />
         </Layout>
     )
 }
