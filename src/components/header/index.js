@@ -19,13 +19,12 @@ import "../../styles/global.css"
 
 // START: TEMPLATE = = = = = = = = = = = = = = = = = = = =
 const Header = ({ siteTitle, page }) => {
-  const [navStyle, setNavStyle] = React.useState(page !== "BYTE Community" ? "z-10 shadow-none bg-transparent" : "z-50 shadow-nav bg-gray-lightest")
+  const [navStyle, setNavStyle] = React.useState(page !== "BYTE Community" ? "sm:z-10 z-50 shadow-none bg-transparent" : "z-50 shadow-nav bg-gray-lightest")
 
   const [click, setClick] = React.useState(false)
   const [button, setButton] = React.useState(true)
 
   const handleClick = () => setClick(!click)
-  const closeMobileMenu = () => setClick(false)
 
   const showButton = () => {
     if (window.innerWidth <= 768) {
@@ -40,7 +39,7 @@ const Header = ({ siteTitle, page }) => {
     showButton()
     window.onscroll = () =>
       window.scrollY === 0 && page !== "BYTE Community"
-        ? setNavStyle("bg-transparent z-10 shadow-none")
+        ? setNavStyle("sm:z-10 z-50 shadow-none bg-transparent")
         : setNavStyle("z-50 shadow-nav bg-gray-lightest")
   })
 
@@ -48,7 +47,7 @@ const Header = ({ siteTitle, page }) => {
 
   return (
     <header
-      className={`fixed top-0 w-full px-10 py-0 transition-all duration-300 ease-in-out md:flex md:items-center md:justify-between ${navStyle}`}
+      className={`fixed top-0 w-full px-10 py-0 transition-all duration-300 ease-in-out sm:flex sm:items-center sm:justify-between ${navStyle}`}
     >
       {/* START: BRAND NAV BUTTON */}
       <div className="flex-none">
@@ -64,25 +63,25 @@ const Header = ({ siteTitle, page }) => {
       {/* START: NAV BUTTONS */}
       <nav>
         <div
-          className="block absolute top-8 right-10 pointer md:hidden"
+          className="block absolute top-8 right-10 pointer sm:hidden"
           onClick={handleClick}
         >
           {click ? (
-            <FontAwesomeIcon icon={faBars} size="2x" />
+            <FontAwesomeIcon icon={faBars} size="2" />
           ) : (
-            <FontAwesomeIcon icon={faTimes} size="2x" />
+            <FontAwesomeIcon icon={faTimes} size="2" />
           )}
         </div>
-        <ul className= {click ? "list-reset md:flex md:items-center nav-menu" : "list-reset md:flex md:items-center nav-menu active"}>
+        <ul className= {click ? "list-reset sm:flex sm:items-center nav-menu" : "list-reset sm:flex sm:items-center nav-menu active"}>
           {/* START: NAV BUTTON */}
           {navbarBtns.map((navbarBtn, key) => {
             return (
-              <li className="block px-8 py-2 bg-red-300 content-center border-b-8 border-transparent hover:border-gray-300 md:ml-4">
+              <li className="block lg:px-8 px-4 py-2 bg-red-300 content-center border-b-8 border-transparent hover:border-gray-300 sm:ml-4">
                 <Link
                   className="navAnimation"
                   activeClassName="navAnimation active"
                   to={navbarBtn.route}
-                  onClick={closeMobileMenu}
+                  onClick={() => setClick(false)}
                 >
                   <p className="medium mt-2">
                     <a style={{ color: navbarBtn.color }}>{navbarBtn.name}</a>
@@ -92,7 +91,7 @@ const Header = ({ siteTitle, page }) => {
             )
           })}
 
-          <Button className="ml-8" link="#" label="Join Us" type="primary" />
+          <Button className="md:m-0 m-4" link="#" label="Join Us" type="primary" />
 
           {/* END: NAV BUTTON */}
         </ul>

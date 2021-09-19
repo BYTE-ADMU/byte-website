@@ -112,23 +112,25 @@ const HomeGrownStartups = ({ startups }) => {
             <div className="flex flex-col md:flex-row items-center justify-center w-full p-4 sm:px-8 lg:px-12 xl:px-24">
               <div className="flex flex-col items-center justify-center md:w-1/2 w-full">
                 <div className="flex justify-center items-center content-center relative">
-                  <img src={selectedStartup.logo.url} className="xl:w-48 xl:h-48 lg:w-32 lg:h-32 w-24 h-24 rounded-full bg-gray-lightest m-5" />
-                  <img src={bitbot} className="lg:w-24 lg:h-auto w-16 h-auto absolute bottom-0 left-0" />
+                  <div className="xl:w-48 xl:h-48 lg:w-40 lg:h-40 md:w-32 md:h-32 w-24 h-24 rounded-full overflow-hidden flex justify-center items-center content-center m-2">
+                    <img src={selectedStartup.logo.url} className="w-auto  h-full" />
+                  </div>
+                  <img src={bitbot} className="lg:w-16 sm:w-12 w-8 h-auto absolute bottom-0 left-0" />
                 </div>
                 <div className="flex items-center justify-center flex-col">
-                  <h2 className="bold pt-12 pb-4">{selectedStartup.name}</h2>
-                  <div className="flex items-center justify-center">
+                  <h2 className="bold pt-8 pb-4">{selectedStartup.name}</h2>
+                  <div className="flex flex-col justify-center items-start content-center">
                     {
                       selectedStartup && selectedStartup
                       ?
                         selectedStartup.founders.map((founder) => (
-                          <div className="flex justify-center items-center content-center mb-4">
-                            <img src={founder.photo.url} 
-                              className="h-4 w-4 md:h-8 md:w-8 lg:h-16 lg:w-16
-                              bg-white rounded-full cursor-pointer 
-                              transition-all duration-300 ease-in-out 
-                              hover:shadow-hover startup-logo"
-                            />
+                          <div className="flex justify-center items-center content-center mb-2">
+                            <div className="w-8 h-8 lg:h-12 lg:w-12 rounded-full overflow-hidden flex justify-center items-center content-center">
+                              <img src={founder.photo.url} 
+                                className="w-full h-auto founders
+                                transition-all duration-300 ease-in-out"
+                              />
+                            </div>
                             <p className="px-4 text-center">{founder.name}</p>
                           </div>
                         ))
@@ -139,9 +141,19 @@ const HomeGrownStartups = ({ startups }) => {
                   </div>
                 </div>
               </div>
-              <div className="p-2 md:p-5 w-full md:w-1/2">
-                <img src={selectedStartup.banner.url} className="bg-gray-lightest w-full h-auto rounded-t-2xl" />
-                <div className="bg-gray-lightest py-8 px-4 rounded-b-2xl shadow-footer">
+              <div className="p-2 md:p-4 w-full md:w-1/2 md:rounded-2xl">
+                {
+                  selectedStartup && selectedStartup.banner
+                  ?
+                    <img src={selectedStartup.banner.url} className="bg-gray-lightest w-full h-auto rounded-t-2xl md:block hidden" />
+                  :
+                    selectedStartup && selectedStartup.logo 
+                    ?
+                      <img src={selectedStartup.logo.url} className="bg-gray-lightest w-full h-auto rounded-t-2xl md:block hidden" />
+                    :
+                    <></>
+                }
+                <div className="md:bg-gray-lightest py-8 px-4 rounded-b-2xl md:shadow-footer">
                   <p className="p-0 m-0">
                     {selectedStartup.description}
                   </p>

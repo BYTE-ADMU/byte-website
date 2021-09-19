@@ -17,6 +17,10 @@
   transform: translateY(-4%);
 }
 
+.founders:hover {
+  transform: scale(1.25);
+}
+
 @media screen and (max-width: 1024px) {
   .bg-styles {
     background-position: center;

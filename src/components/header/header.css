@@ -4,7 +4,7 @@
 
 .header-bytelogo {
   width: 48px;
-  height: 48px;
+  height: auto;
 }
 
 /* .header-joinusbtn {
@@ -58,23 +58,30 @@
   transform: scaleX(1);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .nav-menu {
     display: flex;
     flex-direction: column;
     width: 100%;
     height: 90vh;
     position: absolute;
+    padding: 2rem;
     top: 80px;
     left: -100%;
     opacity: 1;
     transition: all 0.5s ease;
   }
+
   .nav-menu.active {
-    background: #fff;
+    background: #FAFAFA;
     left: 0;
     opacity: 1;
     transition: all 0.5s ease;
     z-index: 1;
+  }
+
+  .header-bytelogo {
+    width: 32px;
+    height: auto;
   }
 }
