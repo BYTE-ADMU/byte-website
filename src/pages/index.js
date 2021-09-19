@@ -38,7 +38,7 @@ const query = graphql`
           }
         }
       }
-      allStrapiGallery(filter: {strapiId: {lte: 3}}) {
+      allStrapiGallery(filter: {strapiId: {lte: 5}}) {
         edges {
           node {
             members {
@@ -47,11 +47,15 @@ const query = graphql`
           }
         }
       }
-      strapiTestimonials(strapiId: {eq: 1}) {
-        name
-        quote
-        image {
-          url
+      allStrapiTestimonials(filter: {strapiId: {lte: 4}}) {
+        edges {
+          node {
+            name
+            quote
+            image {
+              url
+            }
+          }
         }
       }
       allStrapiStartups(filter: {strapiId: {lte: 3}}) {
@@ -117,7 +121,7 @@ const IndexPage = () => (
             gallery={data.allStrapiGallery.edges}
             description="Meet your future wedding guests, grad trip mates and eating buddies! It's rarely a dull moment here with us!" />
           <LandingCommunity layout="right"
-            testimonial={data.strapiTestimonials}
+            testimonials={data.allStrapiTestimonials.edges}
             description="Find those friends you'll struggle and thrive with! Either in academics, leisure, or projects, we gotchu!" />
           <LandingCommunity layout="left"
             startups={data.allStrapiStartups.edges}

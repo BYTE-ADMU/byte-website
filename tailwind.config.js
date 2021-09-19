@@ -24,6 +24,11 @@ module.exports = {
       fontFamily: {
         sans: ['Objectivity', 'sans-serif'],
       },
+      minWidth: {
+        '1/4': '25vw',
+        '1/2': '50vw',
+        '3/4': '75vw'
+      },
       minHeight: {
         '1/4': '25vh',
         '1/2': '50vh',

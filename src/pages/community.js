@@ -79,6 +79,9 @@ const query = graphql`
                 url
               }
             }
+            banner {
+              url
+            }
           }
         }
       }
