@@ -14,40 +14,30 @@ import "swiper/css/pagination"
 // import play from "../../public/icons/play.png"
 
 import message from "../assets/img/message.png"
-import play from "../assets/img/play.png"
+import arrowOutline from "../assets/community/arrow-outline.png"
+import arrow from "../assets/community/arrow.png"
 
 SwiperCore.use([Pagination])
 SwiperCore.use([Autoplay])
-
-const testimonials_data = [
-  {
-    id: 1,
-    name: "Kirsten Sy",
-    position: "BYTE 4 President",
-    caption:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium harum accusamus et? Veritatis recusandae inventore necessitatibus quisquam velit, consequuntur error voluptatum beatae delectus eveniet dolore totam et sequi adipisci ea.",
-  },
-  {
-    id: 2,
-    name: "TJ Lao",
-    position: "BYTE 3 President",
-    caption:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium harum accusamus et? Veritatis recusandae inventore necessitatibus quisquam velit, consequuntur error voluptatum beatae delectus eveniet dolore totam et sequi adipisci ea.",
-  },
-  {
-    id: 3,
-    name: "Lance Villacin",
-    position: "BYTE 3 Executive VP",
-    caption:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium harum accusamus et? Veritatis recusandae inventore necessitatibus quisquam velit, consequuntur error voluptatum beatae delectus eveniet dolore totam et sequi adipisci ea.",
-  },
-]
 
 const colors = ["red", "yellow", "blue", "green", "purple", "orange"]
 
 function getRandomColor() {
   return colors[Math.floor(Math.random()*colors.length)]
 }
+
+const NextArrow = ({ onClick }) => (
+  <div className="absolute right-4 top-2/5 cursor-pointer xl:block hidden w-auto h-auto flex justify-center items-center content-center" onClick={onClick}>
+    <div className="relative">
+      <img src={arrowOutline} className="relative z-10 arrow__container" />
+      <img src={arrow} 
+        className="absolute -bottom-4 -left-4 z-0 
+        transition-all duration-300 ease-in-out
+        arrow__filled" 
+      />
+    </div>
+  </div>
+)
 
 const Testimonial = ({ testimonial, onNext }) => (
   <div className="
@@ -72,7 +62,7 @@ const Testimonial = ({ testimonial, onNext }) => (
       <p className="xl:h-56 lg:h-64 h-auto">{testimonial.node.quote}</p>
     </div>
 
-    <img src={play} alt="Play" className="absolute right-4 top-2/5 cursor-pointer xl:block hidden" onClick={onNext} />
+    <NextArrow onClick={onNext} />
   </div>
 )
 
