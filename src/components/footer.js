@@ -120,10 +120,10 @@ const Footer = ({ siteTitle }) => (
     <div className="flex flex-col-reverse items-start justify-center w-full px-4 lg:px-10 lg:py-16 lg:flex-row">
       <div className="flex flex-col items-center justify-center w-full p-6 lg:w-5/12 lg:justify-around lg:items-start">
         <div className="flex flex-col justify-center w-full lg:justify-center lg:items-center">
-          <h3 className="flex items-center justify-center w-full lg:items-start items-left lg:justify-start font-bold">
+          <h3 className="flex items-center justify-center w-full pl-2 lg:items-start items-left lg:justify-start font-bold">
             Contact Us
           </h3>
-          <div className="flex justify-center w-full lg:justify-start lg:items-start">
+          <div className="flex justify-center w-full py-2 lg:justify-start lg:items-start">
             {social_media.map((value, key) => {
               return (
                 <a
@@ -155,7 +155,7 @@ const Footer = ({ siteTitle }) => (
         </div>
       </div>
 
-      <div className="flex flex-wrap items-start justify-center pl-24 lg:pl-0 lg:w-7/12 w-full h-full mt-5 lg:mt-0 md:flex-nowrap">
+      <div className="flex flex-wrap items-start justify-center pl-6 sm:pl-24 lg:pl-0 lg:w-7/12 w-full h-full mt-5 lg:mt-0 md:flex-nowrap">
         <div className="flex flex-col items-start justify-start w-1/3 m-4 lg:w-1/4">
           <h3 className="font-bold pt-2.5 pb-4">About</h3>
           {about_links.map((value, key) => {

@@ -6,7 +6,8 @@ import Layout from "../layouts/default"
 // Components
 import AboutHero from "../components/about/about-hero"
 import AboutAims from "../components/about/about-aims"
-import AboutByte from "../components/about-byte"
+import AboutByte from "../components/about/about-byte"
+import CTA from "../components/cta"
 // END: IMPORTS = = = = = = = = = = = = = = = = = = = =
 
 const seo = {
@@ -19,7 +20,13 @@ const about = () => {
         <Layout seo={seo}>
             <AboutHero />
             <AboutByte />
-            <AboutAims />
+            <div>
+                <h1 className="w-full text-center sm:text-left sm:px-20 font-sans sm:text-4xl font-bold text-gray-darkest pb-10">
+                    BYTE aims to...
+                </h1>
+                <AboutAims />
+            </div>
+            <CTA />
         </Layout>
     )
 }
