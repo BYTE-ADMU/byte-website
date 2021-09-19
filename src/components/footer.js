@@ -109,7 +109,7 @@ const Footer = ({ siteTitle }) => (
         <div className="flex flex-col items-center justify-center ml-2 lg:items-start lg:justify-start">
           <h3 className="mt-2 mb-4 text-sm text-white md:text-md">
             byteadmu@gmail.com
-          </p>
+          </h3>
           <div className="flex items-center justify-center mt-10">
             {/* <div className="w-32 h-16 mr-4"> */}
             <img src={bytelogo} alt="BYTE Logo" className="w-auto h-12 mr-4" />
