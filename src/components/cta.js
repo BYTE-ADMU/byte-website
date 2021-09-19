@@ -38,7 +38,7 @@ const Cta = ({}) => {
                     :
                         /* Insert speech balloon with typing animation */
                         <div className="absolute md:-top-28 md:-right-40 -top-32 right-1/4">
-                            <p className="font-sans speech text-md">...</p>
+                            <p className="font-sans speech text-md">click me!</p>
                         </div>
                 }
                 <img src={smiling ? smile : sleeping} 

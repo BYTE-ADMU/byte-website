@@ -5,16 +5,17 @@ import '../../styles/global.css'
 
 // Assets
 import AboutHeroImg from '../../assets/about/about-hero-image.png'
-import AboutBg from '../../assets/about/about-bg.png'
+import bg from '../../assets/about/about-bg.png'
 // END: IMPORTS = = = = = = = = = = = = = = = = = = = =
 
 // START: TEMPLATE = = = = = = = = = = = = = = = = = = = =
 const AboutHero = () => {
     return (
-        <div className="w-full h-full bg-cover lg: h-screen flex flex-col justify-center content-center items-center bg-no-repeat bg-center bg-contain">
-            <div className="absolute w-full flex justify-center items-center z-0 px-10 mb-40 sm:mt-10 mb-0 md:mb-0">
-              <img className="relative w-full h-screen left-0" src={AboutBg} />
-            </div>
+        <div className="w-full lg:h-screen h-3/4 bg-cover lg: h-screen flex flex-col justify-center content-center items-center bg-no-repeat bg-center lg:bg-contain bg-cover"
+          style={{
+            backgroundImage: `url(${bg})`
+          }}
+        >
           <div className="z-10 md: w-full md:w-1/2 flex flex-col items-center justify-center">
             <div className="w-3/4 pb-10 md:w-auto px-0">
               <img 
