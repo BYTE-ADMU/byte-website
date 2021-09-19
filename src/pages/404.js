@@ -3,8 +3,13 @@ import * as React from "react"
 import Layout from "../layouts/default"
 import Seo from "../components/seo"
 
+const seo = {
+  siteTitle: "Bitbot couldn't find the page",
+  siteDescription: "This is the official website of BYTE: Building Young Tech Entrepreneurs."
+}
+
 const NotFoundPage = () => (
-  <Layout>
+  <Layout seo={seo}>
     <Seo title="404: Not found" />
     <h1>404: Not Found</h1>
     <p>You just hit a route that doesn&#39;t exist... the sadness.</p>

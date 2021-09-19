@@ -3,13 +3,16 @@ const colors = require('tailwindcss/colors')
 module.exports = {
   purge: ['./src/**/*.{js,jsx,ts,tsx}'],
   darkMode: false, // or 'media' or 'class'
+  variants: {
+    boxShadow: ['responsive', 'hover', 'focus'],
+  },
   theme: {
     extend: {
-      dropShadow: {
-        'normal': '0px 0px 20px rgba(20, 20, 20, 0.1)',
-        'hover': '0px 5px 20px rgba(20, 20, 20, 0.15)',
-        'nav': '0px 4px 8px rgba(20, 20, 20, 0.1)',
-        'footer': '0px -12px 20px rgba(20, 20, 20, 0.1)'
+      boxShadow: {
+        normal: '0px 0px 20px rgba(20, 20, 20, 0.1)',
+        hover: '0px 5px 20px rgba(20, 20, 20, 0.15)',
+        nav: '0px 4px 8px rgba(20, 20, 20, 0.1)',
+        footer: '0px -12px 20px rgba(20, 20, 20, 0.1)'
       },
       backgroundSize: {
         '50%': '50% 100%',
@@ -21,6 +24,16 @@ module.exports = {
       fontFamily: {
         sans: ['Objectivity', 'sans-serif'],
       },
+      minWidth: {
+        '1/4': '25vw',
+        '1/2': '50vw',
+        '3/4': '75vw'
+      },
+      minHeight: {
+        '1/4': '25vh',
+        '1/2': '50vh',
+        '3/4': '75vh'
+      }
     },
     colors: {
       transparent: 'transparent',

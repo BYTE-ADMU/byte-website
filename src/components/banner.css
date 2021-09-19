@@ -1,31 +1,21 @@
 
-.community-container {
+/* .community-container {
   height: 900px;
-}
+} */
 
 .banner-desktop {
   display: flex;
   justify-content: center;
-  height: 900px;
+  align-items: center;
+  align-content: center;
+  height: 100%;
   padding: 0 40px;
 }
 
 .banner-column {
   position: relative;
-  -webkit-animation-play-state: inherit !important;
-  animation-play-state: inherit !important;
-}
-
-.card {
-  display: flex;
-  flex-direction: column;
-  background: #fff;
-  margin: 54px 9px 0;
-  transition: box-shadow 0.3s ease-in-out;
-}
-
-.card_img {
-  border-radius: 30px;
+    -webkit-animation-play-state: inherit !important;
+    animation-play-state: inherit !important;
 }
 
 .name {
@@ -58,53 +48,65 @@
 }
 
 .top-fade {
-  height: 160px;
+  height: 25%;
+  width: 100%;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
   background: linear-gradient(
     180deg,
     #fafafa 28.12%,
     rgba(255, 255, 255, 0) 100%
   );
-  width: 100vw;
-  position: absolute;
-  z-index: 10;
+  z-index: 20;
 }
 
 .bottom-fade {
-  height: 199px;
+  height: 25%;
+  width: 100%;
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
   background: linear-gradient(
-    180deg,
+    360deg,
     #fafafa 42.71%,
     rgba(255, 255, 255, 0) 100%
   );
-  transform: rotate(-180deg) translateY(199px);
-  width: 100vw;
-  position: absolute;
-  z-index: 10;
+  z-index: 20;
 }
 
 .left-animation {
-  animation: 50.2s linear 0s infinite normal none running scroll;
+  animation: scrollUp 120s linear infinite;
 }
 
 .right-animation {
-  animation: 80.2s linear 0s infinite normal none running scroll;
+  direction: rtl;
+  animation: scrollDown 120s linear infinite;
 }
 
 .middle-animation {
   animation: 30.0667s linear 0s infinite normal none running scroll;
 }
 
-.first {
-  top: 10px;
-}
-
-.second {
-  top: 30px;
-}
-
-@keyframes scroll {
+@keyframes scrollUp {
+  50% {
+    transform: translateY(-75%);
+  }
   100% {
-    transform: translateY(-100%);
+    transform: translateY(0);
+  }
+}
+
+@keyframes scrollDown {
+  50% {
+    transform: translateY(75%);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
 
@@ -116,5 +118,23 @@
   .top-fade,
   .bottom-fade {
     display: none;
+  }
+
+  @keyframes scrollUp {
+    50% {
+      transform: translateX(-75%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes scrollDown {
+    50% {
+      transform: translateX(75%);
+    }
+    100% {
+      transform: translateX(0);
+    }
   }
 }

@@ -12,15 +12,61 @@ import cloud from "../assets/img/landing/cloud.png"
 import Loader from "react-loader-spinner";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
-const LandingProjects = ({ data }) => {
+const projectsInfo = {
+     flagship: [
+         {
+             id: 1,
+             name: "Startup Summit",
+             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique porttitor amet ac molestie lectus.",
+             logo: "https://ik.imagekit.io/ripzjge77zz/BYTE/startup_summit_A4psKgXGj.png?updatedAt=1631382590896",
+             image_1: "https://ik.imagekit.io/ripzjge77zz/BYTE/pic_uBolSO5vggN.png?updatedAt=1631382591108",
+             image_2: "https://ik.imagekit.io/ripzjge77zz/BYTE/pic_2_FYy2yfAhy.png?updatedAt=1631382592094",
+             color: "red"
+         },
+         {
+             id: 2,
+             name: "Reboot",
+             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique porttitor amet ac molestie lectus.",
+             logo: "https://ik.imagekit.io/ripzjge77zz/BYTE/startup_summit_A4psKgXGj.png?updatedAt=1631382590896",
+             image_1: "https://ik.imagekit.io/ripzjge77zz/BYTE/pic_uBolSO5vggN.png?updatedAt=1631382591108",
+             image_2: "https://ik.imagekit.io/ripzjge77zz/BYTE/pic_2_FYy2yfAhy.png?updatedAt=1631382592094",
+             color: "purple"
+         },
+         {
+             id: 3,
+             name: "ITECH",
+             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique porttitor amet ac molestie lectus.",
+             logo: "https://ik.imagekit.io/ripzjge77zz/BYTE/startup_summit_A4psKgXGj.png?updatedAt=1631382590896",
+             image_1: "https://ik.imagekit.io/ripzjge77zz/BYTE/pic_uBolSO5vggN.png?updatedAt=1631382591108",
+             image_2: "https://ik.imagekit.io/ripzjge77zz/BYTE/pic_2_FYy2yfAhy.png?updatedAt=1631382592094",
+             color: "blue"
+         },
+         {
+             id: 4,
+             name: "FrostBYTE",
+             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique porttitor amet ac molestie lectus.",
+             logo: "https://ik.imagekit.io/ripzjge77zz/BYTE/startup_summit_A4psKgXGj.png?updatedAt=1631382590896",
+             image_1: "https://ik.imagekit.io/ripzjge77zz/BYTE/pic_uBolSO5vggN.png?updatedAt=1631382591108",
+             image_2: "https://ik.imagekit.io/ripzjge77zz/BYTE/pic_2_FYy2yfAhy.png?updatedAt=1631382592094",
+             color: "green"
+         },
+         {
+             id: 5,
+             name: "BYTE Camp",
+             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique porttitor amet ac molestie lectus.",
+             logo: "https://ik.imagekit.io/ripzjge77zz/BYTE/startup_summit_A4psKgXGj.png?updatedAt=1631382590896",
+             image_1: "https://ik.imagekit.io/ripzjge77zz/BYTE/pic_uBolSO5vggN.png?updatedAt=1631382591108",
+             image_2: "https://ik.imagekit.io/ripzjge77zz/BYTE/pic_2_FYy2yfAhy.png?updatedAt=1631382592094",
+             color: "yellow"
+         }
+     ]
+ }
+
+const AboutByte = ({ data }) => {
     // Get first project as default
     const projects = data;
     const [selected, isSelected] = useState(data && data ? data[0].node : null);
-
-    // data && data means that we have data and it isn't null or undefined
-    // data[0] means you get first project / auto selecting the first project as soon as data is passed
-    // null meaning walang selected
-
+    
     return (
         <div className="
             w-full h-max
@@ -35,15 +81,8 @@ const LandingProjects = ({ data }) => {
                 {
                     projects && projects
                     ?
-                        // map through all of the projects
-                        // for project in data:
                         data.map((project) => (
-                            <Button 
-                                type={selected && selected.id == project.node.id ? "primary" : "secondary"} // if selected, make primary button. else, secondary 
-                                label={project.node.name} // label of the button = name of the project
-                                color={project.node.color} // color of the button = located in Strapi backend
-                                onClick={() => isSelected(project.node)} // onClick function to change the selected project
-                                className="lg:mx-2 sm:mx-1 sm:my-0 my-1" />
+                            <Button type={selected && selected.id == project.node.id ? "primary" : "secondary"} label={project.node.name} color={project.node.color} onClick={() => isSelected(project.node)} className="lg:mx-2 sm:mx-1 sm:my-0 my-1" />
                         ))
                     :
                         <Loader
@@ -62,8 +101,7 @@ const LandingProjects = ({ data }) => {
                 flex ${selected && selected ? "justify-between" : "justify-center"} content-center items-center
                 xl:flex-row flex-col
                 rounded-lg bg-white bg-no-repeat xl:bg-125% md:bg-cover xl:bg-center sm:bg-right-top sm:bg-cover bg-contain bg-bottom
-                border-4 border-solid border-${selected && selected ? selected.color : "red"}-primary
-            `} style={{
+                `} style={{
                 backgroundImage: `url(${project_bg})`
             }}>
                 {
@@ -117,4 +155,4 @@ const LandingProjects = ({ data }) => {
     )
 }
 
-export default LandingProjects;
+export default AboutByte;

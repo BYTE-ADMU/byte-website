@@ -2,17 +2,32 @@ import React, { useState } from "react"
 import "react-responsive-modal/styles.css"
 import { Modal } from "react-responsive-modal"
 
+import Loader from "react-loader-spinner";
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+
+import Tooltip from "react-simple-tooltip";
+
 // import "../styles/global.css"
 import "./homegrown_startups.css"
 
-const HomeGrownStartups = props => {
-  const [open, setOpen] = useState(false)
+import bitbot from "../assets/community/startup.png"
 
-  const onOpenModal = () => setOpen(true)
-  const onCloseModal = () => setOpen(false)
+const HomeGrownStartups = ({ startups }) => {
+  const [open, setOpen] = useState(false)
+  const [selectedStartup, setSelectedStartup] = useState(null)
+
+  function setStartup(startup) {
+    setOpen(true);
+    setSelectedStartup(startup);
+  }
+
+  function deselectStartup() {
+    setOpen(false);
+    setSelectedStartup(null);
+  }
 
   const closeIcon = (
-    <div className="h-10 w-10 flex items-center justify-center rounded-full bg-red-primary">
+    <div className="m-4 h-12 w-12 flex items-center justify-center rounded-full bg-red-primary transition duration-300 ease-in-out hover:shadow-hover">
       <svg
         width="35"
         height="34"
@@ -32,39 +47,58 @@ const HomeGrownStartups = props => {
 
   return (
     <div className="px-10 py-40 h-full w-full bg-gray-200 flex items-center justify-center flex-col bg-styles">
-      <div className="flex items-center justify-center flex-col my-10">
-        <h2 className="text-xl md:text-3xl">Homegrown Startups</h2>
+      <div className="flex items-center justify-center flex-col py-12">
+        <h1 className="bold pb-4">Homegrown Startups</h1>
         <p className="w-2/3 text-center text-md md:text-lg">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident
-          velit nesciunt alias maxime ut odit atque tempora facere.
+          See the homegrown startups making a difference. We're here to support and hopefully see you here soon.
         </p>
       </div>
-      <div className="flex items-center justify-around w-full md:w-2/3">
-        <div
-          className="h-12 w-12 md:h-16 md:w-16 bg-gray-dark rounded-full mx-2 cursor-pointer"
-          onClick={onOpenModal}
-        ></div>
-        <div
-          className="h-12 w-12 md:h-16 md:w-16 bg-gray-dark rounded-full mx-2 cursor-pointer"
-          onClick={onOpenModal}
-        ></div>
-        <div
-          className="h-12 w-12 md:h-16 md:w-16 bg-gray-dark rounded-full mx-2 cursor-pointer"
-          onClick={onOpenModal}
-        ></div>
-        <div
-          className="h-12 w-12 md:h-16 md:w-16 bg-gray-dark rounded-full mx-2 cursor-pointer"
-          onClick={onOpenModal}
-        ></div>
-        <div
-          className="h-12 w-12 md:h-16 md:w-16 bg-gray-dark rounded-full mx-2 cursor-pointer"
-          onClick={onOpenModal}
-        ></div>
+      <div className="flex flex-wrap justify-center items-center content-center w-full md:w-2/3">
+        {
+          startups && startups
+          ?
+            startups.map((startup) => (
+              <Tooltip
+                content={startup.node.name}
+                arrow="8"
+                background="#FAFAFA"
+                border="#FAFAFA"
+                color="#1F2228"
+                fontFamily="'Objectivity', sans-serif"
+                fontSize="1rem"
+                offset="0"
+                padding="8"
+                placement="bottom"
+                radius="5"
+                className="md:block hidden"
+              >
+                <div className="flex flex-col justify-center items-center content-center m-4">
+                  <img src={startup.node.logo.url} 
+                    className="h-12 w-12 md:h-16 md:w-16 lg:h-24 lg:w-24
+                    bg-white rounded-full cursor-pointer 
+                    transition-all duration-300 ease-in-out 
+                    hover:shadow-hover startup-logo"
+                    onClick={() => setStartup(startup.node)}
+                  />
+                  <p className="rounded-md my-4 py-2 px-4 bg-gray-lightest text-center md:hidden block">{startup.node.name}</p>
+                </div>
+              </Tooltip>
+            ))
+          :
+            <Loader
+              type="MutatingDots"
+              color="#F84A5E"
+              secondaryColor="#57CEFE"
+              height={80}
+              width={80}
+              timeout={3000} // 3 secs
+            />
+        }
       </div>
 
       <Modal
         open={open}
-        onClose={onCloseModal}
+        onClose={() => deselectStartup()}
         center
         classNames={{
           overlay: "customOverlay",
@@ -72,30 +106,70 @@ const HomeGrownStartups = props => {
         }}
         closeIcon={closeIcon}
       >
-        <div className="flex flex-col md:flex-row items-center justify-center w-full px-2 py-2 sm:px-4 sm:py-4 md:px-10 md:py-10">
-          <div className="flex flex-col items-center justify-center md:w-1/2 w-full">
-            <div className="w-60 h-60 rounded-full bg-gray-lightest p-20 m-5"></div>
-            <div className="flex items-center justify-center flex-col">
-              <h3>StartUp Name</h3>
-              <div className="flex items-center justify-center">
-                <div className="w-10 h-10 rounded-full bg-red-secondary mr-2"></div>
-                <div className="w-10 h-10 rounded-full bg-gray-dark mr-2"></div>
-                <div className="w-10 h-10 rounded-full bg-gray-darkest mr-2"></div>
+        {
+          selectedStartup && selectedStartup 
+          ?
+            <div className="flex flex-col md:flex-row items-center justify-center w-full p-4 sm:px-8 lg:px-12 xl:px-24">
+              <div className="flex flex-col items-center justify-center md:w-1/2 w-full">
+                <div className="flex justify-center items-center content-center relative">
+                  <div className="xl:w-48 xl:h-48 lg:w-40 lg:h-40 md:w-32 md:h-32 w-24 h-24 rounded-full overflow-hidden flex justify-center items-center content-center m-2">
+                    <img src={selectedStartup.logo.url} className="w-auto  h-full" />
+                  </div>
+                  <img src={bitbot} className="lg:w-16 sm:w-12 w-8 h-auto absolute bottom-0 left-0" />
+                </div>
+                <div className="flex items-center justify-center flex-col">
+                  <h2 className="bold pt-8 pb-4">{selectedStartup.name}</h2>
+                  <div className="flex flex-col justify-center items-start content-center">
+                    {
+                      selectedStartup && selectedStartup
+                      ?
+                        selectedStartup.founders.map((founder) => (
+                          <div className="flex justify-center items-center content-center mb-2">
+                            <div className="w-8 h-8 lg:h-12 lg:w-12 rounded-full overflow-hidden flex justify-center items-center content-center">
+                              <img src={founder.photo.url} 
+                                className="w-full h-auto founders
+                                transition-all duration-300 ease-in-out"
+                              />
+                            </div>
+                            <p className="px-4 text-center">{founder.name}</p>
+                          </div>
+                        ))
+                      :
+                        <>
+                        </>
+                    }
+                  </div>
+                </div>
+              </div>
+              <div className="p-2 md:p-4 w-full md:w-1/2 md:rounded-2xl">
+                {
+                  selectedStartup && selectedStartup.banner
+                  ?
+                    <img src={selectedStartup.banner.url} className="bg-gray-lightest w-full h-auto rounded-t-2xl md:block hidden" />
+                  :
+                    selectedStartup && selectedStartup.logo 
+                    ?
+                      <img src={selectedStartup.logo.url} className="bg-gray-lightest w-full h-auto rounded-t-2xl md:block hidden" />
+                    :
+                    <></>
+                }
+                <div className="md:bg-gray-lightest py-8 px-4 rounded-b-2xl md:shadow-footer">
+                  <p className="p-0 m-0">
+                    {selectedStartup.description}
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-          <div className="p-2 md:p-5 w-full md:w-1/2 ">
-            <div className="bg-gray-light p-28 rounded-t-2xl"></div>
-            <div className="bg-gray-lightest p-5 rounded-b-2xl">
-              <p className="p-0 m-0">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae
-                ratione, repudiandae nesciunt minima exercitationem porro earum
-                labore beatae molestiae dolor voluptates ad excepturi incidunt
-                ipsum cupiditate, in dicta iure officia?
-              </p>
-            </div>
-          </div>
-        </div>
+          :
+            <Loader
+              type="MutatingDots"
+              color="#F84A5E"
+              secondaryColor="#57CEFE"
+              height={80}
+              width={80}
+              timeout={3000} // 3 secs
+            />
+        }
       </Modal>
     </div>
   )

@@ -22,7 +22,7 @@ const DesktopValueProp = ({
     <div className={`2xl:w-1/4 xl:w-1/2 w-full h-auto flex flex-col justify-center items-center content-center about-children py-24`}>
         <div className="w-64 h-64 flex flex-col justify-center items-center content-center relative my-8">
             <img src={imageOne} className={`w-64 h-64 my-4 value-prop-image-1 absolute`} />
-            <img src={imageTwo} className={`w-64 h-64 my-4 value-prop-image-2 absolute`} />
+            <img src={imageTwo} className={`w-48 h-48 my-4 value-prop-image-2 absolute`} />
             <img src={imageThree} className={`w-64 h-64 my-4 value-prop-image-3 absolute`} />
         </div>
         <div className="w-full h-1/3 flex flex-col justify-center items-center content-center relative">
@@ -102,18 +102,18 @@ const LandingAbout = ({}) => {
             }}
         >
             <h1 className="font-sans font-bold text-2xl text-gray-darkest text-center mb-0">
-                BYTE is the premier startup organization of Ateneo.
+                We aim to equip the Filipino with Tech Literacy.
             </h1>
 
             {/* Desktop Version (with Animations) */}
-            <div className="w-full min-h-3/4 h-auto hidden lg:flex flex-col justify-center items-center content-center about-container lg:justify-start px-14 overflow-scroll">
+            <div className="w-full min-h-1/2 h-auto hidden lg:flex flex-col justify-center items-center content-center about-container lg:justify-start px-14 overflow-scroll">
                 <DesktopValueProp
                     imageOne={valuePropOne}
                     imageTwo={valuePropTwo}
                     imageThree={valuePropThree}
                     textOne="As a community, we provide opportunities in crafting solutions that addresses problems encountered by our fellows."
                     textTwo="Different gears work as a system leading to great impact. In BYTE our gears are the Hackers, Hipsters and Hustlers."
-                    textThree="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique porttitor amet ac molestie lectus. 3" 
+                    textThree="BYTE is the Atenean Organization that focuses on startup awareness and execution through modern practices." 
                 />
             </div>
 
@@ -121,10 +121,10 @@ const LandingAbout = ({}) => {
             <div className="w-full h-auto flex flex-col justify-center items-center content-center about-container lg:justify-start px-14 lg:hidden">
                 <MobileValueProp image={valuePropOne} text="As a community, we provide opportunities in crafting solutions that addresses problems encountered by our fellows." className="py-4" />
                 <MobileValueProp image={valuePropTwo} text="Different gears work as a system leading to great impact. In BYTE our gears are the Hackers, Hipsters and Hustlers." className="py-4"/>
-                <MobileValueProp image={valuePropThree} text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique porttitor amet ac molestie lectus. 3" className="pt-4 pb-16 xl:pb-24 2xl:pb-32" />
+                <MobileValueProp image={valuePropThree} text="BYTE is the Atenean Organization that focuses on startup awareness and execution through modern practices." className="pt-4 pb-16 xl:pb-24 2xl:pb-32" />
             </div>
 
-            <Button link="#" type="primary" label="Learn More" className="mt-4" />
+            <Button link="/about" type="primary" label="Learn More" className="mt-4" />
         </div>
     )
 }

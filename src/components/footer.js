@@ -13,32 +13,32 @@ const about_links = [
   {
     id: 1,
     name: "Vision",
-    link: "/vision",
+    link: "/about",
   },
   {
     id: 2,
     name: "Mission",
-    link: "/mission",
+    link: "/about",
   },
   {
     id: 3,
     name: "Advocacy",
-    link: "/advocacy",
+    link: "/about",
   },
   {
     id: 4,
     name: "Empowerment",
-    link: "/empowerment",
+    link: "/about",
   },
   {
     id: 5,
     name: "Core Values",
-    link: "/core-values",
+    link: "/about",
   },
   {
     id: 6,
     name: "Core Thrusts",
-    link: "/core-thrusts",
+    link: "/about",
   },
 ]
 
@@ -46,32 +46,32 @@ const projects_links = [
   {
     id: 1,
     name: "Startup Summit",
-    link: "/startup-summit",
+    link: "/projects",
   },
   {
     id: 2,
     name: "Reboot",
-    link: "/reboot",
+    link: "/projects",
   },
   {
     id: 3,
     name: "ITECH",
-    link: "/itech",
+    link: "/projects",
   },
   {
     id: 4,
     name: "FrosBYTE",
-    link: "/frosbyte",
+    link: "/projects",
   },
   {
     id: 5,
     name: "BYTECamp",
-    link: "/bytecamp",
+    link: "/projects",
   },
   {
     id: 6,
     name: "Mini Projects",
-    link: "/mini-projects",
+    link: "/projects",
   },
 ]
 
@@ -79,17 +79,17 @@ const community_links = [
   {
     id: 1,
     name: "Member Gallery",
-    link: "/member-gallery",
+    link: "/community",
   },
   {
     id: 2,
     name: "Testimonials",
-    link: "/testimonials",
+    link: "/community",
   },
   {
     id: 3,
     name: "Startups",
-    link: "/startups",
+    link: "/community",
   },
 ]
 
@@ -117,18 +117,22 @@ const social_media = [
 ]
 
 const Footer = ({ siteTitle }) => (
-  <footer className="bottom-0 flex flex-col items-center justify-center h-full bg-yellow-secondary drop-shadow-footer">
-    <div className="flex flex-col-reverse items-center justify-center w-full px-4 lg:px-10 lg:py-16 lg:flex-row">
+  <footer className="bottom-0 flex flex-col items-center justify-center h-full bg-gray-lightest shadow-inner shadow-2xl">
+    <div className="flex flex-col-reverse items-start justify-center w-full px-4 lg:px-10 lg:py-16 lg:flex-row">
       <div className="flex flex-col items-center justify-center w-full p-6 lg:w-5/12 lg:justify-around lg:items-start">
         <div className="flex flex-col justify-center w-full lg:justify-center lg:items-center">
-          <h3 className="flex items-center justify-center w-full px-4 lg:items-start items-left lg:justify-start">Contact Us</h3>
-          <div className="flex justify-center w-full lg:justify-start lg:items-start">
+          <h3 className="flex items-center justify-center w-full pl-2 lg:items-start items-left lg:justify-start font-bold">
+            Contact Us
+          </h3>
+          <div className="flex justify-center w-full py-2 lg:justify-start lg:items-start">
             {social_media.map((value, key) => {
               return (
                 <a
                   key={key}
                   href={value.link}
-                  className="flex items-center justify-center w-10 h-10 m-2 rounded-2xl">
+                  target="_blank"
+                  className="flex items-center justify-center w-10 h-10 m-2 rounded-2xl"
+                >
                   <img src={value.image} alt={value.img} className="m-1" />
                 </a>
               )
@@ -141,12 +145,10 @@ const Footer = ({ siteTitle }) => (
             byteadmu@gmail.com
           </p>
           <div className="flex items-center justify-center mt-10">
-            <div className="w-32 h-16 mr-4">
-              <img 
-              src={bytelogo}
-              alt="BYTE Logo"
-              ></img>
-            </div>
+            {/* <div className="w-32 h-16 mr-4"> */}
+            <img src={bytelogo} alt="BYTE Logo" className="w-24 h-24 mr-4" />
+            {/* </div> */}
+            <h3 className="font-bold text-2xl">byte</h3>
           </div>
           <p className="mt-24 text-xs text-center md:text-left">
             © 2021 Building Young Tech Entrepreneurs. All Rights Reserved.
@@ -154,9 +156,9 @@ const Footer = ({ siteTitle }) => (
         </div>
       </div>
 
-      <div className="flex flex-wrap items-start w-7/12 w-full h-full mt-5 md:flex-nowrap lg:">
+      <div className="flex flex-wrap items-start justify-center pl-6 sm:pl-24 lg:pl-0 lg:w-7/12 w-full h-full mt-5 lg:mt-0 md:flex-nowrap">
         <div className="flex flex-col items-start justify-start w-1/3 m-4 lg:w-1/4">
-          <h3>About</h3>
+          <h3 className="font-bold pt-2.5 pb-4">About</h3>
           {about_links.map((value, key) => {
             return (
               <Link key={key} to={value.link} className="mt-1 mb-1 text-sm">
@@ -166,7 +168,7 @@ const Footer = ({ siteTitle }) => (
           })}
         </div>
         <div className="flex flex-col items-start justify-start w-1/3 m-4 lg:w-1/4">
-          <h3>Projects</h3>
+          <h3 className="font-bold pt-2.5 pb-4">Projects</h3>
           {projects_links.map((value, key) => {
             return (
               <Link key={key} to={value.link} className="mt-1 mb-1 text-sm">
@@ -176,7 +178,7 @@ const Footer = ({ siteTitle }) => (
           })}
         </div>
         <div className="flex flex-col items-start justify-start w-1/3 m-4 lg:w-1/4">
-          <h3>Community</h3>
+          <h3 className="font-bold pt-2.5 pb-4">Community</h3>
           {community_links.map((value, key) => {
             return (
               <Link key={key} to={value.link} className="mt-1 mb-1 text-sm">
@@ -186,7 +188,7 @@ const Footer = ({ siteTitle }) => (
           })}
         </div>
         <div className="flex flex-col items-start justify-start w-1/3 m-4 lg:w-1/4">
-          <h3>Partners</h3>
+          <h3 className="font-bold pt-2.5 pb-4">Partners</h3>
           <p className="mt-1 mb-1 text-sm">Coming Soon</p>
         </div>
       </div>
