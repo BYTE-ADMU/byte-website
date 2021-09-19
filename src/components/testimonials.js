@@ -43,6 +43,7 @@ const Testimonial = ({ testimonial, onNext }) => (
   <div className="
       h-full w-full flex md:flex-row flex-col 2xl:px-32 lg:px-24 md:px-16 px-8 py-16 py-16
       justify-center content-center items-center bg-transparent relative"
+      id="testimonials"
     >
     <div className="w-full xl:w-1/3 lg:w-1/2 
                   lg:flex hidden justify-center items-center content-center"

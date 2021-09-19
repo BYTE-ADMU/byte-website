@@ -30,6 +30,10 @@ function getBackground(name) {
   }
 }
 
+// function getId(name) {
+//   return name.replace(/\s+/g, '-').toLowerCase()
+// }
+
 // START: Project Component
 const Project = ({ layout, data, bg }) => (
   <div className="lg:min-h-3/4 min-h-1/2 h-full w-full 2xl:p-48 lg:p-24 md:px-8 py-12 px-4 flex flex-col sm:flex sm:flex-row items-center justify-center md:bg-contain bg-cover bg-no-repeat bg-center"
@@ -96,12 +100,15 @@ const ProjectsLayout = ({ data }) => (
     // style={{
     //   backgroundImage: `url(${ProjectsLayoutBg})`
     // }}
+    id="flagship"
   >
     {
       data && data
       ?
         data.map((project, index) => (
-          <Project layout={index % 2 == 0 ? "left" : "right"} data={project} bg={getBackground(project.node.name)} />
+          <Project layout={index % 2 == 0 ? "left" : "right"} data={project} bg={getBackground(project.node.name)} 
+            // id={getId(project.node.name)} 
+          />
         ))
       :
         <Loader

@@ -46,7 +46,7 @@ const HomeGrownStartups = ({ startups }) => {
   )
 
   return (
-    <div className="px-10 py-40 h-full w-full bg-gray-200 flex items-center justify-center flex-col bg-styles">
+    <div className="px-10 py-40 h-full w-full bg-gray-200 flex items-center justify-center flex-col bg-styles" id="startups">
       <div className="flex items-center justify-center flex-col py-12">
         <h1 className="bold pb-4">Homegrown Startups</h1>
         <p className="w-2/3 text-center text-md md:text-lg">

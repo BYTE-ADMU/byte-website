@@ -3,8 +3,13 @@
 } */
 
 .header-bytelogo {
-  width: 48px;
-  height: auto;
+  width: auto;
+  height: 48px;
+
+  image-rendering: crisp-edges;
+
+  /* Safari seems to support, but seems deprecated and does the same thing as the others. */
+  image-rendering: -webkit-optimize-contrast;
 }
 
 /* .header-joinusbtn {
@@ -81,7 +86,7 @@
   }
 
   .header-bytelogo {
-    width: 32px;
-    height: auto;
+    width: auto;
+    height: 32px;
   }
 }

@@ -11,7 +11,6 @@ import "../../styles/global.css"
 import img1 from '../../assets/about/img1.png'
 import img2 from '../../assets/about/img2.png'
 import img3 from '../../assets/about/img3.png'
-import bg from '../../assets/about/about-aims-bg.png'
 // END: IMPORTS = = = = = = = = = = = = = = = = = = = =
 
 SwiperCore.use([Autoplay])
@@ -25,9 +24,7 @@ const AboutAims = props => {
           disableOnInteraction: false,
         }}
         className="mySwiper lg:min-h-3/4 h-full w-full px-4 flex flex-col sm:flex sm:flex-col items-center justify-center md:bg-contain bg-cover bg-no-repeat bg-center"
-        style={{
-        backgroundImage: `url(${bg})`
-        }}
+        id="goals"
       >
         <SwiperSlide key={props.id} className="width-1/2">
             <div className="flex flex-row items-center justify-center
