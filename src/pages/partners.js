@@ -1,6 +1,9 @@
 import React from 'react'
 import Layout from "../layouts/default"
-import partnersbg from "../assets/partners/partners-coming-soon.png"
+import Button from "../components/button"
+
+import comingSoon from "../assets/partners/coming-soon.png"
+import bg from "../assets/partners/background.png"
 
 const seo = {
     siteTitle: "BYTE Partners",
@@ -10,12 +13,23 @@ const seo = {
 const partners = () => {
     return (
         <Layout seo={seo}>
+            {/* START: Container*/}
             <div
-                className="flex flex-col justify-center items-center content-center w-auto h-screen bg-no-repeat bg-top bg-contain px-10 mb-20 sm:px-0" 
+                className="w-full h-screen px-12 flex justify-center items-center content-center
+                        bg-no-repeat bg-cover bg-center" 
                 style={{
-                backgroundImage: `url(${partnersbg})`
-                }}> 
+                    backgroundImage: `url(${bg})`
+                }}
+            >
+                {/* START: Wrapper */}
+                <div className="xl:w-1/2 w-full h-auto flex flex-col justify-center items-center content-center">
+                    <img src={comingSoon} className="w-full h-auto" />
+                    <p className="pt-8 pb-12 text-center">BYTE is hard at work to build this page for your pleasant viewing experience. <br /><br />In the meantime, check out the rest of our website!</p>
+                    <Button link="/" label="Go Home" type="primary" />
+                </div>
+                {/* END: Wrapper */}
             </div>
+            {/* END: Container */}
         </Layout>
     )
 }

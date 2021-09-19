@@ -19,7 +19,7 @@ import "../../styles/global.css"
 
 // START: TEMPLATE = = = = = = = = = = = = = = = = = = = =
 const Header = ({ siteTitle, page }) => {
-  const [navStyle, setNavStyle] = React.useState(page !== "BYTE Community" ? "sm:z-10 z-50 shadow-none bg-transparent" : "z-50 shadow-nav bg-gray-lightest")
+  const [navStyle, setNavStyle] = React.useState((page !== "BYTE Community" && page !== "BYTE Partners") ? "sm:z-10 z-50 shadow-none bg-transparent" : "z-50 shadow-nav bg-gray-lightest")
 
   const [click, setClick] = React.useState(false)
   const [button, setButton] = React.useState(true)
@@ -38,7 +38,7 @@ const Header = ({ siteTitle, page }) => {
   React.useEffect(() => {
     showButton()
     window.onscroll = () =>
-      window.scrollY === 0 && page !== "BYTE Community"
+      window.scrollY === 0 && (page !== "BYTE Community" && page !== "BYTE Partners")
         ? setNavStyle("sm:z-10 z-50 shadow-none bg-transparent")
         : setNavStyle("z-50 shadow-nav bg-gray-lightest")
   })
@@ -91,7 +91,7 @@ const Header = ({ siteTitle, page }) => {
             )
           })}
 
-          <Button className="md:m-0 m-4" link="#" label="Join Us" type="primary" />
+          <Button className="md:ml-8 m-4" link="#" label="Join Us" type="primary" />
 
           {/* END: NAV BUTTON */}
         </ul>
