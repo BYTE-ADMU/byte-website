@@ -25,15 +25,17 @@ const ProjectsHero = () => {
             </div> */}
           <div className="z-10 md: w-full md:w-1/2 flex flex-col items-center justify-center">
             <div className="w-3/4 pb-10 md:w-auto px-0 relative">
-              <img className="z-10"
-                src={ProjectsHeroImg}
-                alt="Projects Hero Image"
-              />
-              <img className="absolute absolute -bottom-32 -left-60 lg:block hidden"
+              <div className="w-full h-64 relative flex justify-center items-center content-center overflow-hidden rounded-2xl z-10">
+                <img className="w-auto h-full transform duration-300 ease-in-out transform hover:scale-105 z-10 relative"
+                  src={ProjectsHeroImg}
+                  alt="Projects Hero Image"
+                />
+              </div>
+              <img className="absolute absolute -bottom-32 -left-60 lg:block hidden z-20"
                 src={bench}
                 alt="BYTE Tables"
               />
-              <img className="absolute absolute -top-20 -right-40 lg:block hidden"
+              <img className="absolute absolute -top-20 -right-40 lg:block hidden z-20"
                 src={cloud}
                 alt="Bitbot in the Clouds"
               />

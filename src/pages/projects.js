@@ -22,7 +22,7 @@ const ProjectsPage = () => (
                     <div className="w-full">
                         <ProjectsLayout data={data.flagshipProjects.edges} />
                     </div>
-                    <div className="w-full h-full flex flex-col items-center justify-center">
+                    <div className="w-full h-full flex flex-col items-center justify-center" id="growth">
                         <ProjectsGrowthCards data={data.growthProjects.edges} />                    
                     </div>
                 </div>

@@ -6,66 +6,94 @@ import bg from "../../assets/about/about-aims-bg.png"
 import Loader from "react-loader-spinner";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
+// GIFS
+import vision from "../../assets/gif/vision.gif"
+import mission from "../../assets/gif/mission.gif"
+import advocacy from "../../assets/gif/advocacy.gif"
+import empowerment from "../../assets/gif/empowerment.gif"
+
+
 const about = [
     {
         name: "Vision",
-        text: "living in this big blue world, with my head in outer space, i know i'll be a-o a-ok!~~",
-        color:"#F84A5E",
-        secondaryColor:"#57CEFE"
+        text: "BYTE envisions itself to be a technological and entrepreneurial network spearheaded by existing and potential catalysts for change.",
+        color: "purple",
+        gif: vision
     },
     {
         name: "Mission",
-        text: "good morning",
-        color:"#F84A5E",
-        secondaryColor:"#57CEFE"
+        text: "BYTE cultivates young entrepreneurs who create innovative and technological solutions that strive for nation-building.",
+        color:"green",
+        gif: mission
+    },
+    {
+        name: "Advocacy",
+        text: "BYTE aims to promote the importance of tech entrepreneurship to the youth in today’s age. We believe in the importance of cultivating tech, innovation and entrepreneurial skills to create solutions that make a positive impact.",
+        color: "blue",
+        gif: advocacy
+    },
+    {
+        name: "Empowerment",
+        text: "At BYTE, we believe in equipping each one of our members with the skills and experience they need to build a successful startup and providing an inclusive environment for their growth. We are committed to making it happen by enabling opportunitieis through our projects and intiatives.",
+        color:"yellow",
+        gif: empowerment
     }
 ]
-const AboutByte = ({ data }) => {
-    const [selected, isSelected] = useState(data && data ? data[0].node : null);
+const AboutByte = () => {
+    const [selected, isSelected] = useState(about[0]);
 
     return (
         <div className={`
-            2xl:w-full h-max 2xl:p-32 relative
-            lg:px-4 md:py-10 md:py-8 py-16 px-4 w-full
-            flex "justify-between" : "justify-center"} content-center items-center
-            xl:flex-row flex-col
-            rounded-lg bg-white bg-no-repeat xl:bg-125% md:bg-cover xl:bg-center sm:bg-right-top sm:bg-cover bg-contain bg-bottom
-            `} style={{
-            backgroundImage: `url(${bg})`
-        }}>
-            <h1 className="w-full text-center sm:text-left sm:px-20 font-sans sm:text-4xl font-bold text-gray-darkest">
+            2xl:w-full h-max relative
+            2xl:px-64 xl:px-32 md:px-16 sm:px-8 px-4 2xl:py-32 py-16 w-full
+            flex flex-col justify-center content-center items-start
+            rounded-lg bg-gray-background bg-no-repeat md:bg-cover bg-contain md:bg-center bg-top lg:bg-fixed bg-scroll
+            `} style={{ backgroundImage: `url(${bg})`}}
+            id="values"
+        >
+            <h1 className="w-full text-center sm:text-left font-sans sm:text-4xl font-bold text-gray-darkest">
                 What BYTE stands for...
             </h1>
-            {
-                    about && about
-                    ?
-                        // map through all of the projects
-                        // for project in data:
-                        about.map((about) => (
-                            <Button 
-                                name={about.name} // if selected, make primary button. else, secondary 
-                                text={about.text} // label of the button = name of the project
-                                color={about.color} // color of the button = located in Strapi backend
-                                onClick={() => isSelected(about.node)} // onClick function to change the selected project
-                                className="lg:mx-2 sm:mx-1 sm:my-0 my-1" />
-                        ))
-                        :
-                        <Loader
-                            type="MutatingDots"
-                            color="#F84A5E"
-                            secondaryColor="#57CEFE"
-                            height={80}
-                            width={80}
-                            timeout={3000} // 3 secs
-                        />
-            }
-            <div className="w-full h-max flex flex-col content-center items-center">
-                {/* buttons */}
-                <div className="w-full h-full flex flex-row content-center items-center sm:flex-row">
-                    <p className="text-center w-64 md:px-12 md:w-3/5">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-                    <div className="w-0 sm:w-64 h-32 bg-gray-darkest rounded-2xl"></div>
+
+            {/* START: BUTTONS */}
+            <div className="w-full flex justify-start items-center content-center">
+                <div className="lg:w-full w-1/2 h-auto flex lg:flex-row flex-col lg:justify-start justify-center lg:items-center items-start content-center lg:pt-12 py-4">
+                    {
+                        about && about
+                        ?
+                            about.map((value) => (
+                                <Button
+                                    type={selected.name == value.name ? "primary" : "secondary"}
+                                    label={value.name}
+                                    color={value.color}
+                                    onClick={() => isSelected(value)} // onClick function to change the selected project
+                                    className="lg:mr-4 mr-2 lg:my-0 my-2" />
+                            ))
+                            :
+                            <Loader
+                                type="MutatingDots"
+                                color="#F84A5E"
+                                secondaryColor="#57CEFE"
+                                height={80}
+                                width={80}
+                                timeout={3000} // 3 secs
+                            />
+                    }
+                </div>
+                <img src={selected.gif} className="md:w-1/3 w-1/2 h-auto lg:hidden block" />
+            </div>
+            {/* END: BUTTONS */}
+
+            {/* START: CONTENT */}
+            <div className="w-full h-auto flex content-center items-start py-4">
+                <div className="lg:w-1/2 w-full h-auto">
+                    <p className="w-full lg:text-left text-center w-full">{selected.text}</p>
+                </div>
+                <div className="lg:w-1/2 h-60 lg:flex hidden justify-center items-start content-center">
+                    <img src={selected.gif} className="xl:h-full md:h-1/2 h-full w-auto" />
                 </div>
             </div>
+            {/* END: CONTENT */}
         </div>
     )
 }

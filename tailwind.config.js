@@ -5,6 +5,9 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   variants: {
     boxShadow: ['responsive', 'hover', 'focus'],
+    extend: {
+      inset: ['hover'],
+    }
   },
   theme: {
     extend: {
@@ -68,6 +71,7 @@ module.exports = {
         light: '#C7C7C7',
         lighter: '#E0E0E0',
         lightest: '#FAFAFA',
+        background: "#f9f7f9" // for 404 and partner pages only
       },
       black: {
         primary: "#000000",

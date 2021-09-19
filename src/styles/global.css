@@ -168,3 +168,10 @@ p { font-size: 1rem; line-height: 1.5rem; }
     .small { font-size: 0.75rem; line-height: 1rem; }
 }
 /* END: FONT SIZES */
+
+/* START: ARROW (FOR TESTIMONIALS) */
+.arrow__container:hover + .arrow__filled {
+  bottom: 0;
+  left: 0;
+}
+/* END: ARROW */

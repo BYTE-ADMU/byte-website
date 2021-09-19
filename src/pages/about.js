@@ -9,6 +9,9 @@ import AboutAims from "../components/about/about-aims"
 import AboutByte from "../components/about/about-byte"
 import CoreThrusts from "../components/about/core-thrusts"
 import CTA from "../components/cta"
+
+// Assets
+import bg from '../assets/about/about-aims-bg.png'
 // END: IMPORTS = = = = = = = = = = = = = = = = = = = =
 
 const seo = {
@@ -21,8 +24,13 @@ const about = () => {
         <Layout seo={seo}>
             <AboutHero />
             <AboutByte />
-            <div>
-                <h1 className="w-full text-center sm:text-left sm:px-20 font-sans sm:text-4xl font-bold text-gray-darkest pb-10">
+            <div className="2xl:px-64 xl:px-32 md:px-16 sm:px-8 px-4 2xl:py-32 py-16 w-full
+                bg-cover bg-no-repeat bg-center"
+                style={{
+                    backgroundImage: `url(${bg})`
+                }}
+            >
+                <h1 className="w-full sm:text-left text-center font-sans font-bold text-gray-darkest pb-10">
                     BYTE aims to...
                 </h1>
                 <AboutAims />

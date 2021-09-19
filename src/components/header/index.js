@@ -9,7 +9,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Button from "../button"
 
 // Assets
-import byteLogo from "../../assets/img/byte-icon-without-text.png"
+import byteLogo from "../../assets/img/byte-icon-with-text.png"
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons"
 
 //Styles
@@ -54,7 +54,7 @@ const Header = ({ siteTitle, page }) => {
         <Link to="/">
           <div className="flex items-center py-6 ">
             <img src={byteLogo} className="mr-4 header-bytelogo" />
-            <h1 className="bold">{siteTitle.toLowerCase()}</h1>
+            {/* <h1 className="bold">{siteTitle.toLowerCase()}</h1> */}
           </div>
         </Link>
       </div>
