@@ -83,20 +83,26 @@ const LandingProjects = ({ data }) => {
                                     <h1 className={`font-sans font-bold text-xl text-${selected && selected ? selected.color : "red"}-primary mb-2`}>{selected && selected ? selected.name : ""}</h1>
                                     <p className="xl:h-32 font-sans text-base text-white md:text-left text-center">{selected && selected ? selected.teaser : ""}</p>
                                 </div>
-                                <img src={selected && selected ? selected.logo.url : ""} className="xl:w-60 xl:h-60 md:w-40 md:h-40 md:mb-0 mb-4 w-20 h-20 rounded-full" />
+                                <div className={`xl:w-60 xl:h-60 md:w-40 md:h-40 md:mb-0 mb-4 w-20 h-20 rounded-full overflow-hidden flex justify-center items-center content-center border-2 border-solid border-${selected && selected ? selected.color : "red"}-primary`}>
+                                    <img src={selected && selected ? selected.logo.url : ""} className="h-full w-auto transform duration-300 ease-in-out transform hover:scale-105" />
+                                </div>
                             </div>
                             <div className="
                                 xl:w-1/2 md:w-full h-max relative
                                 flex flex-col md:flex-row xl:justify-center md:justify-between justify-center content-center items-center
                             ">
-                                <img className="
-                                    w-80 h-56 relative lg:py-0 py-4
-                                    xl:absolute xl:-top-48 2xl:left-12 xl:left-4
-                                    transform duration-300 ease-in-out transform hover:scale-105" src={selected && selected ? selected.image_1.url : ""} />
-                                <img className="
-                                    w-80 h-56 relative lg:py-0 py-4
-                                    xl:absolute xl:-bottom-48 2xl:right-0 xl:-right-4 md:relative xl:z-10
-                                    transform duration-300 ease-in-out transform hover:scale-105" src={selected && selected ? selected.image_2.url : ""} />
+                                <div className="w-80 h-56 relative lg:py-0 py-4 rounded-2xl 
+                                    flex justify-center content-center items-center overflow-hidden 
+                                    xl:absolute xl:-top-48 2xl:left-12 xl:left-4"
+                                >
+                                    <img className="w-auto h-full transform duration-300 ease-in-out transform hover:scale-105" src={selected && selected ? selected.image_1.url : ""} />
+                                </div>
+                                <div className="w-80 h-56 relative lg:py-0 py-4 rounded-2xl
+                                    flex justify-center content-center items-center overflow-hidden
+                                    xl:absolute xl:-bottom-48 2xl:right-0 xl:-right-4 md:relative xl:z-10"
+                                >
+                                    <img className="w-auto h-full transform duration-300 ease-in-out transform hover:scale-105" src={selected && selected ? selected.image_2.url : ""} />
+                                </div>
                                 <img className="w-200 absolute -top-64 left-72 z-20 xl:block hidden" src={cloud} />
                             </div>
                             <img className="absolute top-48 -right-40 sm:block hidden" src={squigglyTwo} />
