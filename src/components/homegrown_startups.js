@@ -27,7 +27,7 @@ const HomeGrownStartups = ({ startups }) => {
   }
 
   const closeIcon = (
-    <div className="h-10 w-10 flex items-center justify-center rounded-full bg-red-primary">
+    <div className="m-4 h-12 w-12 flex items-center justify-center rounded-full bg-red-primary transition duration-300 ease-in-out hover:shadow-hover">
       <svg
         width="35"
         height="34"
@@ -94,26 +94,6 @@ const HomeGrownStartups = ({ startups }) => {
               timeout={3000} // 3 secs
             />
         }
-        {/* <div
-          className="h-12 w-12 md:h-16 md:w-16 bg-gray-dark rounded-full mx-2 cursor-pointer"
-          onClick={onOpenModal}
-        ></div>
-        <div
-          className="h-12 w-12 md:h-16 md:w-16 bg-gray-dark rounded-full mx-2 cursor-pointer"
-          onClick={onOpenModal}
-        ></div>
-        <div
-          className="h-12 w-12 md:h-16 md:w-16 bg-gray-dark rounded-full mx-2 cursor-pointer"
-          onClick={onOpenModal}
-        ></div>
-        <div
-          className="h-12 w-12 md:h-16 md:w-16 bg-gray-dark rounded-full mx-2 cursor-pointer"
-          onClick={onOpenModal}
-        ></div>
-        <div
-          className="h-12 w-12 md:h-16 md:w-16 bg-gray-dark rounded-full mx-2 cursor-pointer"
-          onClick={onOpenModal}
-        ></div> */}
       </div>
 
       <Modal
@@ -129,10 +109,10 @@ const HomeGrownStartups = ({ startups }) => {
         {
           selectedStartup && selectedStartup 
           ?
-            <div className="flex flex-col md:flex-row items-center justify-center w-full px-2 py-2 sm:px-4 sm:py-4 md:px-10 md:py-10">
+            <div className="flex flex-col md:flex-row items-center justify-center w-full p-4 sm:px-8 lg:px-12 xl:px-24">
               <div className="flex flex-col items-center justify-center md:w-1/2 w-full">
                 <div className="flex justify-center items-center content-center relative">
-                  <img src={selectedStartup.logo.url} className="w-60 h-60 rounded-full bg-gray-lightest m-5" />
+                  <img src={selectedStartup.logo.url} className="xl:w-48 xl:h-48 lg:w-32 lg:h-32 w-24 h-24 rounded-full bg-gray-lightest m-5" />
                   <img src={bitbot} className="lg:w-24 lg:h-auto w-16 h-auto absolute bottom-0 left-0" />
                 </div>
                 <div className="flex items-center justify-center flex-col">
@@ -142,29 +122,15 @@ const HomeGrownStartups = ({ startups }) => {
                       selectedStartup && selectedStartup
                       ?
                         selectedStartup.founders.map((founder) => (
-                          <Tooltip
-                            content={founder.name}
-                            arrow="0"
-                            background="#FAFAFA"
-                            border="#FAFAFA"
-                            color="#1F2228"
-                            fontFamily="'Objectivity', sans-serif"
-                            fontSize="1rem"
-                            padding="4"
-                            placement="bottom"
-                            radius="5"
-                            className="md:block hidden"
-                          >
-                            <div className="flex justify-center items-center content-center m-4">
-                              <img src={founder.photo.url} 
-                                className="h-4 w-4 md:h-8 md:w-8 lg:h-16 lg:w-16
-                                bg-white rounded-full cursor-pointer 
-                                transition-all duration-300 ease-in-out 
-                                hover:shadow-hover startup-logo"
-                              />
-                              <p className="rounded-md my-4 py-2 px-4 bg-gray-lightest text-center md:hidden block">{founder.name}</p>
-                            </div>
-                          </Tooltip>
+                          <div className="flex justify-center items-center content-center mb-4">
+                            <img src={founder.photo.url} 
+                              className="h-4 w-4 md:h-8 md:w-8 lg:h-16 lg:w-16
+                              bg-white rounded-full cursor-pointer 
+                              transition-all duration-300 ease-in-out 
+                              hover:shadow-hover startup-logo"
+                            />
+                            <p className="px-4 text-center">{founder.name}</p>
+                          </div>
                         ))
                       :
                         <>
@@ -173,9 +139,9 @@ const HomeGrownStartups = ({ startups }) => {
                   </div>
                 </div>
               </div>
-              <div className="p-2 md:p-5 w-full md:w-1/2 ">
-                <div className="bg-gray-light p-28 rounded-t-2xl"></div>
-                <div className="bg-gray-lightest p-5 rounded-b-2xl">
+              <div className="p-2 md:p-5 w-full md:w-1/2">
+                <img src={selectedStartup.banner.url} className="bg-gray-lightest w-full h-auto rounded-t-2xl" />
+                <div className="bg-gray-lightest py-8 px-4 rounded-b-2xl shadow-footer">
                   <p className="p-0 m-0">
                     {selectedStartup.description}
                   </p>

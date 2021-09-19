@@ -6,8 +6,10 @@
 }
 
 .customModal {
+  min-width: 50%;
   background-image: url("../assets/community/modal.png");
   background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
 }
 
