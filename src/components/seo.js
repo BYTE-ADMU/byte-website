@@ -8,6 +8,7 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
+
 import { useStaticQuery, graphql } from "gatsby"
 
 function Seo({ description, lang, meta, title }) {
@@ -68,6 +69,15 @@ function Seo({ description, lang, meta, title }) {
           name: `twitter:description`,
           content: metaDescription,
         },
+        {
+          name: `og:url`,
+          content: `https://byteadmu.com/`,
+        },
+        // Once thumbnail is available, import image and use here
+        // {
+        //   name: `og:image`,
+        //   content: image,
+        // },
       ].concat(meta)}
     />
   )

@@ -1,0 +1,28 @@
+.bg-styles {
+  background-image: url("../assets/community/homegrown_bg.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.customModal {
+  min-width: 50%;
+  background-image: url("../assets/community/modal.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.startup-logo:hover {
+  transform: translateY(-4%);
+}
+
+.founders:hover {
+  transform: scale(1.25);
+}
+
+@media screen and (max-width: 1024px) {
+  .bg-styles {
+    background-position: center;
+  }
+}

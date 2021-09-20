@@ -1,0 +1,92 @@
+/* .header {
+  @apply flex flex-wrap items-center justify-between px-6 py-2 bg-gray-500;
+} */
+
+.header-bytelogo {
+  width: auto;
+  height: 48px;
+
+  image-rendering: crisp-edges;
+
+  /* Safari seems to support, but seems deprecated and does the same thing as the others. */
+  image-rendering: -webkit-optimize-contrast;
+}
+
+/* .header-joinusbtn {
+  @apply inline-block px-4 py-2 mt-4 text-sm leading-none text-white border border-white rounded lg:mt-0;
+} */
+
+/* START: NAV ANIMATION */
+/* Start: Set 1 */
+/* .navAnimation li{
+  text-decoration: none;
+  position: relative;
+} */
+/* Hover Text Color */
+/* .navAnimation li:hover{color:#f00800;}  */
+
+/* Hover Underline Animation */
+/* .navAnimation li:after{content:""; display:block;}
+.navAnimation li:after{position:absolute; left:50%; bottom:0; width:0%; height:8px; background-color:#ffe800; transform:translateX( -50% ); -webkit-transition:all .3s cubic-bezier(0.68, -0.55, 0.265, 1.55); -o-transition:all .3s cubic-bezier(0.68, -0.55, 0.265, 1.55); transition:all .3s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
+.navAnimation li:hover:after{width:100%;} */
+/* End: Set 1 */
+
+/* Start: Set 2 */
+.navAnimation a {
+  text-decoration: none;
+  position: relative;
+  color: currentColor;
+}
+
+.navAnimation a::after {
+  position: absolute;
+  content: "";
+  height: 2px;
+  top: 150%;
+  background: currentColor;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  transform: scaleX(0);
+  transition: transform 0.4s cubic-bezier(0.95, 0.05, 0.795, 0.035);
+}
+
+.navAnimation a:hover::after {
+  transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+  transform: scaleX(1);
+}
+/* End: Set 2 */
+/* END: NAV ANIMATION */
+
+/* START: ACTIVE LINK STYLES */
+.navAnimation.active a::after {
+  transform: scaleX(1);
+}
+
+@media screen and (max-width: 767px) {
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 90vh;
+    position: absolute;
+    padding: 2rem;
+    top: 80px;
+    left: -100%;
+    opacity: 1;
+    transition: all 0.5s ease;
+  }
+
+  .nav-menu.active {
+    background: #FAFAFA;
+    left: 0;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 1;
+  }
+
+  .header-bytelogo {
+    width: auto;
+    height: 32px;
+  }
+}
