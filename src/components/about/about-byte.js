@@ -90,7 +90,7 @@ const AboutByte = () => {
                     <p className="w-full lg:text-left text-center w-full">{selected.text}</p>
                 </div>
                 <div className="lg:w-1/2 h-60 lg:flex hidden justify-center items-start content-center">
-                    <img src={selected.gif} alt={selected.name} className="xl:h-full md:h-1/2 h-full w-auto" />
+                    <img src={selected.gif} alt={selected.name} className="h-full w-auto" />
                 </div>
             </div>
             {/* END: CONTENT */}
