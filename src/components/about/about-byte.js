@@ -67,7 +67,7 @@ const AboutByte = () => {
                                     label={value.name}
                                     color={value.color}
                                     onClick={() => isSelected(value)} // onClick function to change the selected project
-                                    className="lg:mr-4 mr-2 lg:my-0 my-2" />
+                                    className="lg:mr-4 mr-2 ml-4 sm:ml-0 lg:my-0 my-2" />
                             ))
                             :
                             <Loader
