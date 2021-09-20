@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -21,9 +21,9 @@ const DesktopValueProp = ({
 }) => (
     <div className={`2xl:w-1/4 xl:w-1/2 w-full h-auto flex flex-col justify-center items-center content-center about-children py-24`}>
         <div className="w-64 h-64 flex flex-col justify-center items-center content-center relative my-8">
-            <img src={imageOne} className={`w-64 h-64 my-4 value-prop-image-1 absolute`} />
-            <img src={imageTwo} className={`w-48 h-48 my-4 value-prop-image-2 absolute`} />
-            <img src={imageThree} className={`w-64 h-64 my-4 value-prop-image-3 absolute`} />
+            <img src={imageOne} alt="Value Prop 1" className={`w-64 h-64 my-4 value-prop-image-1 absolute`} />
+            <img src={imageTwo} alt="Value Prop 2" className={`w-48 h-48 my-4 value-prop-image-2 absolute`} />
+            <img src={imageThree} alt="Value Prop 3" className={`w-64 h-64 my-4 value-prop-image-3 absolute`} />
         </div>
         <div className="w-full h-1/3 flex flex-col justify-center items-center content-center relative">
             <p className={`w-full text-center font-sans font-normal not-italic value-prop-text-1 absolute`}>{textOne}</p>
@@ -39,12 +39,12 @@ const MobileValueProp = ({
     className
 }) => (
     <div className={`2xl:w-1/4 xl:w-1/2 w-full h-auto flex flex-col justify-center items-center content-center about-children ${className}`}>
-        <img src={image} className="w-48 h-48 my-4" />
+        <img src={image} alt="Value Prop" className="w-48 h-48 my-4" />
         <p className="text-center font-sans font-normal not-italic">{text}</p>
     </div>
 )
 
-const LandingAbout = ({}) => {
+const LandingAbout = () => {
     useEffect(() => {
         // Create GSAP Timeline for container
         let valueProp = gsap.timeline({

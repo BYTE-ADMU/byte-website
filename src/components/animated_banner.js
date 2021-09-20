@@ -8,17 +8,16 @@ import upperCaption from "../assets/community/upperCaption.png";
 import lowerCaption from "../assets/community/lowerCaption.png";
 
 const Card = ({ member }) => (
-  <img src={member.node.members.url} 
-      alt="placeholder" 
-      className="lg:w-full lg:h-auto w-auto sm:h-full h-40
-                lg:my-8 lg:mx-4 my-4 mx-2
-                rounded-3xl
-                transition-all ease-in-out
-                hover:scale-105"
-      onClick={() => window.open(member.node.members.url, "_blank")}
-      onKeyDown={() => window.open(member.node.members.url, "_blank")}
-      role="presentation"
-  />
+  <a href={member.node.members.url} target="_blank" rel="noreferrer">
+    <img src={member.node.members.url} 
+        alt="placeholder" 
+        className="lg:w-full lg:h-auto w-auto sm:h-full h-40
+                  lg:my-8 lg:mx-4 my-4 mx-2
+                  rounded-3xl
+                  transition-all ease-in-out
+                  hover:scale-105"
+    />
+  </a>
 )
 
 const AnimatedBanner = ({ members }) => (
