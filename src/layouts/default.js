@@ -8,11 +8,13 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-
 import { Helmet } from "react-helmet"
-import Header from "../components/header"
 import "./default.css"
+
+import Header from "../components/header"
 import Footer from "../components/footer"
+
+import thumbnail from "../assets/img/thumbnail.png"
 
 const Layout = ({ seo, children }) => {
   const data = useStaticQuery(graphql`
@@ -68,10 +70,14 @@ const Layout = ({ seo, children }) => {
             content: `https://byteadmu.com/`,
           },
           // Once thumbnail is available, import image and use here
-          // {
-          //   name: `og:image`,
-          //   content: image,
-          // },
+          {
+            name: `og:image`,
+            content: thumbnail,
+          },
+          {
+            name: `twitter:image`,
+            content: thumbnail
+          }
         ]}
       />
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} page={seo.siteTitle} />
