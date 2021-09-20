@@ -49,7 +49,7 @@ const HomeGrownStartups = ({ startups }) => {
     <div className="px-10 py-40 h-full w-full bg-gray-200 flex items-center justify-center flex-col bg-styles" id="startups">
       <div className="flex items-center justify-center flex-col py-12">
         <h1 className="bold pb-4">Homegrown Startups</h1>
-        <p className="w-2/3 text-center text-md md:text-lg">
+        <p className="w-full sm:w-2/3 text-center text-md md:text-lg">
           See the homegrown startups making a difference. We're here to support and hopefully see you here soon.
         </p>
       </div>
