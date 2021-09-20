@@ -26,7 +26,7 @@ module.exports = {
         background_color: `#FAFAFA`,
         theme_color: `#FAFAFA`,
         display: `minimal-ui`,
-        icon: `src/assets/img/byte-icon-without-text.png`, // This path is relative to the root of the site.
+        icon: `src/assets/img/byte-logo-manifest.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-gatsby-cloud`,

@@ -8,7 +8,7 @@ import LandingHero from "../components/landing_hero"
 import LandingAbout from "../components/landing_about"
 import LandingProjects from "../components/landing_projects"
 import LandingCommunity from "../components/landing_community"
-import CTA from "../components/cta"
+import Cta from "../components/cta"
 
 import projects from "../assets/img/landing/projects-section.png"
 import community from "../assets/img/landing/community.png"
@@ -61,6 +61,7 @@ const query = graphql`
       allStrapiStartups(filter: {strapiId: {lte: 3}}) {
         edges {
           node {
+            name
             logo {
               url
             }
@@ -130,7 +131,7 @@ const IndexPage = () => (
         </div>
 
         {/* CTA */}
-        <CTA />
+        <Cta />
       </Layout>
     )}
   />

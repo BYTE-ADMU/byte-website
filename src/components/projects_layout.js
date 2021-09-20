@@ -17,13 +17,13 @@ import byteCamp from '../assets/projects/byte-camp.png'
 
 // Function to get the background for the project
 function getBackground(name) {
-  if (name.toLowerCase() == "startup summit") {
+  if (name.toLowerCase() === "startup summit") {
     return startupSummit
-  } else if (name.toLowerCase() == "reboot") {
+  } else if (name.toLowerCase() === "reboot") {
     return reboot
-  } else if (name.toLowerCase() == "itech") {
+  } else if (name.toLowerCase() === "itech") {
     return itech
-  } else if (name.toLowerCase() == "frostbyte") {
+  } else if (name.toLowerCase() === "frostbyte") {
     return frostbyte
   } else {
     return byteCamp
@@ -42,7 +42,7 @@ const Project = ({ layout, data, bg }) => (
     }}
   >
     {
-      layout == "left"
+      layout === "left"
       ?
         <>
           <div className="md:w-2/5 xl:h-96 lg:h-64 h-auto flex flex-row sm:flex sm:flex-col justify-center items-center content-center relative xl:py-32 lg:py-24 md:py-16 sm:py-8 py-4">
@@ -50,13 +50,13 @@ const Project = ({ layout, data, bg }) => (
                 w-1/2 h-full rounded-2xl lg:absolute lg:top-0 lg:left-0 z-10
                 flex justify-center content-center items-center overflow-hidden"
             >
-              <img className="w-auto h-full transform duration-300 ease-in-out transform hover:scale-105" src={data.node.image_1.url} />
+              <img className="w-auto h-full transform duration-300 ease-in-out transform hover:scale-105" src={data.node.image_1.url} alt={`${data.node.name}`} />
             </div>
             <div className="ml-1 sm:ml-0 xl:w-96 xl:h-60 md:w-64 md:h-40 lg:py-0 sm:py-2 py-0
                 w-1/2 h-full rounded-2xl lg:absolute lg:bottom-0 lg:right-0 z-20
                 flex justify-center content-center items-center overflow-hidden"
             >
-              <img className="w-auto h-full transform duration-300 ease-in-out transform hover:scale-105" src={data.node.image_2.url} />
+              <img className="w-auto h-full transform duration-300 ease-in-out transform hover:scale-105" src={data.node.image_2.url} alt={`${data.node.name}`} />
             </div>
           </div>
           
@@ -79,13 +79,13 @@ const Project = ({ layout, data, bg }) => (
               w-1/2 h-full rounded-2xl lg:absolute lg:top-0 lg:left-0 z-10
               flex justify-center content-center items-center overflow-hidden"
           >
-            <img className="w-auto h-full transform duration-300 ease-in-out transform hover:scale-105" src={data.node.image_1.url} />
+            <img className="w-auto h-full transform duration-300 ease-in-out transform hover:scale-105" src={data.node.image_1.url} alt={`${data.node.name}`} />
           </div>
           <div className="ml-1 sm:ml-0 xl:w-96 xl:h-60 md:w-64 md:h-40 lg:py-0 sm:py-2 py-0
               w-1/2 h-full rounded-2xl lg:absolute lg:bottom-0 lg:right-0 z-20
               flex justify-center content-center items-center overflow-hidden"
           >
-            <img className="w-auto h-full transform duration-300 ease-in-out transform hover:scale-105" src={data.node.image_2.url} />
+            <img className="w-auto h-full transform duration-300 ease-in-out transform hover:scale-105" src={data.node.image_2.url} alt={`${data.node.name}`} />
           </div>
         </div>
       </>
@@ -106,7 +106,7 @@ const ProjectsLayout = ({ data }) => (
       data && data
       ?
         data.map((project, index) => (
-          <Project layout={index % 2 == 0 ? "left" : "right"} data={project} bg={getBackground(project.node.name)} 
+          <Project layout={index % 2 === 0 ? "left" : "right"} data={project} bg={getBackground(project.node.name)} 
             // id={getId(project.node.name)} 
           />
         ))

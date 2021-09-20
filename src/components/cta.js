@@ -1,5 +1,4 @@
 import React, { useState } from "react"
-import { Link } from "gatsby"
 
 import bg from "../assets/img/cta/background.png"
 import sleep from "../assets/img/cta/BitBotSleep.png"
@@ -9,10 +8,10 @@ import snooze from "../assets/img/cta/Snooze.png"
 
 import Button from "./button"
 
-const Cta = ({}) => {
+const Cta = () => {
     // State management for bit bot interactions
     // Sleep vs Awake for Hovers
-    const [sleeping, isSleeping] = useState(sleep)
+    const [sleeping, isSleeping] = useState(sleep && sleep)
     
     // Sleep vs Smile for Clicks
     const [smiling, isSmiling] = useState(false)
@@ -29,11 +28,11 @@ const Cta = ({}) => {
                             <p className="font-sans speech text-md">Come join BYTE!</p>
                         </div>
                     :
-                    sleeping == sleep
+                    sleeping === sleep
                     ?
                         /* Insert snooze images here */
                         <div className="absolute md:-top-24 md:-right-28 -top-32 right-1/4">
-                            <img src={snooze} className="snooze" />
+                            <img src={snooze} alt="snooze" className="snooze" />
                         </div>
                     :
                         /* Insert speech balloon with typing animation */
@@ -45,7 +44,10 @@ const Cta = ({}) => {
                     onMouseEnter={() => isSleeping(awake)} 
                     onMouseLeave={() => isSleeping(sleep)} 
                     onClick={() => isSmiling(!smiling)}
+                    onKeyDown={() => isSmiling(!smiling)}
+                    role="presentation"
                     className="bitbot" 
+                    alt="bitbot"
                 />
             </div>
             <h1 className="pt-12 pb-4 mb-2 font-sans text-2xl font-bold text-center text-black">Get those brain juices going!</h1>

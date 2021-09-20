@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 import Button from '../button'
 
 import bg from "../../assets/about/about-aims-bg.png"
@@ -63,7 +63,7 @@ const AboutByte = () => {
                         ?
                             about.map((value) => (
                                 <Button
-                                    type={selected.name == value.name ? "primary" : "secondary"}
+                                    type={selected.name === value.name ? "primary" : "secondary"}
                                     label={value.name}
                                     color={value.color}
                                     onClick={() => isSelected(value)} // onClick function to change the selected project
@@ -80,7 +80,7 @@ const AboutByte = () => {
                             />
                     }
                 </div>
-                <img src={selected.gif} className="md:w-1/3 w-1/2 h-auto lg:hidden block" />
+                <img src={selected.gif} alt={selected.name} className="md:w-1/3 w-1/2 h-auto lg:hidden block" />
             </div>
             {/* END: BUTTONS */}
 
@@ -90,7 +90,7 @@ const AboutByte = () => {
                     <p className="w-full lg:text-left text-center w-full">{selected.text}</p>
                 </div>
                 <div className="lg:w-1/2 h-60 lg:flex hidden justify-center items-start content-center">
-                    <img src={selected.gif} className="xl:h-full md:h-1/2 h-full w-auto" />
+                    <img src={selected.gif} alt={selected.name} className="xl:h-full md:h-1/2 h-full w-auto" />
                 </div>
             </div>
             {/* END: CONTENT */}

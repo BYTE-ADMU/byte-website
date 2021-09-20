@@ -53,7 +53,7 @@ const Header = ({ siteTitle, page }) => {
       <div className="flex-none">
         <Link to="/">
           <div className="flex items-center py-6 ">
-            <img src={byteLogo} className="mr-4 header-bytelogo" />
+            <img src={byteLogo} className="mr-4 header-bytelogo" alt="BYTE Logo" />
             {/* <h1 className="bold">{siteTitle.toLowerCase()}</h1> */}
           </div>
         </Link>
@@ -65,8 +65,10 @@ const Header = ({ siteTitle, page }) => {
         <div
           className="block absolute top-8 right-10 pointer sm:hidden"
           onClick={handleClick}
+          onKeyDown={handleClick}
+          role="presentation"
         >
-          {click ? (
+          {button && click ? (
             <FontAwesomeIcon icon={faBars} size="2" />
           ) : (
             <FontAwesomeIcon icon={faTimes} size="2" />
@@ -83,8 +85,8 @@ const Header = ({ siteTitle, page }) => {
                   to={navbarBtn.route}
                   onClick={() => setClick(false)}
                 >
-                  <p className="medium mt-2">
-                    <a style={{ color: navbarBtn.color }}>{navbarBtn.name}</a>
+                  <p className="medium mt-2" style={{ color: navbarBtn.color }}>
+                    {navbarBtn.name}
                   </p>
                 </Link>
               </li>
