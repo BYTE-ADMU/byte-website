@@ -73,12 +73,14 @@ const HomeGrownStartups = ({ startups }) => {
                 className="md:block hidden"
               >
                 <div className="flex flex-col justify-center items-center content-center m-4">
-                  <img src={startup.node.logo.url} 
+                  <img src={startup.node.logo.url} alt={startup.node.name}
                     className="h-12 w-12 md:h-16 md:w-16 lg:h-24 lg:w-24
                     bg-white rounded-full cursor-pointer 
                     transition-all duration-300 ease-in-out 
                     hover:shadow-hover startup-logo"
                     onClick={() => setStartup(startup.node)}
+                    onKeyDown={() => setStartup(startup.node)}
+                    role="presentation"
                   />
                   <p className="rounded-md my-4 py-2 px-4 bg-gray-lightest text-center md:hidden block">{startup.node.name}</p>
                 </div>
@@ -113,9 +115,9 @@ const HomeGrownStartups = ({ startups }) => {
               <div className="flex flex-col items-center justify-center md:w-1/2 w-full">
                 <div className="flex justify-center items-center content-center relative">
                   <div className="xl:w-48 xl:h-48 lg:w-40 lg:h-40 md:w-32 md:h-32 w-24 h-24 rounded-full overflow-hidden flex justify-center items-center content-center m-2">
-                    <img src={selectedStartup.logo.url} className="w-auto  h-full" />
+                    <img src={selectedStartup.logo.url} alt={selectedStartup.name} className="w-auto  h-full" />
                   </div>
-                  <img src={bitbot} className="lg:w-16 sm:w-12 w-8 h-auto absolute bottom-0 left-0" />
+                  <img src={bitbot} alt="bitbot" className="lg:w-16 sm:w-12 w-8 h-auto absolute bottom-0 left-0" />
                 </div>
                 <div className="flex items-center justify-center flex-col">
                   <h2 className="bold pt-8 pb-4">{selectedStartup.name}</h2>
@@ -127,6 +129,7 @@ const HomeGrownStartups = ({ startups }) => {
                           <div className="flex justify-center items-center content-center mb-2">
                             <div className="w-8 h-8 lg:h-12 lg:w-12 rounded-full overflow-hidden flex justify-center items-center content-center">
                               <img src={founder.photo.url} 
+                                alt={founder.name}
                                 className="w-full h-auto founders
                                 transition-all duration-300 ease-in-out"
                               />
@@ -145,11 +148,11 @@ const HomeGrownStartups = ({ startups }) => {
                 {
                   selectedStartup && selectedStartup.banner
                   ?
-                    <img src={selectedStartup.banner.url} className="bg-gray-lightest w-full h-auto rounded-t-2xl md:block hidden" />
+                    <img src={selectedStartup.banner.url} alt={selectedStartup.name} className="bg-gray-lightest w-full h-auto rounded-t-2xl md:block hidden" />
                   :
                     selectedStartup && selectedStartup.logo 
                     ?
-                      <img src={selectedStartup.logo.url} className="bg-gray-lightest w-full h-auto rounded-t-2xl md:block hidden" />
+                      <img src={selectedStartup.logo.url} alt={selectedStartup.name} className="bg-gray-lightest w-full h-auto rounded-t-2xl md:block hidden" />
                     :
                     <></>
                 }

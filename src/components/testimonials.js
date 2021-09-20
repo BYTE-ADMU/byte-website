@@ -27,10 +27,10 @@ function getRandomColor() {
 }
 
 const NextArrow = ({ onClick }) => (
-  <div className="absolute right-4 top-2/5 cursor-pointer xl:block hidden w-auto h-auto flex justify-center items-center content-center" onClick={onClick}>
+  <div className="absolute right-4 top-2/5 cursor-pointer xl:block hidden w-auto h-auto flex justify-center items-center content-center" onClick={onClick} onKeyDown={onClick} role="presentation">
     <div className="relative">
-      <img src={arrowOutline} className="relative z-10 arrow__container" />
-      <img src={arrow} 
+      <img src={arrowOutline} alt="Arrow Outline" className="relative z-10 arrow__container" />
+      <img src={arrow} alt="Arrow"
         className="absolute -bottom-4 -left-4 z-0 
         transition-all duration-300 ease-in-out
         arrow__filled" 

@@ -23,7 +23,7 @@ const partners = () => {
             >
                 {/* START: Wrapper */}
                 <div className="xl:w-1/2 w-full h-auto flex flex-col justify-center items-center content-center">
-                    <img src={comingSoon} className="w-full h-auto" />
+                    <img src={comingSoon} alt="Coming Soon" className="w-full h-auto" />
                     <p className="pt-8 pb-12 text-center">BYTE is hard at work to build this page for your pleasant viewing experience. <br /><br />In the meantime, check out the rest of our website!</p>
                     <Button link="/" label="Go Home" type="primary" />
                 </div>

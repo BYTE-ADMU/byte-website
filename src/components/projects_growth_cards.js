@@ -27,7 +27,7 @@ const comingSoon = [
 // START: Card Component
 const Card = ({ project }) => (
   <div className="md:w-80 w-full h-full flex flex-col justify-center items-center content-center bg-white-primary rounded-2xl mb-16 mx-7 lg:mx-4 md:mx-3 sm:mx-2">
-    <img className="w-full h-40 rounded-t-xl p-0 m-0" src={project.node.image_1.url} />
+    <img className="w-full h-40 rounded-t-xl p-0 m-0" src={project.node.image_1.url} alt={project.node.name} />
     <div className="lg:p-8 p-4 min-h-56 h-auto w-full flex flex-col justify-center items-start content-center">
       <h3 className={`text-${project.node.color ? project.node.color : "red"}-primary w-full text-center text-xl bold m-0 p-0`}>{project.node.name}</h3>
       <p className="py-4 m-0">{project.node.description}</p>
