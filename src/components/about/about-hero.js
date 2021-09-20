@@ -22,8 +22,8 @@ const AboutHero = () => {
               <div className="w-full h-64 relative flex justify-center items-center content-center overflow-hidden rounded-2xl">
                 <img 
                   src={AboutHeroImg}
-                  alt="Projects Hero Image"
-                  className="h-full w-auto transform duration-300 ease-in-out transform hover:scale-105"
+                  alt="Projects Hero"
+                  className="lg:h-full lg:w-auto w-full h-auto transform duration-300 ease-in-out transform hover:scale-105"
                 />
               </div>
               <img 

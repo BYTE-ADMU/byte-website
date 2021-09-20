@@ -82,7 +82,7 @@ const AboutByte = ({ data }) => {
                     projects && projects
                     ?
                         data.map((project) => (
-                            <Button type={selected && selected.id == project.node.id ? "primary" : "secondary"} label={project.node.name} color={project.node.color} onClick={() => isSelected(project.node)} className="lg:mx-2 sm:mx-1 sm:my-0 my-1" />
+                            <Button type={selected && selected.id === project.node.id ? "primary" : "secondary"} label={project.node.name} color={project.node.color} onClick={() => isSelected(project.node)} className="lg:mx-2 sm:mx-1 sm:my-0 my-1" />
                         ))
                     :
                         <Loader

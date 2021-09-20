@@ -25,10 +25,10 @@ const ProjectsHero = () => {
             </div> */}
           <div className="z-10 md: w-full md:w-1/2 flex flex-col items-center justify-center">
             <div className="w-3/4 pb-10 md:w-auto px-0 relative">
-              <div className="w-full h-64 relative flex justify-center items-center content-center overflow-hidden rounded-2xl z-10">
-                <img className="w-auto h-full transform duration-300 ease-in-out transform hover:scale-105 z-10 relative"
+              <div className="w-full lg:h-64 h-auto relative flex justify-center items-center content-center overflow-hidden rounded-2xl z-10">
+                <img className="lg:h-full lg:w-auto w-full h-auto transform duration-300 ease-in-out transform hover:scale-105 z-10 relative"
                   src={ProjectsHeroImg}
-                  alt="Projects Hero Image"
+                  alt="Projects Hero"
                 />
               </div>
               <img className="absolute absolute -bottom-32 -left-60 lg:block hidden z-20"

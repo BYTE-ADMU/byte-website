@@ -22,7 +22,7 @@ const NotFoundPage = () => (
       >
           {/* START: Wrapper */}
           <div className="xl:w-1/2 w-full h-auto flex flex-col justify-center items-center content-center">
-              <img src={gif} className="w-full h-auto" />
+              <img src={gif} alt="404" className="w-full h-auto" />
               <p className="pt-8 pb-12 text-center">Oh no! This page does not exist on our website. Go back home and check out the rest of the site!</p>
               <Button link="/" label="Go Home" type="primary" />
           </div>

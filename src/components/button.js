@@ -19,9 +19,9 @@ const tertiary = `w-max bg-transparent border-transparent
                 hover:text-red-secondary`
 
 function getStyle(type, color) {
-    if (type == "primary") {
+    if (type === "primary") {
         return `bg-${color}-primary hover:bg-${color}-secondary active:bg-${color}-primary`;
-    } else if (type == "secondary") {
+    } else if (type === "secondary") {
         return `text-${color}-primary border-${color}-primary hover:text-${color}-secondary hover:border-${color}-secondary active:bg-${color}-primary active:text-gray-lightest`
     } else {
         return `text-${color}-primary hover:text-${color}-secondary`;
@@ -42,11 +42,11 @@ const Button = ({
             ?
                 <Link to={link}>
                     <button type="button" className={
-                        type == "primary" 
+                        type === "primary" 
                         ? 
                             ( color ? `${primary} ${className} ${getStyle(type, color)}` : `${primary} ${className}`) 
                         : 
-                        type == "secondary" 
+                        type === "secondary" 
                         ? 
                             ( color ? `${secondary} ${className} ${getStyle(type, color)}` : `${secondary} ${className}`) 
                         : 
@@ -57,11 +57,11 @@ const Button = ({
                 </Link>
             :
                 <button type="button" className={
-                    type == "primary" 
+                    type === "primary" 
                     ? 
                         ( color ? `${primary} ${className} ${getStyle(type, color)}` : `${primary} ${className}`) 
                     : 
-                    type == "secondary" 
+                    type === "secondary" 
                     ? 
                         ( color ? `${secondary} ${className} ${getStyle(type, color)}` : `${secondary} ${className}`) 
                     : 

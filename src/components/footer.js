@@ -1,6 +1,5 @@
 import * as React from "react"
 import PropTypes from "prop-types"
-import { Link } from "gatsby"
 import { AnchorLink } from "gatsby-plugin-anchor-links";
 
 import facebook from "../assets/img/social_icons/facebook.png"
@@ -97,6 +96,7 @@ const Footer = ({ siteTitle }) => (
                   key={key}
                   href={value.link}
                   target="_blank"
+                  rel="noreferrer"
                   className="flex items-center justify-center w-10 h-10 m-2 rounded-2xl"
                 >
                   <img src={value.image} alt={value.img} className="m-1" />

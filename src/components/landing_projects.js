@@ -1,7 +1,4 @@
-import React, { useEffect, useState } from "react"
-// import { StaticQuery, graphql } from 'gatsby';
-import { Link } from "gatsby"
-import axios from "axios";
+import React, { useState } from "react"
 import Button from './button'
 
 import project_bg from "../assets/img/landing/projects.png"
@@ -39,7 +36,7 @@ const LandingProjects = ({ data }) => {
                         // for project in data:
                         data.map((project) => (
                             <Button 
-                                type={selected && selected.id == project.node.id ? "primary" : "secondary"} // if selected, make primary button. else, secondary 
+                                type={selected && selected.id === project.node.id ? "primary" : "secondary"} // if selected, make primary button. else, secondary 
                                 label={project.node.name} // label of the button = name of the project
                                 color={project.node.color} // color of the button = located in Strapi backend
                                 onClick={() => isSelected(project.node)} // onClick function to change the selected project
@@ -70,7 +67,7 @@ const LandingProjects = ({ data }) => {
                     selected && selected
                     ?
                         <>
-                            <img className="absolute top-20 -left-32 sm:block hidden" src={squigglyOne} />
+                            <img className="absolute top-20 -left-32 sm:block hidden" src={squigglyOne} alt="Squiggly Line" />
                             <div className="
                                 xl:w-1/2 xl:mb-0 w-full h-max mb-8
                                 flex xl:flex-col md:flex-row-reverse flex-col-reverse justify-center content-center xl:items-start items-center
@@ -84,7 +81,7 @@ const LandingProjects = ({ data }) => {
                                     <p className="xl:h-32 font-sans text-base text-white md:text-left text-center">{selected && selected ? selected.teaser : ""}</p>
                                 </div>
                                 <div className={`xl:w-60 xl:h-60 md:w-40 md:h-40 md:mb-0 mb-4 w-20 h-20 rounded-full overflow-hidden flex justify-center items-center content-center border-2 border-solid border-${selected && selected ? selected.color : "red"}-primary`}>
-                                    <img src={selected && selected ? selected.logo.url : ""} className="h-full w-auto transform duration-300 ease-in-out transform hover:scale-105" />
+                                    <img src={selected && selected ? selected.logo.url : ""} className="h-full w-auto transform duration-300 ease-in-out transform hover:scale-105" alt={selected.name} />
                                 </div>
                             </div>
                             <div className="
@@ -95,17 +92,17 @@ const LandingProjects = ({ data }) => {
                                     flex justify-center content-center items-center overflow-hidden 
                                     xl:absolute xl:-top-48 2xl:left-12 xl:left-4"
                                 >
-                                    <img className="w-auto h-full transform duration-300 ease-in-out transform hover:scale-105" src={selected && selected ? selected.image_1.url : ""} />
+                                    <img className="w-auto h-full transform duration-300 ease-in-out transform hover:scale-105" src={selected && selected ? selected.image_1.url : ""} alt={`${selected.name}`} />
                                 </div>
                                 <div className="w-80 h-56 relative lg:py-0 py-4 rounded-2xl
                                     flex justify-center content-center items-center overflow-hidden
                                     xl:absolute xl:-bottom-48 2xl:right-0 xl:-right-4 md:relative xl:z-10"
                                 >
-                                    <img className="w-auto h-full transform duration-300 ease-in-out transform hover:scale-105" src={selected && selected ? selected.image_2.url : ""} />
+                                    <img className="w-auto h-full transform duration-300 ease-in-out transform hover:scale-105" src={selected && selected ? selected.image_2.url : ""} alt={`${selected.name}`} />
                                 </div>
-                                <img className="w-200 absolute -top-64 left-72 z-20 xl:block hidden" src={cloud} />
+                                <img className="w-200 absolute -top-64 left-72 z-20 xl:block hidden" src={cloud} alt="Cloud" />
                             </div>
-                            <img className="absolute top-48 -right-40 sm:block hidden" src={squigglyTwo} />
+                            <img className="absolute top-48 -right-40 sm:block hidden" src={squigglyTwo} alt="Squiggly Line" />
                         </>
                     :
                         <Loader

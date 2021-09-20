@@ -18,32 +18,20 @@ import "../../styles/global.css"
 // END: IMPORTS = = = = = = = = = = = = = = = = = = = =
 
 // START: TEMPLATE = = = = = = = = = = = = = = = = = = = =
-const Header = ({ siteTitle, page }) => {
+const Header = ({ page }) => {
   const [navStyle, setNavStyle] = React.useState((page !== "BYTE Community" && page !== "BYTE Partners") ? "sm:z-10 z-50 shadow-none bg-transparent" : "z-50 shadow-nav bg-gray-lightest")
 
   const [click, setClick] = React.useState(false)
-  const [button, setButton] = React.useState(true)
 
   const handleClick = () => setClick(!click)
 
-  const showButton = () => {
-    if (window.innerWidth <= 768) {
-      setButton(false)
-    } else {
-      setButton(true)
-    }
-  }
-
   // HANDLE SCROLL FUNCTION: NAVBAR TRANSPARENT AND NO DROP SHADOW IF ON TOP OF WINDOW
   React.useEffect(() => {
-    showButton()
     window.onscroll = () =>
       window.scrollY === 0 && (page !== "BYTE Community" && page !== "BYTE Partners")
         ? setNavStyle("sm:z-10 z-50 shadow-none bg-transparent")
         : setNavStyle("z-50 shadow-nav bg-gray-lightest")
   })
-
-  window.addEventListener("resize", showButton)
 
   return (
     <header
@@ -53,7 +41,7 @@ const Header = ({ siteTitle, page }) => {
       <div className="flex-none">
         <Link to="/">
           <div className="flex items-center py-6 ">
-            <img src={byteLogo} className="mr-4 header-bytelogo" />
+            <img src={byteLogo} className="mr-4 header-bytelogo" alt="BYTE Logo" />
             {/* <h1 className="bold">{siteTitle.toLowerCase()}</h1> */}
           </div>
         </Link>
@@ -63,8 +51,10 @@ const Header = ({ siteTitle, page }) => {
       {/* START: NAV BUTTONS */}
       <nav>
         <div
-          className="block absolute top-8 right-10 pointer sm:hidden"
+          className="block absolute top-8 right-10 pointer md:hidden"
           onClick={handleClick}
+          onKeyDown={handleClick}
+          role="presentation"
         >
           {click ? (
             <FontAwesomeIcon icon={faBars} size="2" />
@@ -83,8 +73,8 @@ const Header = ({ siteTitle, page }) => {
                   to={navbarBtn.route}
                   onClick={() => setClick(false)}
                 >
-                  <p className="medium mt-2">
-                    <a style={{ color: navbarBtn.color }}>{navbarBtn.name}</a>
+                  <p className="medium mt-2" style={{ color: navbarBtn.color }}>
+                    {navbarBtn.name}
                   </p>
                 </Link>
               </li>

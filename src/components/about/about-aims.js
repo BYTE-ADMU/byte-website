@@ -2,7 +2,7 @@
 // Dependencies
 import React from "react"
 import { Swiper, SwiperSlide } from "swiper/react"
-import SwiperCore, { Pagination, Autoplay } from "swiper"
+import SwiperCore, { Autoplay } from "swiper"
 
 // Styles
 import "../../styles/global.css"
@@ -30,7 +30,7 @@ const AboutAims = props => {
             <div className="flex flex-row items-center justify-center
                             h-full w-full lg:p-24 md:px-8">
               <div className="flex flex-col items-center w-1/2">
-                  <img src={img2} />
+                  <img src={img1} alt="Inclusive Home Organization" />
                   <p className="medium text-center py-4">Be an inclusive home organization to its members</p>
               </div>
             </div>
@@ -39,7 +39,7 @@ const AboutAims = props => {
             <div className="flex flex-row items-center justify-center 
                             h-full w-full lg:p-24 md:px-8">
               <div className="flex flex-col items-center w-1/2">
-                  <img src={img2} />
+                  <img src={img2} alt="ITE 3Hs" />
                   <p className="medium text-center py-4">Help members develop the ITE 3H's</p>
               </div>
             </div>
@@ -48,7 +48,7 @@ const AboutAims = props => {
             <div className="flex flex-row items-center justify-center w-full 
                             h-full w-full lg:p-24 md:px-8">
               <div className="flex flex-col items-center w-1/2">
-                  <img src={img3} />
+                  <img src={img3} alt="Tech Entrepreneurship" />
                   <p className="medium text-center py-4">Promote tech entreprenuer to the youth</p>
               </div>
             </div>

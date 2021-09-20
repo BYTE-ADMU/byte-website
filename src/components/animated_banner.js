@@ -8,15 +8,16 @@ import upperCaption from "../assets/community/upperCaption.png";
 import lowerCaption from "../assets/community/lowerCaption.png";
 
 const Card = ({ member }) => (
-  <img src={member.node.members.url} 
-      alt="placeholder" 
-      className="lg:w-full lg:h-auto w-auto sm:h-full h-40
-                lg:my-8 lg:mx-4 my-4 mx-2
-                rounded-3xl
-                transition-all ease-in-out
-                hover:scale-105"
-      onClick={() => window.open(member.node.members.url, "_blank")}    
-  />
+  <a href={member.node.members.url} target="_blank" rel="noreferrer">
+    <img src={member.node.members.url} 
+        alt="placeholder" 
+        className="lg:w-full lg:h-auto w-auto sm:h-full h-40
+                  lg:my-8 lg:mx-4 my-4 mx-2
+                  rounded-3xl
+                  transition-all ease-in-out
+                  hover:scale-105"
+    />
+  </a>
 )
 
 const AnimatedBanner = ({ members }) => (
@@ -34,7 +35,7 @@ const AnimatedBanner = ({ members }) => (
           members && members
           ?
             members.map((member, index) => (
-              index % 2 == 0
+              index % 2 === 0
               ?
                 <Card member={member} />
               :
@@ -79,7 +80,7 @@ const AnimatedBanner = ({ members }) => (
           members && members
           ?
             members.map((member, index) => (
-              index % 2 == 1
+              index % 2 === 1
               ?
                 <Card member={member} />
               :
@@ -102,7 +103,7 @@ const AnimatedBanner = ({ members }) => (
     {/* <div class="block md:hidden py-10 md:py-0">
       {
         members.map((member, index) => (
-          index % 2 == 0
+          index % 2 === 0
           ?
             <div className="card">
               <img src={member.node.members.url} alt="placeholder" className="card_img" />
@@ -119,7 +120,7 @@ const AnimatedBanner = ({ members }) => (
       <div className="flex items-center justify-around">
         {
           members.map((member, index) => (
-            index % 2 == 1
+            index % 2 === 1
             ?
               <div className="card">
                 <img src={member.node.members.url} alt="placeholder" className="card_img" />
