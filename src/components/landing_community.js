@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 // layout -> image is in the left or right
 // type -> type of media (gallery, testimonial, or startups)
@@ -24,7 +24,11 @@ function generateRandomNumber() {
 }
   
 const Testimonial = ({ testimonials }) => {
-    var randomNumber = generateRandomNumber()
+    const [randomNumber, setRandomNumber] = useState(0)
+    
+    useEffect(() => {
+        setRandomNumber(generateRandomNumber())
+    }, [])
     
     return (
         <div className="w-full h-auto flex justify-center items-center content-center">
