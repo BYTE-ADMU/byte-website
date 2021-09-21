@@ -94,7 +94,7 @@ const LandingAbout = () => {
     // };
 
     return (
-        <div className="w-full md:min-h-screen lg:h-full h-auto 2xl:py-32 lg:py-24 md:py-16 py-32 lg:px-24
+        <div className="w-full md:min-h-screen lg:h-full h-auto 2xl:py-32 lg:py-24 py-16
             flex flex-col justify-center items-center content-center
             lg:bg-contain bg-cover bg-no-repeat bg-center lg:max-h-screen value-prop-container"
             style={{

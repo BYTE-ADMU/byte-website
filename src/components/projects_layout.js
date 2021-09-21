@@ -79,16 +79,16 @@ const Project = ({ layout, data, bg }) => (
         <>
           <div className="md:w-2/5 xl:h-96 lg:h-64 h-auto flex flex-row sm:flex sm:flex-col justify-center items-center content-center relative xl:py-32 lg:py-24 md:py-16 sm:py-8 py-4">
             <div className="mr-1 sm:mr-0 xl:w-96 xl:h-60 md:w-64 md:h-40 lg:py-0 sm:py-2 py-0 
-                w-1/2 h-full rounded-2xl lg:absolute lg:top-0 lg:left-0 z-10
+                w-1/2 h-auto rounded-2xl lg:absolute lg:top-0 lg:left-0 z-10
                 flex justify-center content-center items-center overflow-hidden"
             >
-              <img className="w-auto h-full transform duration-300 ease-in-out transform hover:scale-105" src={data.node.image_1.url} alt={`${data.node.name}`} />
+              <img className="md:w-auto md:h-full w-full h-auto rounded-2xl transform duration-300 ease-in-out transform hover:scale-105" src={data.node.image_1.url} alt={`${data.node.name}`} />
             </div>
             <div className="ml-1 sm:ml-0 xl:w-96 xl:h-60 md:w-64 md:h-40 lg:py-0 sm:py-2 py-0
                 w-1/2 h-full rounded-2xl lg:absolute lg:bottom-0 lg:right-0 z-20
                 flex justify-center content-center items-center overflow-hidden"
             >
-              <img className="w-auto h-full transform duration-300 ease-in-out transform hover:scale-105" src={data.node.image_2.url} alt={`${data.node.name}`} />
+              <img className="md:w-auto md:h-full w-full h-auto rounded-2xl transform duration-300 ease-in-out transform hover:scale-105" src={data.node.image_2.url} alt={`${data.node.name}`} />
             </div>
           </div>
           
@@ -111,13 +111,13 @@ const Project = ({ layout, data, bg }) => (
               w-1/2 h-full rounded-2xl lg:absolute lg:top-0 lg:left-0 z-10
               flex justify-center content-center items-center overflow-hidden"
           >
-            <img className="w-auto h-full transform duration-300 ease-in-out transform hover:scale-105" src={data.node.image_1.url} alt={`${data.node.name}`} />
+            <img className="md:w-auto md:h-full w-full h-auto rounded-2xl transform duration-300 ease-in-out transform hover:scale-105" src={data.node.image_1.url} alt={`${data.node.name}`} />
           </div>
           <div className="ml-1 sm:ml-0 xl:w-96 xl:h-60 md:w-64 md:h-40 lg:py-0 sm:py-2 py-0
               w-1/2 h-full rounded-2xl lg:absolute lg:bottom-0 lg:right-0 z-20
               flex justify-center content-center items-center overflow-hidden"
           >
-            <img className="w-auto h-full transform duration-300 ease-in-out transform hover:scale-105" src={data.node.image_2.url} alt={`${data.node.name}`} />
+            <img className="md:w-auto md:h-full w-full h-auto rounded-2xl transform duration-300 ease-in-out transform hover:scale-105" src={data.node.image_2.url} alt={`${data.node.name}`} />
           </div>
         </div>
       </>
