@@ -27,11 +27,6 @@ import yellowBitbot from '../../assets/about/yellowhbitbot.png'
 import redBitbot from '../../assets/about/redhbitbot.png'
 import unicornImage from '../../assets/about/unicorn-image.png'
 
-// Swiper
-import Loader from "react-loader-spinner";
-import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
-import "swiper/css"
-import "swiper/css/pagination"
 // END: IMPORTS = = = = = = = = = = = = = = = = = = = =
 
 const coreThrustsData = [
@@ -71,7 +66,7 @@ const coreThrustsData = [
 
 const CloseIcon = ({ onClick }) => (
     <div className="m-4 h-12 w-12 flex items-center justify-center rounded-full bg-red-primary transition duration-300 ease-in-out hover:shadow-hover cursor-pointer absolute top-0 right-0" 
-        onClick={onClick}
+        onClick={onClick} onKeyPress={onClick} role="presentation"
     >
       <svg
         width="35"
@@ -100,9 +95,9 @@ const Description = ({ title, subtitle, color, className }) => (
 
 const Logo = ({ className, onBlueClick, onRedClick, onYellowClick }) => (
     <div className={`relative lg:flex hidden justify-center items-center content-center ${className}`}>
-        <img src={blueBlock} alt="Blue Block" className="logo-block blue-block" onClick={onBlueClick} />
-        <img src={redBlock} alt="Red Block" className="logo-block red-block" onClick={onRedClick} />
-        <img src={yellowBlock} alt="Yellow Block" className="logo-block yellow-block" onClick={onYellowClick} />
+        <img src={blueBlock} alt="Blue Block" className="logo-block blue-block" onClick={onBlueClick} onKeyPress={onBlueClick} role="presentation" />
+        <img src={redBlock} alt="Red Block" className="logo-block red-block" onClick={onRedClick} onKeyPress={onRedClick} role="presentation" />
+        <img src={yellowBlock} alt="Yellow Block" className="logo-block yellow-block" onClick={onYellowClick} onKeyPress={onYellowClick} role="presentation" />
     </div>
 )
 

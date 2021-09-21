@@ -59,7 +59,7 @@ const LandingProjects = ({ data }) => {
                 flex ${selected && selected ? "justify-between" : "justify-center"} content-center items-center
                 xl:flex-row flex-col
                 rounded-lg bg-white bg-no-repeat xl:bg-125% md:bg-cover xl:bg-center sm:bg-right-top sm:bg-cover bg-contain bg-bottom
-                border-4 border-solid border-${selected && selected ? selected.color : "red"}-primary
+                border-4 border-solid ${selected && selected ? `border-${selected.color}-primary` : "border-red-primary"}
             `} style={{
                 backgroundImage: `url(${project_bg})`
             }}>
@@ -77,7 +77,7 @@ const LandingProjects = ({ data }) => {
                                     flex flex-col justify-center content-center items-center md:items-start
                                     xl:pb-4 md:px-8
                                 ">
-                                    <h1 className={`font-sans font-bold text-xl text-${selected && selected ? selected.color : "red"}-primary mb-2`}>{selected && selected ? selected.name : ""}</h1>
+                                    <h1 className={`font-sans font-bold text-xl ${selected && selected ? `text-${selected.color}-primary` : "text-red-primary"} mb-2`}>{selected && selected ? selected.name : ""}</h1>
                                     <p className="xl:h-32 font-sans text-base text-white md:text-left text-center">{selected && selected ? selected.teaser : ""}</p>
                                 </div>
                                 <div className={`xl:w-60 xl:h-60 md:w-40 md:h-40 md:mb-0 mb-4 w-20 h-20 rounded-full overflow-hidden flex justify-center items-center content-center border-2 border-solid border-${selected && selected ? selected.color : "red"}-primary`}>

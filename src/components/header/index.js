@@ -3,14 +3,14 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 //Components
 import Button from "../button"
+import Hamburger from 'hamburger-react'
 
 // Assets
 import byteLogo from "../../assets/img/byte-icon-with-text.png"
-import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons"
 
 //Styles
 import "./header.css"
@@ -23,8 +23,6 @@ const Header = ({ page }) => {
 
   const [click, setClick] = React.useState(false)
 
-  const handleClick = () => setClick(!click)
-
   // HANDLE SCROLL FUNCTION: NAVBAR TRANSPARENT AND NO DROP SHADOW IF ON TOP OF WINDOW
   React.useEffect(() => {
     window.onscroll = () =>
@@ -35,7 +33,7 @@ const Header = ({ page }) => {
 
   return (
     <header
-      className={`fixed top-0 w-full px-10 py-0 transition-all duration-300 ease-in-out sm:flex sm:items-center sm:justify-between ${navStyle}`}
+      className={`fixed top-0 w-full px-10 py-0 transition-all duration-300 ease-in-out sm:flex sm:items-center justify-between ${navStyle}`}
     >
       {/* START: BRAND NAV BUTTON */}
       <div className="flex-none">
@@ -50,19 +48,10 @@ const Header = ({ page }) => {
 
       {/* START: NAV BUTTONS */}
       <nav>
-        <div
-          className="block absolute top-8 right-10 pointer md:hidden"
-          onClick={handleClick}
-          onKeyDown={handleClick}
-          role="presentation"
-        >
-          {click ? (
-            <FontAwesomeIcon icon={faBars} size="2" />
-          ) : (
-            <FontAwesomeIcon icon={faTimes} size="2" />
-          )}
+        <div className="block absolute top-4 right-8 pointer md:hidden">
+          <Hamburger toggled={click} toggle={setClick} />
         </div>
-        <ul className= {click ? "list-reset sm:flex sm:items-center nav-menu" : "list-reset sm:flex sm:items-center nav-menu active"}>
+        <ul className= {`list-reset sm:flex sm:items-center nav-menu ${click && click ? "active" : ""}`}>
           {/* START: NAV BUTTON */}
           {navbarBtns.map((navbarBtn, key) => {
             return (
@@ -73,8 +62,8 @@ const Header = ({ page }) => {
                   to={navbarBtn.route}
                   onClick={() => setClick(false)}
                 >
-                  <p className="medium mt-2" style={{ color: navbarBtn.color }}>
-                    {navbarBtn.name}
+                  <p>
+                    <span className="w-auto medium mt-2" style={{ color: navbarBtn.color }}>{navbarBtn.name}</span>
                   </p>
                 </Link>
               </li>

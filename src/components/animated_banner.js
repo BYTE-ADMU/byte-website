@@ -9,12 +9,14 @@ import lowerCaption from "../assets/community/lowerCaption.png";
 
 import community from "../assets/community/community.png";
 
-const Card = ({ member, counter, setCounter }) => {
+const Card = ({ member
+  // counter, setCounter 
+}) => {
   const [loaded, hasLoaded] = useState(false)
 
   function onLoadHandler() {
     hasLoaded(true);
-    setCounter(counter + 1);
+    // setCounter(counter + 1);
   }
 
   return (
@@ -34,10 +36,6 @@ const Card = ({ member, counter, setCounter }) => {
 }
 
 const AnimatedBanner = ({ members }) => {
-  // useState to see if every image has loaded
-  const [counter, setCounter] = useState(0)
-  const length = members && members.length
-
   return (
     <div className="w-full h-screen overflow-hidden bg-gray-lightest relative flex flex-col justify-center items-center content-center">
       <div className="top-fade"></div>
@@ -56,7 +54,9 @@ const AnimatedBanner = ({ members }) => {
               members.map((member, index) => (
                 index % 2 === 0
                 ?
-                  <Card member={member} counter={counter} setCounter={setCounter} />
+                  <Card member={member} 
+                    // counter={counter} setCounter={setCounter} 
+                  />
                 :
                   <></>
               ))
@@ -102,7 +102,9 @@ const AnimatedBanner = ({ members }) => {
               members.map((member, index) => (
                 index % 2 === 1
                 ?
-                  <Card member={member} counter={counter} setCounter={setCounter} />
+                  <Card member={member} 
+                    // counter={counter} setCounter={setCounter} 
+                  />
                 :
                   <></>
               ))
