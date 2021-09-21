@@ -91,7 +91,8 @@ const AnimatedBanner = ({ members }) => {
         <div className={`
           lg:h-auto sm:h-1/3 h-1/8
           xl:w-1/3 lg:w-1/4 w-auto 
-          lg:py-0 pt-4 px-0 overflow-visible 
+          lg:py-0 lg:pt-0 px-0 overflow-visible 
+          pt-2 sm:pt-10
           flex lg:flex-col flex-row justify-start items-center content-center
           banner-column right-animation`} 
           // ${counter === length ? "right-animation" : ""}`}
