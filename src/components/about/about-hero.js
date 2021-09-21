@@ -19,11 +19,11 @@ const AboutHero = () => {
         >
           <div className="z-10 md: w-full md:w-1/2 flex flex-col items-center justify-center">
             <div className="relative w-3/4 md:w-auto pb-10 px-0">
-              <div className="w-full h-64 relative flex justify-center items-center content-center overflow-hidden rounded-2xl">
+              <div className="w-full xl:h-64 lg:h-48 h-auto relative flex justify-center items-center content-center overflow-hidden rounded-2xl">
                 <img 
                   src={AboutHeroImg}
                   alt="Projects Hero"
-                  className="lg:h-full lg:w-auto w-full h-auto transform duration-300 ease-in-out transform hover:scale-105"
+                  className="w-full h-auto transform duration-300 ease-in-out transform hover:scale-105"
                 />
               </div>
               <img 

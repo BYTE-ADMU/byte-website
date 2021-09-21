@@ -33,7 +33,7 @@ const coreThrustsData = [
     {
         name: "Hacker",
         role: "Coder • Engineer • Analyst",
-        description: "Interested on the engineering side of tech startup ventures? Have a natural knack for numbers and logic? You’re most likely a HACKER! A Hacker usually coordinates the idea of your venture into a viable and usable product!",
+        description: "The hacker focuses on the tech side of the business ― back-end web design, coding, and programming. Hackers can look at a tech idea and make it happen, whether it’s getting a prototype website to work or turning an app from an idea to a product.",
         bg: blueBg,
         image: blueBitBot,
         color: "blue"
@@ -41,7 +41,7 @@ const coreThrustsData = [
     {
         name: "Hustler",
         role: "Businessman • Influencer • Networker",
-        description: "On the verge of closing your next partnership? Or do you constantly connect with people on LinkedIn? You’re a HUSTLER! Hustlers find the most viable business opportunities for your venture and communicate your idea to have people buy into it.",
+        description: "The hustler focuses on the core of every business: management. This is where the entrepreneurship part of ITE comes in. Like the name says, hustlers have what it takes to take a business from ideation to success, and aren’t afraid to get their hands dirty when doing it.",
         bg: yellowBg,
         image: yellowBitbot,
         color: "yellow"
@@ -49,7 +49,7 @@ const coreThrustsData = [
     {
         name: "Hipster",
         role: "Designer • Animator • Artist",
-        description: "Wanna be at the forefront designing a pleasant user experience? Or even the branding of your next launch? You’re a HIPSTER! Hipsters ideate on ways to make impactful designs within their ventures by marrying aesthetics and ease of use.",
+        description: "The hipster focuses on design and functionality in a business ― designing user interfaces, visual layouts, and crafting an overall intuitive user experience for their customers. Hipsters have an eye and mind for creativity and can apply it to web design, mobile design, and even the marketing aspects of a business.",
         bg: redBg,
         image: redBitbot,
         color: "red"
@@ -57,7 +57,7 @@ const coreThrustsData = [
     {
         name: "Unicorn",
         role: "Hacker • Hipster • Hustler",
-        description: "Unicorns are jacks-of-all-trades who decide they want to master all 3 H’s. It sounds appealing to become an expert at every aspect of a tech startup, but it’s not easy ― that’s why they’re nicknamed unicorns, because they aren’t common. Many students find their passion in one of the three H’s, and that’s perfectly fine, but those rare individuals that are able to balance all three can enter the business world equipped and experienced in every aspect of tech entrepreneurship.",
+        description: "Unicorns are the master of all 3 H’s. It sounds appealing to be knowledgeable at every aspect of a tech startup, but it’s not easy ― that’s why they’re nicknamed unicorns, because they aren’t common. Those rare individuals who balance all three are equipped and experienced in every aspect of tech entrepreneurship.",
         bg: purpleBg,
         image: unicornImage,
         color: "purple"
@@ -142,6 +142,7 @@ const CoreThrusts = () => {
             w-full lg:h-screen h-auto py-4 2xl:px-64 xl:px-32 md:px-16 sm:px-8 px-4
             flex flex-col justify-center content-center items-center
             lg:bg-contain bg-0% bg-no-repeat bg-bottom"
+            id="core-thrusts"
             style={selected && selected ? {
                 backgroundImage: `url(${selected.bg})`
             } : {

@@ -148,6 +148,15 @@
 }
 /* END: TYPEFACES */
 
+/* START: GLOBAL STYLES */
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+/* END: GLOBAL STYLES */
 
 /* START: FONT WEIGHTS */
 .bold {font-weight: 700}

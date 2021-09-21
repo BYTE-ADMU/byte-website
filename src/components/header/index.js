@@ -19,7 +19,7 @@ import "../../styles/global.css"
 
 // START: TEMPLATE = = = = = = = = = = = = = = = = = = = =
 const Header = ({ page }) => {
-  const [navStyle, setNavStyle] = React.useState((page !== "BYTE Community" && page !== "BYTE Partners") ? "sm:z-10 z-50 shadow-none bg-transparent" : "z-50 shadow-nav bg-gray-lightest")
+  const [navStyle, setNavStyle] = React.useState((page !== "BYTE Community" && page !== "BYTE Partners") ? "lg:z-10 z-50 lg:shadow-none shadow-nav lg:bg-transparent bg-gray-lightest" : "z-50 shadow-nav bg-gray-lightest")
 
   const [click, setClick] = React.useState(false)
 
@@ -27,19 +27,19 @@ const Header = ({ page }) => {
   React.useEffect(() => {
     window.onscroll = () =>
       window.scrollY === 0 && (page !== "BYTE Community" && page !== "BYTE Partners")
-        ? setNavStyle("sm:z-10 z-50 shadow-none bg-transparent")
+        ? setNavStyle("lg:z-10 z-50 lg:shadow-none shadow-nav lg:bg-transparent bg-gray-lightest")
         : setNavStyle("z-50 shadow-nav bg-gray-lightest")
   })
 
   return (
     <header
-      className={`fixed top-0 w-full px-10 py-0 transition-all duration-300 ease-in-out sm:flex sm:items-center justify-between ${navStyle}`}
+      className={`fixed top-0 w-full max-w-screen px-12 py-0 transition-all duration-300 ease-in-out md:flex md:items-center justify-between ${navStyle}`}
     >
       {/* START: BRAND NAV BUTTON */}
       <div className="flex-none">
         <Link to="/">
           <div className="flex items-center py-6 ">
-            <img src={byteLogo} className="mr-4 header-bytelogo" alt="BYTE Logo" />
+            <img src={byteLogo} className="header-bytelogo" alt="BYTE Logo" />
             {/* <h1 className="bold">{siteTitle.toLowerCase()}</h1> */}
           </div>
         </Link>
@@ -48,14 +48,14 @@ const Header = ({ page }) => {
 
       {/* START: NAV BUTTONS */}
       <nav>
-        <div className="block absolute top-4 right-8 pointer md:hidden">
+        <div className="block absolute top-4 right-8 pointer burger">
           <Hamburger toggled={click} toggle={setClick} />
         </div>
-        <ul className= {`list-reset sm:flex sm:items-center nav-menu ${click && click ? "active" : ""}`}>
+        <ul className= {`list-reset md:flex md:items-center nav-menu ${click && click ? "active" : ""}`}>
           {/* START: NAV BUTTON */}
           {navbarBtns.map((navbarBtn, key) => {
             return (
-              <li className="block lg:px-8 px-4 py-2 bg-red-300 content-center border-b-8 border-transparent hover:border-gray-300 sm:ml-4">
+              <li className="block lg:px-8 px-4 py-2 bg-red-300 content-center border-b-8 border-transparent hover:border-gray-300 md:ml-4">
                 <Link
                   className="navAnimation"
                   activeClassName="navAnimation active"
