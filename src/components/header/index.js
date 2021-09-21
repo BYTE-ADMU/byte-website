@@ -70,7 +70,7 @@ const Header = ({ page }) => {
             )
           })}
 
-          <Button className="md:ml-8 m-4" link="#" label="Join Us" type="primary" />
+          <Button className="md:ml-8 m-4" link="https://bit.ly/BYTE4-MemberApps" label="Join Us" type="primary" />
 
           {/* END: NAV BUTTON */}
         </ul>
