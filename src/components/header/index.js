@@ -61,6 +61,7 @@ const Header = ({ page }) => {
                   activeClassName="navAnimation active"
                   to={navbarBtn.route}
                   onClick={() => setClick(false)}
+                  onToggle={() => "z-50 bg-white"}
                 >
                   <p>
                     <span className="w-auto medium mt-2" style={{ color: navbarBtn.color }}>{navbarBtn.name}</span>
