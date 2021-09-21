@@ -30,6 +30,38 @@ function getBackground(name) {
   }
 }
 
+function getColor(type, color) {
+  if (type === "primary") {
+    if (color === "red") {
+        return `text-red-primary`
+    } else if (color === "blue") {
+        return `text-blue-primary`
+    } else if (color === "purple") {
+        return `text-purple-primary`
+    } else if (color === "green") {
+        return `text-green-primary`
+    } else if (color === "yellow") {
+        return `text-yellow-primary`
+    } else {
+        return `text-orange-primary`
+    }
+  } else {
+    if (color === "red") {
+      return `text-red-secondary`
+    } else if (color === "blue") {
+        return `text-blue-secondary`
+    } else if (color === "purple") {
+        return `text-purple-secondary`
+    } else if (color === "green") {
+        return `text-green-secondary`
+    } else if (color === "yellow") {
+        return `text-yellow-secondary`
+    } else {
+        return `text-orange-secondary`
+    }
+  }
+}
+
 // function getId(name) {
 //   return name.replace(/\s+/g, '-').toLowerCase()
 // }
@@ -61,16 +93,16 @@ const Project = ({ layout, data, bg }) => (
           </div>
           
           <div className="h-full w-full px-0 md:w-3/5 md:px-4 lg:px-8">
-            <h2 className={`text-${data.node.color}-primary bold py-2`}>{data.node.name}</h2>
-            <h3 className={`text-${data.node.color}-secondary medium pb-4`}>{data.node.subtitle}</h3>
+            <h2 className={`${getColor("primary", data.node.color)} bold py-2`}>{data.node.name}</h2>
+            <h3 className={`${getColor("secondary", data.node.color)} medium pb-4`}>{data.node.subtitle}</h3>
             <p>{data.node.description}</p>
           </div>
         </>
       :
       <>
         <div className="h-full w-full px-0 md:w-3/5 md:px-4 lg:px-8">
-          <h2 className={`text-${data.node.color}-primary bold py-2`}>{data.node.name}</h2>
-          <h3 className={`text-${data.node.color}-secondary medium pb-4`}>{data.node.subtitle}</h3>
+          <h2 className={`${getColor("primary", data.node.color)} bold py-2`}>{data.node.name}</h2>
+          <h3 className={`${getColor("secondary", data.node.color)} medium pb-4`}>{data.node.subtitle}</h3>
           <p>{data.node.description}</p>
         </div>
 
