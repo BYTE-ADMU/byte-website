@@ -19,7 +19,7 @@ const DesktopValueProp = ({
     textTwo,
     textThree
 }) => (
-    <div className={`2xl:w-1/4 xl:w-1/2 w-full h-auto flex flex-col justify-center items-center content-center about-children py-24`}>
+    <div className={`2xl:w-1/4 xl:w-1/2 md:w-2/3 w-full h-auto flex flex-col justify-center items-center content-center about-children py-24`}>
         <div className="w-64 h-64 flex flex-col justify-center items-center content-center relative my-8">
             <img src={imageOne} alt="Value Prop 1" className={`w-64 h-64 my-4 value-prop-image-1 absolute`} />
             <img src={imageTwo} alt="Value Prop 2" className={`w-48 h-48 my-4 value-prop-image-2 absolute`} />
@@ -33,16 +33,16 @@ const DesktopValueProp = ({
     </div>
 )
 
-const MobileValueProp = ({
-    image,
-    text,
-    className
-}) => (
-    <div className={`2xl:w-1/4 xl:w-1/2 w-full h-auto flex flex-col justify-center items-center content-center about-children ${className}`}>
-        <img src={image} alt="Value Prop" className="w-48 h-48 my-4" />
-        <p className="text-center font-sans font-normal not-italic">{text}</p>
-    </div>
-)
+// const MobileValueProp = ({
+//     image,
+//     text,
+//     className
+// }) => (
+//     <div className={`2xl:w-1/4 xl:w-1/2 w-full h-auto flex flex-col justify-center items-center content-center about-children ${className}`}>
+//         <img src={image} alt="Value Prop" className="w-48 h-48 my-4" />
+//         <p className="text-center font-sans font-normal not-italic">{text}</p>
+//     </div>
+// )
 
 const LandingAbout = () => {
     useEffect(() => {
@@ -94,7 +94,7 @@ const LandingAbout = () => {
     // };
 
     return (
-        <div className="w-full lg:min-h-screen lg:h-full h-auto py-16 2xl:py-32 xl:py-24 lg:px-24
+        <div className="w-full md:min-h-screen lg:h-full h-auto 2xl:py-32 lg:py-24 md:py-16 py-32 lg:px-24
             flex flex-col justify-center items-center content-center
             lg:bg-contain bg-cover bg-no-repeat bg-center lg:max-h-screen value-prop-container"
             style={{
@@ -106,7 +106,7 @@ const LandingAbout = () => {
             </h1>
 
             {/* Desktop Version (with Animations) */}
-            <div className="w-full min-h-1/2 h-auto hidden lg:flex flex-col justify-center items-center content-center about-container lg:justify-start px-14 overflow-scroll">
+            <div className="w-full xl:min-h-1/2 md:min-h-2/3 min-h-1/2 h-auto flex flex-col justify-center items-center content-center about-container lg:justify-start px-16 overflow-scroll">
                 <DesktopValueProp
                     imageOne={valuePropOne}
                     imageTwo={valuePropTwo}
@@ -118,11 +118,11 @@ const LandingAbout = () => {
             </div>
 
             {/* Mobile Version */}
-            <div className="w-full h-auto flex flex-col justify-center items-center content-center about-container lg:justify-start px-14 lg:hidden">
+            {/* <div className="w-full h-auto flex flex-col justify-center items-center content-center about-container lg:justify-start px-14 lg:hidden">
                 <MobileValueProp image={valuePropOne} text="As a community, we provide opportunities in crafting solutions that addresses problems encountered by our fellows." className="py-4" />
                 <MobileValueProp image={valuePropTwo} text="Different gears work as a system leading to great impact. In BYTE our gears are the Hackers, Hipsters and Hustlers." className="py-4"/>
                 <MobileValueProp image={valuePropThree} text="BYTE is the Atenean Organization that focuses on startup awareness and execution through modern practices." className="pt-4 pb-16 xl:pb-24 2xl:pb-32" />
-            </div>
+            </div> */}
 
             <Button link="/about" type="primary" label="Learn More" className="mt-4" />
         </div>

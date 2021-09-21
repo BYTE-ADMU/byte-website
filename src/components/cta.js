@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import { isMobile } from "react-device-detect";
 
 import bg from "../assets/img/cta/background.png"
 import sleep from "../assets/img/cta/BitBotSleep.png"
@@ -41,7 +42,7 @@ const Cta = () => {
                         </div>
                 }
                 <img src={smiling ? smile : sleeping} 
-                    onMouseEnter={() => isSleeping(awake)} 
+                    onMouseEnter={() => isMobile ? isSleeping(sleep) : isSleeping(awake)} 
                     onMouseLeave={() => isSleeping(sleep)} 
                     onClick={() => isSmiling(!smiling)}
                     onKeyDown={() => isSmiling(!smiling)}

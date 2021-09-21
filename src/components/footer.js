@@ -24,7 +24,7 @@ const about_links = [
   {
     id: 3,
     name: "Core Thrusts",
-    link: "/about#corethrusts",
+    link: "/about#core-thrusts",
   },
 ]
 

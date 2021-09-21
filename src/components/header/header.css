@@ -63,7 +63,11 @@
   transform: scaleX(1);
 }
 
-@media screen and (max-width: 767px) {
+.burger {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
   .nav-menu {
     display: flex;
     flex-direction: column;
@@ -88,5 +92,9 @@
   .header-bytelogo {
     width: auto;
     height: 32px;
+  }
+
+  .burger {
+    display: block;
   }
 }
