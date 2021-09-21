@@ -19,7 +19,7 @@ const DesktopValueProp = ({
     textTwo,
     textThree
 }) => (
-    <div className={`2xl:w-1/4 xl:w-1/2 md:w-2/3 w-full h-auto flex flex-col justify-center items-center content-center about-children py-24`}>
+    <div className={`2xl:w-1/4 xl:w-1/2 md:w-2/3 w-full h-auto flex flex-col justify-center items-center content-center about-children md:py-24 py-8`}>
         <div className="w-64 h-64 flex flex-col justify-center items-center content-center relative my-8">
             <img src={imageOne} alt="Value Prop 1" className={`w-64 h-64 my-4 value-prop-image-1 absolute`} />
             <img src={imageTwo} alt="Value Prop 2" className={`w-48 h-48 my-4 value-prop-image-2 absolute`} />
@@ -94,7 +94,7 @@ const LandingAbout = () => {
     // };
 
     return (
-        <div className="w-full md:min-h-screen lg:h-full h-auto 2xl:py-32 lg:py-24 py-16
+        <div className="w-full md:min-h-screen lg:h-full h-screen 2xl:py-32 lg:py-24 py-8
             flex flex-col justify-center items-center content-center
             lg:bg-contain bg-cover bg-no-repeat bg-center lg:max-h-screen value-prop-container"
             style={{

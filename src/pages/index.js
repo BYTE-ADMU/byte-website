@@ -116,7 +116,7 @@ const IndexPage = () => (
             Make memories with our awesome comm-YOU-nity!{" "}
           </h1>
           <p className="font-sans text-base text-center text-gray-darkest px-6 pt-2 pb-8 sm:px-0">
-            Forge unforgettable moments with BYTE — ones that you'll always cherish .
+            Forge unforgettable moments with BYTE — ones that you'll always cherish.
           </p>
           <LandingCommunity layout="left"
             gallery={data.allStrapiGallery.edges}
