@@ -142,6 +142,7 @@ const CoreThrusts = () => {
             w-full lg:h-screen h-auto py-4 2xl:px-64 xl:px-32 md:px-16 sm:px-8 px-4
             flex flex-col justify-center content-center items-center
             lg:bg-contain bg-0% bg-no-repeat bg-bottom"
+            id="corethrusts"
             style={selected && selected ? {
                 backgroundImage: `url(${selected.bg})`
             } : {

@@ -1,6 +1,7 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { AnchorLink } from "gatsby-plugin-anchor-links";
+import { Link } from "gatsby"
 
 import facebook from "../assets/img/social_icons/facebook.png"
 import linkedin from "../assets/img/social_icons/linkedin.png"
@@ -23,7 +24,7 @@ const about_links = [
   {
     id: 3,
     name: "Core Thrusts",
-    link: "/about",
+    link: "/about#corethrusts",
   },
 ]
 
@@ -107,16 +108,15 @@ const Footer = ({ siteTitle }) => (
         </div>
 
         <div className="flex flex-col items-center justify-center ml-2 lg:items-start lg:justify-start">
-          <h3 className="mt-2 mb-4 text-sm text-white md:text-md">
+          <a href="mailto: byteadmu@gmail.com" className="mt-2 mb-4 text-sm md:text-md hover:text-red-primary">
             byteadmu@gmail.com
-          </h3>
-          <div className="flex items-center justify-center mt-10">
-            {/* <div className="w-32 h-16 mr-4"> */}
-            <img src={bytelogo} alt="BYTE Logo" className="w-auto h-12 mr-4" />
-            {/* </div> */}
-            {/* <h3 className="font-bold text-2xl">byte</h3> */}
-          </div>
-          <p className="mt-24 text-xs text-center md:text-left">
+          </a>
+          <Link to="/">
+            <div className="flex items-center justify-center mt-10">
+              <img src={bytelogo} alt="BYTE Logo" className="w-auto h-12 mr-4 cursor-pointer" link=""/>
+            </div>
+          </Link>
+          <p className="mt-12 text-xs text-center md:text-left">
             © 2021 Building Young Tech Entrepreneurs. All Rights Reserved.
           </p>
         </div>
