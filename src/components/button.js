@@ -38,7 +38,7 @@ const Button = ({
 }) => (
     <>
         {
-            link
+            link && (link[0] === "/" || link[0] === "#")
             ?
                 <Link to={link}>
                     <button type="button" className={
@@ -56,19 +56,37 @@ const Button = ({
                     </button>
                 </Link>
             :
-                <button type="button" className={
-                    type === "primary" 
-                    ? 
-                        ( color ? `${primary} ${className} ${getStyle(type, color)}` : `${primary} ${className}`) 
-                    : 
-                    type === "secondary" 
-                    ? 
-                        ( color ? `${secondary} ${className} ${getStyle(type, color)}` : `${secondary} ${className}`) 
-                    : 
-                        ( color ? `${tertiary} ${className} ${getStyle(type, color)}` : `${tertiary} ${className}`)
-                } onClick={onClick}>
-                    {label}
-                </button>
+                link
+                ?
+                    <a href={link} target="_blank" rel="noreferrer">
+                        <button type="button" className={
+                            type === "primary" 
+                            ? 
+                                ( color ? `${primary} ${className} ${getStyle(type, color)}` : `${primary} ${className}`) 
+                            : 
+                            type === "secondary" 
+                            ? 
+                                ( color ? `${secondary} ${className} ${getStyle(type, color)}` : `${secondary} ${className}`) 
+                            : 
+                                ( color ? `${tertiary} ${className} ${getStyle(type, color)}` : `${tertiary} ${className}`)
+                        }>
+                            {label}
+                        </button>
+                    </a>
+                :
+                    <button type="button" className={
+                        type === "primary" 
+                        ? 
+                            ( color ? `${primary} ${className} ${getStyle(type, color)}` : `${primary} ${className}`) 
+                        : 
+                        type === "secondary" 
+                        ? 
+                            ( color ? `${secondary} ${className} ${getStyle(type, color)}` : `${secondary} ${className}`) 
+                        : 
+                            ( color ? `${tertiary} ${className} ${getStyle(type, color)}` : `${tertiary} ${className}`)
+                    } onClick={onClick}>
+                        {label}
+                    </button>
         }
     </>
 )

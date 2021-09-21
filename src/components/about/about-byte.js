@@ -67,7 +67,7 @@ const AboutByte = () => {
                                     label={value.name}
                                     color={value.color}
                                     onClick={() => isSelected(value)} // onClick function to change the selected project
-                                    className="lg:mr-4 mr-2 lg:my-0 my-2" />
+                                    className="lg:mr-4 mr-2 ml-4 sm:ml-0 lg:my-0 my-2" />
                             ))
                             :
                             <Loader
@@ -90,7 +90,7 @@ const AboutByte = () => {
                     <p className="w-full lg:text-left text-center w-full">{selected.text}</p>
                 </div>
                 <div className="lg:w-1/2 h-60 lg:flex hidden justify-center items-start content-center">
-                    <img src={selected.gif} alt={selected.name} className="xl:h-full md:h-1/2 h-full w-auto" />
+                    <img src={selected.gif} alt={selected.name} className="h-full w-auto" />
                 </div>
             </div>
             {/* END: CONTENT */}

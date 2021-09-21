@@ -23,7 +23,7 @@ const landing_hero = () => {
             In BYTE, we don't just build young tech entrepreneurs, we make a change and serve as catalysts of the future.
           </p>
         </div>
-        <Button link="#" label="Register Now" type="primary" />
+        <Button link="https://bit.ly/BYTE4-MemberApps" label="Register Now" type="primary" />
       </div>
     </div>
   )

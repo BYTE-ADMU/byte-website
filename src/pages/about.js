@@ -7,6 +7,7 @@ import Layout from "../layouts/default"
 import AboutHero from "../components/about/about-hero"
 import AboutAims from "../components/about/about-aims"
 import AboutByte from "../components/about/about-byte"
+import CoreThrusts from "../components/about/core-thrusts"
 import Cta from "../components/cta"
 
 // Assets
@@ -34,6 +35,7 @@ const about = () => {
                 </h1>
                 <AboutAims />
             </div>
+            <CoreThrusts />
             <Cta />
         </Layout>
     )

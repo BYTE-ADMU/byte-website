@@ -1,0 +1,50 @@
+.logo-block {
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.blue-block {
+    position: absolute;
+    top: -80px;
+    z-index: 20;
+}
+
+.red-block {
+    position: relative;
+    z-index: 10;
+}
+
+.yellow-block {
+    position: absolute;
+    right: -72px;
+    bottom: -42px;
+    z-index: 20;
+}
+
+.blue-block:hover {
+    transform: translateY(-20%);
+}
+
+.red-block:hover {
+    transform: translateY(20%);
+}
+
+.yellow-block:hover {
+    transform: translate(20%, 10%);
+}
+
+.unicorn-toggle.react-toggle--checked .react-toggle-track,
+.unicorn-toggle.react-toggle--checked:hover:not(.react-toggle--disabled) .react-toggle-track {
+    background-color: #3D147D;
+}
+
+.unicorn-toggle .react-toggle-thumb,
+.unicorn-toggle.react-toggle--checked .react-toggle-thumb {
+    border-color: transparent;
+}
+
+@media only screen and (max-width: 768px) {
+    .unicorn-toggle {
+        display: none !important;
+    }
+}

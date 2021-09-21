@@ -80,12 +80,12 @@
 }
 
 .left-animation {
-  animation: scrollUp 120s linear infinite;
+  animation: scrollUp 150s linear infinite;
 }
 
 .right-animation {
   direction: rtl;
-  animation: scrollDown 120s linear infinite;
+  animation: scrollDown 150s linear infinite;
 }
 
 .middle-animation {
@@ -127,12 +127,12 @@
   }
 
   .left-animation {
-    animation: scrollUp 60s linear infinite;
+    animation: scrollUp 150s linear infinite;
   }
   
   .right-animation {
     direction: rtl;
-    animation: scrollDown 60s linear infinite;
+    animation: scrollDown 150s linear infinite;
   }
 
   @keyframes scrollUp {
@@ -157,5 +157,16 @@
     100% {
       transform: translateX(-100%);
     }
+  }
+}
+
+
+@media only screen and (max-width: 568px) {
+  .left-animation {
+    animation: scrollUp 120s linear infinite;
+  }
+  
+  .right-animation {
+    animation: scrollDown 120s linear infinite;
   }
 }

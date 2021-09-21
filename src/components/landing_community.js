@@ -75,13 +75,13 @@ const LandingCommunity = ({
                         }
                     </div>
                     <div className="md:w-1/2 w-full h-auto flex justify-start items-center content-center px-16">
-                        <p className="md:text-left text-center font-sans text-base text-gray-darkest">{description}</p>
+                        <p className="md:text-left text-center font-sans text-base text-gray-darkest pt-10 sm:pt-0">{description}</p>
                     </div>
                 </>
             :
             <>
                     <div className="md:w-1/2 w-full h-auto flex flex-row justify-start items-center content-center px-16">
-                        <p className="md:text-left text-center font-sans text-base text-gray-darkest">{description}</p>
+                        <p className="md:text-left text-center font-sans text-base text-gray-darkest pt-4 sm:pt-0">{description}</p>
                     </div>
                     <div className="md:w-1/2 w-full h-auto flex justify-center items-center content-center px-8">
                         {

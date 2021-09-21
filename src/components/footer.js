@@ -8,6 +8,7 @@ import twitter from "../assets/img/social_icons/twitter.png"
 import ig from "../assets/img/social_icons/ig.png"
 import bytelogo from "../assets/img/byte-icon-with-text.png"
 
+
 const about_links = [
   {
     id: 1,
@@ -115,7 +116,7 @@ const Footer = ({ siteTitle }) => (
             {/* </div> */}
             {/* <h3 className="font-bold text-2xl">byte</h3> */}
           </div>
-          <p className="mt-4 text-xs text-center md:text-left">
+          <p className="mt-24 text-xs text-center md:text-left">
             © 2021 Building Young Tech Entrepreneurs. All Rights Reserved.
           </p>
         </div>
