@@ -64,6 +64,22 @@ const coreThrustsData = [
     },
 ]
 
+function getColor(color) {
+    if (color === "red") {
+        return `text-red-primary`
+    } else if (color === "blue") {
+        return `text-blue-primary`
+    } else if (color === "purple") {
+        return `text-purple-primary`
+    } else if (color === "green") {
+        return `text-green-primary`
+    } else if (color === "yellow") {
+        return `text-yellow-primary`
+    } else {
+        return `text-orange-primary`
+    }   
+}
+
 const CloseIcon = ({ onClick }) => (
     <div className="m-4 h-12 w-12 flex items-center justify-center rounded-full bg-red-primary transition duration-300 ease-in-out hover:shadow-hover cursor-pointer absolute top-0 right-0" 
         onClick={onClick} onKeyPress={onClick} role="presentation"
@@ -106,7 +122,7 @@ const MobileLayout = ({ data }) => (
         style={{ backgroundImage: `url(${data.bg})` }}
     >
         <img src={data.image} alt={data.name} className="w-1/2 h-auto pb-8" />
-        <h2 className={`bold text-${data.color}-primary`}>{data.name}</h2>
+        <h2 className={`bold ${getColor(data.color)}`}>{data.name}</h2>
         <p className="small pt-2 pb-4">{data.role}</p>
         <p>{data.description}</p>
     </div>
@@ -165,7 +181,7 @@ const CoreThrusts = () => {
                             }
                             <img src={selected.image} alt={selected.name} className="w-1/3 h-auto px-16" />
                             <div className="w-2/3 h-auto flex flex-col justify-center items-start content-center px-16">
-                                <h1 className={`bold text-${selected.color}-primary pb-4`}>{selected.name}</h1>
+                                <h1 className={`bold ${getColor(selected.color)} pb-4`}>{selected.name}</h1>
                                 <p>{selected.description}</p>
                             </div>
                         </div>

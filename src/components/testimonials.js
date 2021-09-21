@@ -23,7 +23,21 @@ SwiperCore.use([Autoplay])
 const colors = ["red", "yellow", "blue", "green", "purple", "orange"]
 
 function getRandomColor() {
-  return colors[Math.floor(Math.random()*colors.length)]
+  var color = colors[Math.floor(Math.random()*colors.length)]
+
+  if (color === "red") {
+    return `text-red-primary`
+  } else if (color === "blue") {
+      return `text-blue-primary`
+  } else if (color === "purple") {
+      return `text-purple-primary`
+  } else if (color === "green") {
+      return `text-green-primary`
+  } else if (color === "yellow") {
+      return `text-yellow-primary`
+  } else {
+      return `text-orange-primary`
+  }
 }
 
 const NextArrow = ({ onClick }) => (
@@ -58,7 +72,7 @@ const Testimonial = ({ testimonial, onNext }) => (
       <img src={message} alt="Message" className="hidden lg:block" />
       <div className="flex flex justify-center items-center content-center pt-4 pb-8">
         <img src={testimonial.node.image.url} alt="Message" className="h-16 w-16 rounded-full lg:hidden block mr-4" />
-        <h1 className={`text-${getRandomColor()}-primary bold`}>{testimonial.node.name}</h1>
+        <h1 className={`${getRandomColor()} bold`}>{testimonial.node.name}</h1>
       </div>
       <p className="xl:h-56 lg:h-64 h-auto">{testimonial.node.quote}</p>
     </div>

@@ -20,11 +20,47 @@ const tertiary = `w-max bg-transparent border-transparent
 
 function getStyle(type, color) {
     if (type === "primary") {
-        return `bg-${color}-primary hover:bg-${color}-secondary active:bg-${color}-primary`;
+        if (color === "red") {
+            return `bg-red-primary hover:bg-red-secondary active:bg-red-primary`;
+        } else if (color === "blue") {
+            return `bg-blue-primary hover:bg-blue-secondary active:bg-blue-primary`;
+        } else if (color === "purple") {
+            return `bg-purple-primary hover:bg-purple-secondary active:bg-purple-primary`;
+        } else if (color === "green") {
+            return `bg-green-primary hover:bg-green-secondary active:bg-green-primary`;
+        } else if (color === "yellow") {
+            return `bg-yellow-primary hover:bg-yellow-secondary active:bg-yellow-primary`;
+        } else {
+            return `bg-orange-primary hover:bg-orange-secondary active:bg-orange-primary`;
+        }
     } else if (type === "secondary") {
-        return `text-${color}-primary border-${color}-primary hover:text-${color}-secondary hover:border-${color}-secondary active:bg-${color}-primary active:text-gray-lightest`
+        if (color === "red") {
+            return `text-red-primary border-red-primary hover:text-red-secondary hover:border-red-secondary active:bg-red-primary active:text-gray-lightest`
+        } else if (color === "blue") {
+            return `text-blue-primary border-blue-primary hover:text-blue-secondary hover:border-blue-secondary active:bg-blue-primary active:text-gray-lightest`;
+        } else if (color === "purple") {
+            return `text-purple-primary border-purple-primary hover:text-purple-secondary hover:border-purple-secondary active:bg-purple-primary active:text-gray-lightest`;
+        } else if (color === "green") {
+            return `text-green-primary border-green-primary hover:text-green-secondary hover:border-green-secondary active:bg-green-primary active:text-gray-lightest`;
+        } else if (color === "yellow") {
+            return `text-yellow-primary border-yellow-primary hover:text-yellow-secondary hover:border-yellow-secondary active:bg-yellow-primary active:text-gray-lightest`;
+        } else {
+            return `text-orange-primary border-orange-primary hover:text-orange-secondary hover:border-orange-secondary active:bg-orange-primary active:text-gray-lightest`;
+        }
     } else {
-        return `text-${color}-primary hover:text-${color}-secondary`;
+        if (color === "red") {
+            return `text-red-primary hover:text-red-secondary`;
+        } else if (color === "blue") {
+            return `text-blue-primary hover:text-blue-secondary`;
+        } else if (color === "purple") {
+            return `text-purple-primary hover:text-purple-secondary`;
+        } else if (color === "green") {
+            return `text-green-primary hover:text-green-secondary`;
+        } else if (color === "yellow") {
+            return `text-yellow-primary hover:text-yellow-secondary`;
+        } else {
+            return `text-orange-primary hover:text-orange-secondary`;
+        }
     }
 }
 
