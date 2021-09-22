@@ -21,31 +21,31 @@ const tertiary = `w-max bg-transparent border-transparent
 function getStyle(type, color) {
     if (type === "primary") {
         if (color === "red") {
-            return `bg-red-primary hover:bg-red-secondary active:bg-red-primary`;
+            return `bg-red-primary hover:bg-red-primary active:bg-red-primary`;
         } else if (color === "blue") {
-            return `bg-blue-primary hover:bg-blue-secondary active:bg-blue-primary`;
+            return `bg-blue-primary hover:bg-blue-primary active:bg-blue-primary`;
         } else if (color === "purple") {
-            return `bg-purple-primary hover:bg-purple-secondary active:bg-purple-primary`;
+            return `bg-purple-primary hover:bg-purple-primary active:bg-purple-primary`;
         } else if (color === "green") {
-            return `bg-green-primary hover:bg-green-secondary active:bg-green-primary`;
+            return `bg-green-primary hover:bg-green-primary active:bg-green-primary`;
         } else if (color === "yellow") {
-            return `bg-yellow-primary hover:bg-yellow-secondary active:bg-yellow-primary`;
+            return `bg-yellow-primary hover:bg-yellow-primary active:bg-yellow-primary`;
         } else {
-            return `bg-orange-primary hover:bg-orange-secondary active:bg-orange-primary`;
+            return `bg-orange-primary hover:bg-orange-primary active:bg-orange-primary`;
         }
     } else if (type === "secondary") {
         if (color === "red") {
-            return `text-red-primary border-red-primary hover:text-red-secondary hover:border-red-secondary active:bg-red-primary active:text-gray-lightest`
+            return `text-red-primary border-red-primary hover:text-red-primary hover:border-red-primary active:bg-red-primary active:text-gray-lightest`
         } else if (color === "blue") {
-            return `text-blue-primary border-blue-primary hover:text-blue-secondary hover:border-blue-secondary active:bg-blue-primary active:text-gray-lightest`;
+            return `text-blue-primary border-blue-primary hover:text-blue-primary hover:border-blue-primary active:bg-blue-primary active:text-gray-lightest`;
         } else if (color === "purple") {
-            return `text-purple-primary border-purple-primary hover:text-purple-secondary hover:border-purple-secondary active:bg-purple-primary active:text-gray-lightest`;
+            return `text-purple-primary border-purple-primary hover:text-purple-primary hover:border-purple-primary active:bg-purple-primary active:text-gray-lightest`;
         } else if (color === "green") {
-            return `text-green-primary border-green-primary hover:text-green-secondary hover:border-green-secondary active:bg-green-primary active:text-gray-lightest`;
+            return `text-green-primary border-green-primary hover:text-green-primary hover:border-green-primary active:bg-green-primary active:text-gray-lightest`;
         } else if (color === "yellow") {
-            return `text-yellow-primary border-yellow-primary hover:text-yellow-secondary hover:border-yellow-secondary active:bg-yellow-primary active:text-gray-lightest`;
+            return `text-yellow-primary border-yellow-primary hover:text-yellow-primary hover:border-yellow-primary active:bg-yellow-primary active:text-gray-lightest`;
         } else {
-            return `text-orange-primary border-orange-primary hover:text-orange-secondary hover:border-orange-secondary active:bg-orange-primary active:text-gray-lightest`;
+            return `text-orange-primary border-orange-primary hover:text-orange-primary hover:border-orange-primary active:bg-orange-primary active:text-gray-lightest`;
         }
     } else {
         if (color === "red") {
