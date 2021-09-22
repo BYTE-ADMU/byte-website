@@ -49,17 +49,17 @@ function getStyle(type, color) {
         }
     } else {
         if (color === "red") {
-            return `text-red-primary hover:text-red-secondary`;
+            return `text-red-primary hover:text-red-primary`;
         } else if (color === "blue") {
-            return `text-blue-primary hover:text-blue-secondary`;
+            return `text-blue-primary hover:text-blue-primary`;
         } else if (color === "purple") {
-            return `text-purple-primary hover:text-purple-secondary`;
+            return `text-purple-primary hover:text-purple-primary`;
         } else if (color === "green") {
-            return `text-green-primary hover:text-green-secondary`;
+            return `text-green-primary hover:text-green-primary`;
         } else if (color === "yellow") {
-            return `text-yellow-primary hover:text-yellow-secondary`;
+            return `text-yellow-primary hover:text-yellow-primary`;
         } else {
-            return `text-orange-primary hover:text-orange-secondary`;
+            return `text-orange-primary hover:text-orange-primary`;
         }
     }
 }
