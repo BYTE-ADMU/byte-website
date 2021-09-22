@@ -36,8 +36,8 @@ const projects_links = [
   },
   {
     id: 2,
-    name: "Growth",
-    link: "/projects#growth",
+    name: "Initiatives",
+    link: "/projects#initiatives",
   },
 ]
 

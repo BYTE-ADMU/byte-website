@@ -124,7 +124,7 @@ const MobileLayout = ({ data }) => (
         <img src={data.image} alt={data.name} className="w-1/2 h-auto pb-8" />
         <h2 className={`bold ${getColor(data.color)}`}>{data.name}</h2>
         <p className="small pt-2 pb-4">{data.role}</p>
-        <p>{data.description}</p>
+        <p className="text-center sm:text-left">{data.description}</p>
     </div>
 )
 

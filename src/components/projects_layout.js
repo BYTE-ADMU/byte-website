@@ -47,17 +47,17 @@ function getColor(type, color) {
     }
   } else {
     if (color === "red") {
-      return `text-red-secondary`
+      return `text-red-primary`
     } else if (color === "blue") {
-        return `text-blue-secondary`
+        return `text-blue-primary`
     } else if (color === "purple") {
-        return `text-purple-secondary`
+        return `text-purple-primary`
     } else if (color === "green") {
-        return `text-green-secondary`
+        return `text-green-primary`
     } else if (color === "yellow") {
-        return `text-yellow-secondary`
+        return `text-yellow-primary`
     } else {
-        return `text-orange-secondary`
+        return `text-orange-primary`
     }
   }
 }
@@ -68,7 +68,7 @@ function getColor(type, color) {
 
 // START: Project Component
 const Project = ({ layout, data, bg }) => (
-  <div className="lg:min-h-3/4 min-h-1/2 h-full w-full 2xl:p-48 lg:p-24 md:px-8 py-12 px-4 flex flex-col sm:flex sm:flex-row items-center justify-center md:bg-contain bg-cover bg-no-repeat bg-center"
+  <div className="lg:min-h-3/4 min-h-1/2 h-full w-full 2xl:p-48 lg:p-24 md:px-8 py-20 px-4 flex flex-col sm:flex sm:flex-row items-center justify-center md:bg-contain bg-cover bg-no-repeat bg-center"
     style={{
       backgroundImage: `url(${bg})`
     }}

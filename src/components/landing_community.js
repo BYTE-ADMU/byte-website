@@ -65,7 +65,7 @@ const LandingCommunity = ({
             layout === "left"
             ?
                 <>
-                    <div className="md:w-1/2 w-full h-auto flex justify-center items-center content-center px-8">
+                    <div className="md:w-1/2 w-full h-auto flex justify-center items-center content-center sm:px-8">
                         {
                             gallery && gallery
                             ?

@@ -102,7 +102,7 @@ const LandingAbout = () => {
             }}
         >
             <h1 className="font-sans font-bold text-2xl text-gray-darkest text-center mb-0">
-                We aim to equip the Filipino with Tech Literacy.
+                We aim to equip the Filipino youth with Tech Literacy.
             </h1>
 
             {/* Desktop Version (with Animations) */}
