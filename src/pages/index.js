@@ -127,7 +127,7 @@ const IndexPage = () => (
           <LandingCommunity layout="left"
             startups={data.allStrapiStartups.edges}
             description="There are no better startup partners than people who hold you accountable. You might meet them here in BYTE!" />
-          <Button type="primary" label="Learn More" link="/community" className="my-16" />
+          <Button type="primary" label="See the Bits" link="/community" className="my-16" />
         </div>
 
         {/* CTA */}

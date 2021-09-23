@@ -32,7 +32,7 @@ const AboutHero = () => {
                 className="absolute -bottom-8 -left-16"
               />
             </div>
-            <h2 class="text-4xl pt-2 lg:pt-6 medium py-6">Who are we.</h2>
+            <h2 class="text-4xl pt-2 lg:pt-6 medium py-6">Who are we</h2>
             <div className="flex flex-col md:items-center justify-center w-full">
                 <p className="text-center px-11 sm:px-5">
                   We cultivate young entrepreneurs who create innovative solutions for nation-building.

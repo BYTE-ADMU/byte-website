@@ -37,9 +37,9 @@ const Card = ({ member
 
 const AnimatedBanner = ({ members }) => {
   return (
-    <div className="w-full h-screen overflow-hidden bg-gray-lightest relative flex flex-col justify-center items-center content-center">
+    <div className="w-full sm:h-screen h-auto overflow-hidden bg-gray-lightest relative flex flex-col justify-center items-center content-center">
       <div className="top-fade"></div>
-      <div className="h-screen items-center content-center flex lg:flex-row lg:justify-center flex-col justify-between">
+      <div className="sm:h-screen h-auto items-center content-center flex lg:flex-row lg:justify-center flex-col justify-between">
         <div className={`
           lg:h-auto sm:h-1/3 h-1/8 
           xl:w-1/3 lg:w-1/4 w-auto 
@@ -73,7 +73,7 @@ const AnimatedBanner = ({ members }) => {
         </div>
 
         <div className="
-          lg:h-auto sm:h-1/3 h-3/4
+          lg:h-auto sm:h-1/3 h-2/3
           xl:w-1/3 lg:w-1/2 w-auto lg:py-0 p-4
           flex flex-col justify-start items-center content-center text-center"
         >
@@ -91,7 +91,7 @@ const AnimatedBanner = ({ members }) => {
         <div className={`
           lg:h-auto sm:h-1/3 h-1/8
           xl:w-1/3 lg:w-1/4 w-auto 
-          lg:py-0 pt-4 px-0 overflow-visible 
+          lg:py-0 lg:pt-0 px-0 overflow-visible 
           flex lg:flex-col flex-row justify-start items-center content-center
           banner-column right-animation`} 
           // ${counter === length ? "right-animation" : ""}`}
