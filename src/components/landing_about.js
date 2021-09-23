@@ -124,7 +124,7 @@ const LandingAbout = () => {
                 <MobileValueProp image={valuePropThree} text="BYTE is the Atenean Organization that focuses on startup awareness and execution through modern practices." className="pt-4 pb-16 xl:pb-24 2xl:pb-32" />
             </div> */}
 
-            <Button link="/about" type="primary" label="Learn More" className="mt-4" />
+            <Button link="/about" type="primary" label="Learn about BYTE" className="mt-4" />
         </div>
     )
 }
