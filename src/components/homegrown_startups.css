@@ -26,3 +26,9 @@
     background-position: center;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .customTooltip {
+    display: none;
+  }
+}
