@@ -70,7 +70,7 @@ const HomeGrownStartups = ({ startups }) => {
                 padding="8"
                 placement="bottom"
                 radius="5"
-                className="md:block hidden"
+                className="customTooltip"
               >
                 <div className="flex flex-col justify-center items-center content-center m-4">
                   <img src={startup.node.logo.url} alt={startup.node.name}
