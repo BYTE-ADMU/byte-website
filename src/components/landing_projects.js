@@ -58,7 +58,7 @@ const LandingProjects = ({ data }) => {
                 lg:px-24 md:py-32 md:py-8 py-16 px-4 w-full
                 flex ${selected && selected ? "justify-between" : "justify-center"} content-center items-center
                 xl:flex-row flex-col
-                rounded-lg bg-white bg-no-repeat xl:bg-125% md:bg-cover xl:bg-center sm:bg-right-top sm:bg-cover bg-contain bg-bottom
+                rounded-lg bg-white bg-no-repeat xl:bg-125% lg:bg-contain md:bg-cover xl:bg-center sm:bg-right-top sm:bg-cover bg-contain bg-bottom
                 border-4 border-solid ${selected && selected ? `border-${selected.color}-primary` : "border-red-primary"}
             `} style={{
                 backgroundImage: `url(${project_bg})`

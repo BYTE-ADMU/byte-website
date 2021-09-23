@@ -19,13 +19,13 @@ const DesktopValueProp = ({
     textTwo,
     textThree
 }) => (
-    <div className={`2xl:w-1/4 xl:w-1/2 md:w-2/3 w-full h-auto flex flex-col justify-center items-center content-center about-children md:py-24 py-0`}>
-        <div className="w-64 h-64 flex flex-col justify-center items-center content-center relative my-8">
-            <img src={imageOne} alt="Value Prop 1" className={`w-64 h-64 my-4 value-prop-image-1 absolute`} />
-            <img src={imageTwo} alt="Value Prop 2" className={`w-48 h-48 my-4 value-prop-image-2 absolute`} />
-            <img src={imageThree} alt="Value Prop 3" className={`w-64 h-64 my-4 value-prop-image-3 absolute`} />
+    <div className={`2xl:w-1/4 xl:w-1/2 md:w-2/3 w-full sm:h-auto h-2/3 flex flex-col lg:justify-evenly justify-center items-center content-center about-children md:py-16 py-0`}>
+        <div className="2xl:w-32 2xl:h-32 w-24 h-24 flex flex-col justify-center items-center content-center relative xl:my-24 md:my-16 my-8">
+            <img src={imageOne} alt="Value Prop 1" className={`xl:h-full lg:h-3/4 h-full w-auto md:-my-4 md:mb-4 -my-8 mb-8 value-prop-image-1 absolute`} />
+            <img src={imageTwo} alt="Value Prop 2" className={`xl:h-full lg:h-3/4 h-full w-auto md:-my-4 md:mb-4 -my-8 mb-8 value-prop-image-2 absolute`} />
+            <img src={imageThree} alt="Value Prop 3" className={`xl:h-full lg:h-3/4 h-full w-auto md:-my-4 md:mb-4 -my-8 mb-8 value-prop-image-3 absolute`} />
         </div>
-        <div className="w-full h-1/3 flex flex-col justify-center items-center content-center relative">
+        <div className="md:w-80 w-full h-auto flex flex-col justify-center items-center content-center relative">
             <p className={`w-full text-center font-sans font-normal not-italic value-prop-text-1 absolute`}>{textOne}</p>
             <p className={`w-full text-center font-sans font-normal not-italic value-prop-text-2 absolute`}>{textTwo}</p>
             <p className={`w-full text-center font-sans font-normal not-italic value-prop-text-3 absolute`}>{textThree}</p>
@@ -59,24 +59,24 @@ const LandingAbout = () => {
         valueProp
             .from('.value-prop-image-1', { opacity: 1, ease: "slow", duration: 10, delay: 1 }, "<30")
             .from('.value-prop-text-1', { opacity: 0, ease: "slow", duration: 10, delay: 1 }, "<15")
-            .to('.value-prop-text-1', { opacity: 1, ease: "slow", duration: 20}, "<20")
-            .to('.value-prop-image-1', { opacity: 1, transform: "scale(1.1)", ease: "slow", duration: 20}, "<0")
-            .to('.value-prop-image-1', { opacity: 0, ease: "slow", duration: 40}, "<0")
-            .to('.value-prop-text-1', { opacity: 0, ease: "slow", duration: 40}, "<0")
+            .to('.value-prop-text-1', { opacity: 1, ease: "slow", duration: 30}, "<20")
+            .to('.value-prop-image-1', { opacity: 1, transform: "scale(1.1)", ease: "slow", duration: 30}, "<0")
+            .to('.value-prop-image-1', { opacity: 0, ease: "slow", duration: 50}, "<0")
+            .to('.value-prop-text-1', { opacity: 0, ease: "slow", duration: 50}, "<0")
 
             .from('.value-prop-image-2', { opacity: 0, ease: "slow", duration: 10, delay: 1 }, "<30")
             .from('.value-prop-text-2', { opacity: 0, ease: "slow", duration: 10, delay: 1 }, "<15")
-            .to('.value-prop-image-2', { opacity: 1, ease: "slow", duration: 20}, "<0")
-            .to('.value-prop-image-2', { opacity: 1, transform: "scale(1.1)", ease: "slow", duration: 20}, "<0")
-            .to('.value-prop-text-2', { opacity: 1, ease: "slow", duration: 20}, "<20")
-            .to('.value-prop-image-2', { opacity: 0, ease: "slow", duration: 40}, "<0")
-            .to('.value-prop-text-2', { opacity: 0, ease: "slow", duration: 40}, "<0")
+            .to('.value-prop-image-2', { opacity: 1, ease: "slow", duration: 30}, "<0")
+            .to('.value-prop-image-2', { opacity: 1, transform: "scale(1.1)", ease: "slow", duration: 30}, "<0")
+            .to('.value-prop-text-2', { opacity: 1, ease: "slow", duration: 30}, "<20")
+            .to('.value-prop-image-2', { opacity: 0, ease: "slow", duration: 50}, "<0")
+            .to('.value-prop-text-2', { opacity: 0, ease: "slow", duration: 50}, "<0")
 
             .from('.value-prop-image-3', { opacity: 0, ease: "slow", duration: 10, delay: 1 }, "<30")
             .from('.value-prop-text-3', { opacity: 0, ease: "slow", duration: 10, delay: 1 }, "<15")
-            .to('.value-prop-image-3', { opacity: 1, ease: "slow", duration: 20}, "<0")
-            .to('.value-prop-text-3', { opacity: 1, ease: "slow", duration: 20}, "<0")
-            .to('.value-prop-image-3', { opacity: 1, transform: "scale(1.1)", ease: "slow", duration: 20}, "<0")
+            .to('.value-prop-image-3', { opacity: 1, ease: "slow", duration: 30}, "<0")
+            .to('.value-prop-text-3', { opacity: 1, ease: "slow", duration: 30}, "<0")
+            .to('.value-prop-image-3', { opacity: 1, transform: "scale(1.1)", ease: "slow", duration: 30}, "<0")
       }, []);
 
     // function sectionAnimation(prop, before) {
@@ -106,7 +106,7 @@ const LandingAbout = () => {
             </h1>
 
             {/* Desktop Version (with Animations) */}
-            <div className="w-full xl:min-h-1/2 md:min-h-2/3 min-h-1/2 h-auto flex flex-col justify-center items-center content-center about-container lg:justify-start px-16 overflow-scroll">
+            <div className="w-full md:min-h-2/3 min-h-1/2 h-auto flex flex-col justify-center items-center content-center about-container lg:justify-start lg:px-16 md:px-8 px-4 overflow-hidden">
                 <DesktopValueProp
                     imageOne={valuePropOne}
                     imageTwo={valuePropTwo}
