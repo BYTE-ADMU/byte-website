@@ -68,7 +68,7 @@ function getColor(type, color) {
 
 // START: Project Component
 const Project = ({ layout, data, bg }) => (
-  <div className="lg:min-h-3/4 min-h-1/2 h-full w-full 2xl:p-48 lg:p-24 md:px-8 py-20 px-4 flex flex-col sm:flex sm:flex-row items-center justify-center md:bg-contain bg-cover bg-no-repeat bg-center"
+  <div className={`lg:min-h-3/4 min-h-1/2 h-full w-full 2xl:p-48 lg:p-24 md:px-8 py-16 px-4 flex ${layout === "left" ? "flex-col" : "flex-col-reverse"} sm:flex sm:flex-row items-center justify-center md:bg-contain bg-cover bg-no-repeat bg-center`}
     style={{
       backgroundImage: `url(${bg})`
     }}

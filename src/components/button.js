@@ -21,45 +21,45 @@ const tertiary = `w-max bg-transparent border-transparent
 function getStyle(type, color) {
     if (type === "primary") {
         if (color === "red") {
-            return `bg-red-primary hover:bg-red-primary active:bg-red-primary`;
+            return `bg-red-primary lg:hover:bg-red-secondary hover:bg-red-primary active:bg-red-primary`;
         } else if (color === "blue") {
-            return `bg-blue-primary hover:bg-blue-primary active:bg-blue-primary`;
+            return `bg-blue-primary lg:hover:bg-blue-secondary hover:bg-blue-primary active:bg-blue-primary`;
         } else if (color === "purple") {
-            return `bg-purple-primary hover:bg-purple-primary active:bg-purple-primary`;
+            return `bg-purple-primary lg:hover:bg-purple-secondary hover:bg-purple-primary active:bg-purple-primary`;
         } else if (color === "green") {
-            return `bg-green-primary hover:bg-green-primary active:bg-green-primary`;
+            return `bg-green-primary lg:hover:bg-green-secondary hover:bg-green-primary active:bg-green-primary`;
         } else if (color === "yellow") {
-            return `bg-yellow-primary hover:bg-yellow-primary active:bg-yellow-primary`;
+            return `bg-yellow-primary lg:hover:bg-yellow-secondary hover:bg-yellow-primary active:bg-yellow-primary`;
         } else {
-            return `bg-orange-primary hover:bg-orange-primary active:bg-orange-primary`;
+            return `bg-orange-primary lg:hover:bg-orange-secondary hover:bg-orange-primary active:bg-orange-primary`;
         }
     } else if (type === "secondary") {
         if (color === "red") {
-            return `text-red-primary border-red-primary hover:text-red-primary hover:border-red-primary active:bg-red-primary active:text-gray-lightest`
+            return `text-red-primary border-red-primary lg:hover:text-red-secondary lg:hover:border-red-secondary hover:text-red-primary hover:border-red-primary active:bg-red-primary active:text-gray-lightest`
         } else if (color === "blue") {
-            return `text-blue-primary border-blue-primary hover:text-blue-primary hover:border-blue-primary active:bg-blue-primary active:text-gray-lightest`;
+            return `text-blue-primary border-blue-primary lg:hover:text-blue-secondary lg:hover:border-blue-secondary hover:text-blue-primary hover:border-blue-primary active:bg-blue-primary active:text-gray-lightest`;
         } else if (color === "purple") {
-            return `text-purple-primary border-purple-primary hover:text-purple-primary hover:border-purple-primary active:bg-purple-primary active:text-gray-lightest`;
+            return `text-purple-primary border-purple-primary lg:hover:text-purple-secondary lg:hover:border-purple-secondary hover:text-purple-primary hover:border-purple-primary active:bg-purple-primary active:text-gray-lightest`;
         } else if (color === "green") {
-            return `text-green-primary border-green-primary hover:text-green-primary hover:border-green-primary active:bg-green-primary active:text-gray-lightest`;
+            return `text-green-primary border-green-primary lg:hover:text-green-secondary lg:hover:border-green-secondary hover:text-green-primary hover:border-green-primary active:bg-green-primary active:text-gray-lightest`;
         } else if (color === "yellow") {
-            return `text-yellow-primary border-yellow-primary hover:text-yellow-primary hover:border-yellow-primary active:bg-yellow-primary active:text-gray-lightest`;
+            return `text-yellow-primary border-yellow-primary lg:hover:text-yellow-secondary lg:hover:border-yellow-secondary hover:text-yellow-primary hover:border-yellow-primary active:bg-yellow-primary active:text-gray-lightest`;
         } else {
-            return `text-orange-primary border-orange-primary hover:text-orange-primary hover:border-orange-primary active:bg-orange-primary active:text-gray-lightest`;
+            return `text-orange-primary border-orange-primary lg:hover:text-orange-secondary lg:hover:border-orange-secondary hover:text-orange-primary hover:border-orange-primary active:bg-orange-primary active:text-gray-lightest`;
         }
     } else {
         if (color === "red") {
-            return `text-red-primary hover:text-red-primary`;
+            return `text-red-primary lg:hover:text-red-secondary hover:text-red-primary`;
         } else if (color === "blue") {
-            return `text-blue-primary hover:text-blue-primary`;
+            return `text-blue-primary lg:hover:text-blue-secondary hover:text-blue-primary`;
         } else if (color === "purple") {
-            return `text-purple-primary hover:text-purple-primary`;
+            return `text-purple-primary lg:hover:text-purple-secondary hover:text-purple-primary`;
         } else if (color === "green") {
-            return `text-green-primary hover:text-green-primary`;
+            return `text-green-primary lg:hover:text-green-secondary hover:text-green-primary`;
         } else if (color === "yellow") {
-            return `text-yellow-primary hover:text-yellow-primary`;
+            return `text-yellow-primary lg:hover:text-yellow-secondary hover:text-yellow-primary`;
         } else {
-            return `text-orange-primary hover:text-orange-primary`;
+            return `text-orange-primary lg:hover:text-orange-secondary hover:text-orange-primary`;
         }
     }
 }
