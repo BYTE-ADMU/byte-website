@@ -35,7 +35,7 @@ const AboutHero = () => {
             <h2 class="text-4xl pt-2 lg:pt-6 medium py-6">Who are we</h2>
             <div className="flex flex-col md:items-center justify-center w-full">
                 <p className="text-center px-11 sm:px-5">
-                  We cultivate young entrepreneurs who create innovative solutions for nation-building.
+                  We cultivate young entrepreneurs who create innovative solutions for nation-building
                 </p>
             </div>
           </div>
