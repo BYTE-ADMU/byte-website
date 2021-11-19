@@ -4,9 +4,9 @@ import Layout from '../layouts/default';
 
 import "./community.css";
 
-import AnimatedBanner from "../components/animated_banner";
-import HomeGrownStartups from "../components/homegrown_startups";
-import Testimonials from "../components/testimonials";
+import AnimatedBanner from "../components/community/animated_banner";
+import HomeGrownStartups from "../components/community/homegrown_startups";
+import Testimonials from "../components/community/testimonials";
 
 import testimonialsBg from "../assets/community/community-bg.png"
 

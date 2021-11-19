@@ -5,7 +5,7 @@ import SwiperCore, { Pagination, Autoplay } from "swiper"
 import Loader from "react-loader-spinner";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
-import "../styles/global.css"
+import "../../styles/global.css"
 
 import "swiper/css"
 import "swiper/css/pagination"
@@ -13,9 +13,9 @@ import "swiper/css/pagination"
 // import message from "../../public/icons/message.png"
 // import play from "../../public/icons/play.png"
 
-import message from "../assets/img/message.png"
-import arrowOutline from "../assets/community/arrow-outline.png"
-import arrow from "../assets/community/arrow.png"
+import message from "../../assets/img/message.png"
+import arrowOutline from "../../assets/community/arrow-outline.png"
+import arrow from "../../assets/community/arrow.png"
 
 SwiperCore.use([Pagination])
 SwiperCore.use([Autoplay])

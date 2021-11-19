@@ -1,13 +1,13 @@
 // START: IMPORTS = = = = = = = = = = = = = = = = = = = =
 // Dependencies
 import React from 'react';
-import '../styles/global.css';
+import '../../styles/global.css';
 
 // Assets
-import ProjectsHeroImg from '../assets/projects/projects-hero-image.png';
-import bg from "../assets/projects/hero-bg.png";
-import bench from "../assets/projects/bench.png";
-import cloud from "../assets/projects/cloud.png";
+import ProjectsHeroImg from '../../assets/projects/projects-hero-image.png';
+import bg from "../../assets/projects/hero-bg.png";
+import bench from "../../assets/projects/bench.png";
+import cloud from "../../assets/projects/cloud.png";
 
 // END: IMPORTS = = = = = = = = = = = = = = = = = = = =
 

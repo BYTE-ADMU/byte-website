@@ -1,13 +1,13 @@
 // START: DEPENDENCIES
 import React from 'react'
-import '../styles/global.css'
+import '../../styles/global.css'
 
 import Loader from "react-loader-spinner";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 // END: DEPENDENCIES
 
 // START: ASSETS
-import GrowthCardsBg from '../assets/projects/growth-card-bg.png'
+import GrowthCardsBg from '../../assets/projects/growth-card-bg.png'
 // END: ASSETS
 
 // START: COMING SOON CARD

@@ -4,10 +4,10 @@ import "./banner.css"
 import Loader from "react-loader-spinner";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
-import upperCaption from "../assets/community/upperCaption.png";
-import lowerCaption from "../assets/community/lowerCaption.png";
+import upperCaption from "../../assets/community/upperCaption.png";
+import lowerCaption from "../../assets/community/lowerCaption.png";
 
-import community from "../assets/community/community.png";
+import community from "../../assets/community/community.png";
 
 const Card = ({ member
   // counter, setCounter 

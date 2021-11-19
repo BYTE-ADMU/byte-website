@@ -10,7 +10,7 @@ import Tooltip from "react-simple-tooltip";
 // import "../styles/global.css"
 import "./homegrown_startups.css"
 
-import bitbot from "../assets/community/startup.png"
+import bitbot from "../../assets/community/startup.png"
 
 const HomeGrownStartups = ({ startups }) => {
   const [open, setOpen] = useState(false)

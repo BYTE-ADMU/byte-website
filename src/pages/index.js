@@ -94,8 +94,7 @@ const IndexPage = () => (
           className="flex flex-col items-center content-center justify-center w-full p-4 bg-white bg-center bg-no-repeat bg-contain h-max 2xl:p-32 lg:p-16 md:p-8" 
           style={{
             backgroundImage: `url(${projects})`
-          }}
-        >
+          }}>
           <h1 className="font-sans text-2xl font-bold text-center text-gray-darkest pb-1">
             Grow with us through these projects.{" "}
           </h1>
@@ -110,8 +109,7 @@ const IndexPage = () => (
           className="flex flex-col items-center content-center justify-center w-full p-4 bg-white bg-center bg-no-repeat bg-contain h-max 2xl:p-48 lg:p-24 md:p-8" 
           style={{
             backgroundImage: `url(${community})`
-          }}
-        >
+          }}>
           <h1 className="font-sans text-2xl font-bold text-center text-gray-darkest px-6 pb-2 sm:px-0">
             Make memories with our awesome comm-YOU-nity!{" "}
           </h1>

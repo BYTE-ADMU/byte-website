@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react"
 // import { StaticQuery, graphql } from 'gatsby';
 import { Link } from "gatsby"
 import axios from "axios";
-import Button from './button'
+import Button from '../button'
 
 import project_bg from "../assets/img/landing/projects.png"
 import squigglyOne from "../assets/img/landing/squiggly_1.png"

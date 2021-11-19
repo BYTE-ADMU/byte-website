@@ -1,6 +1,6 @@
 // START: DEPENDENCIES
 import React from 'react'
-import '../styles/global.css'
+import '../../styles/global.css'
 
 import Loader from "react-loader-spinner";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
@@ -8,11 +8,11 @@ import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
 // START: ASSETS
 // import projectsLayoutBg from "../assets/projects/projects-layout-bg.png";
-import startupSummit from '../assets/projects/startup-summit.png'
-import reboot from '../assets/projects/reboot.png'
-import itech from '../assets/projects/itech.png'
-import frostbyte from '../assets/projects/frostbyte.png'
-import byteCamp from '../assets/projects/byte-camp.png'
+import startupSummit from '../../assets/projects/startup-summit.png'
+import reboot from '../../assets/projects/reboot.png'
+import itech from '../../assets/projects/itech.png'
+import frostbyte from '../../assets/projects/frostbyte.png'
+import byteCamp from '../../assets/projects/byte-camp.png'
 // END: ASSETS
 
 // Function to get the background for the project

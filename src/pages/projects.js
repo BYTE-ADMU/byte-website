@@ -1,9 +1,9 @@
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import Layout from '../layouts/default';
-import ProjectsHero from "../components/projects_hero";
-import ProjectsLayout from "../components/projects_layout";
-import ProjectsGrowthCards from "../components/projects_growth_cards";
+import ProjectsHero from "../components/projects/projects_hero";
+import ProjectsLayout from "../components/projects/projects_layout";
+import ProjectsGrowthCards from "../components/projects/projects_growth_cards";
 
 const seo = {
     siteTitle: "BYTE Projects",
